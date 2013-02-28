@@ -1,0 +1,31 @@
+{
+	:db
+	{	
+		:classname "org.postgresql.Driver"
+		:subprotocol "postgresql"
+		:subname "//localhost:5432/coming-soon"
+		:user "sean"
+		:password ""
+	}	
+	:coming-soon
+	{	
+		:admin-user "admin"
+		:admin-password "change_me!"
+		:allow-twitter true
+		:allow-email true
+		:google-analytics-key ""
+	}
+	:landing-page
+	{	
+		:page-title "Silver Bullet | Launching soon!"
+		:app-title "Silver Bullet"
+		; see http://code.google.com/webfonts for available fonts
+		:app-title-font "Philosopher"
+		:app-summary "It's Clojure powered bad-assery!"
+		:thank-you "Thank you for your interest in Silver Bullet. We'll be in thouch soon!"
+		:bg-color "#FFFFF"
+		:twitter-handle ""
+		:app-dot-net-handle ""
+		:facebook-page ""
+	}
+}
