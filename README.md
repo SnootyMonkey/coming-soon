@@ -2,29 +2,35 @@
 
 ## What is coming-soon?
 
-![](http://i.imgur.com/w3hXT.png)
-
 **coming-soon** is a simple Clojure/ClojureScript "landing page" application that takes just a few minute to setup. It lets you quickly put up a page to publicize your new idea and to collect email addresses or Twitter user names for when you are ready to launch your new Clojure app and take over the world.
 
-coming-soon can be hosted on Heroku for free and uses PostgreSQL (Heroku's default) to store the contacts. Update the HTML and Twitter Bootstrap CSS to be your own, deploy to Heroku, and point a domain at it. That's all there is to it. You are in business like the big boys. Now get back to hacking on your Clojure app so you have something to launch!
+![](http://i.imgur.com/w3hXT.png)
 
 Google Analytics is supported so you can track views and conversion rates for signing up.
 
-coming-soon (including much of the text you are reading right now) is inspired by the Ruby [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
+Twitter, App.net and Facebook page links are supported.
+
+coming-soon (including much of the text you are reading right now) is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
+
+## What do I need?
+
+coming-soon can be hosted on Heroku for free and uses PostgreSQL (Heroku's default) to store the submitted contacts. Once you update the settings, and optionally the HTML and Twitter Bootstrap CSS to be your own, you deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business like the big boys and can get back to hacking on your Clojure app so you have something to launch!
+
+Make sure you have the Heroku pre-reqs: [http://devcenter.heroku.com/articles/quickstart#prerequisites]()
 
 ## Quick Start Steps
 
 1. Setup an account on [Heroku](heroku.com) (you can use the free account)  
 
 Instructions: [http://devcenter.heroku.com/articles/quickstart]()  
-Make sure you have the pre-reqs: [http://devcenter.heroku.com/articles/quickstart#prerequisites]()  
+  
+1. Download coming-soon:
 
-1. Clone coming-soon
+	https://github.com/SnootyMonkey/coming-soon/archive/master.zip
 
-	git clone git@github.com:SnootyMonkey/coming-soon.git
+1. Unzip coming-soon and navigate to the directory it creates:
 
-1. Navigate to the directory git creates
-
+	unzip coming-soon
 	cd coming-soon
 
 1. Open 'config.edn' in a text editor.  You should see a 'db' block where you can enter the details for your database connection, a 'coming-soon' block where you can enter configuration details (such as if to allow email and twitter and the admin credentials), and a 'landing-page' block where you can configure the appearance of the landing page (your site's name, a summary, colors, etc).
@@ -35,6 +41,7 @@ Make sure you have the pre-reqs: [http://devcenter.heroku.com/articles/quickstar
 
 1. Once you have edited 'config.edn' to add your app's settings, run the following commands from your project folder:
 
+				 git init
          git add .
          git commit -m "setting up my landing page"
 
