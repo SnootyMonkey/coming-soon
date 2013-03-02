@@ -4,7 +4,7 @@
   :license {:name "MIT License"
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [
-    [org.clojure/clojure "1.5.0-alpha5"] ; Lisp on the JVM http://clojure.org/documentation
+    [org.clojure/clojure "1.5.0"] ; Lisp on the JVM http://clojure.org/documentation
     [compojure "1.1.5"] ; Web routing http://github.com/weavejester/compojure
     [postgresql "9.1-901.jdbc4"] ; SQL DB access
     [lobos "1.0.0-beta1"] ; database migrations http://budu.github.com/lobos/
