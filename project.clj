@@ -8,6 +8,7 @@
     [compojure "1.1.5"] ; Web routing http://github.com/weavejester/compojure
     [postgresql "9.1-901.jdbc4"] ; SQL DB access
     [lobos "1.0.0-beta1"] ; database migrations http://budu.github.com/lobos/
+    [enlive "1.0.1"] ; HTML templates
   ]
   :plugins [
     [lein-ring "0.8.3"] ; common ring tasks https://github.com/weavejester/lein-ring

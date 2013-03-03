@@ -4,16 +4,13 @@
 		:classname "org.postgresql.Driver"
 		:subprotocol "postgresql"
 		:subname "//localhost:5432/coming-soon"
-		:user ""
+		:user "sean"
 		:password ""
 	}	
 	:coming-soon
 	{	
 		:admin-user "admin"
 		:admin-password "change_me!"
-		:allow-twitter true
-		:allow-email true
-		:google-analytics-key ""
 	}
 	:landing-page
 	{	
@@ -27,5 +24,6 @@
 		:twitter-handle ""
 		:app-dot-net-handle ""
 		:facebook-page ""
+		:google-analytics-key ""
 	}
 }

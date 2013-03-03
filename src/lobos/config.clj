@@ -1,7 +1,7 @@
 ; All from the lobos README here: https://github.com/budu/lobos/
 (ns lobos.config
   (:use lobos.connectivity)
-  (:require [coming-soon.app :as app]))
+  (:require [coming-soon.config :as config]))
 
 (def db
-  (app/config :db))
+	(config/config :db))

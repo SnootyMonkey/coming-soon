@@ -1,15 +1,14 @@
 (ns coming-soon.controllers.contacts
-  (:use [compojure.core :only (defroutes GET POST)]))
+  (:use [compojure.core :only (defroutes GET POST)]
+  		coming-soon.views.contacts))
 
-(defn new-req [] (str "<h1>new</h1>"))
-
-(defn index-req [format] (str "<h1>index " format "</h1>"))
+(defn index-req [format] (apply str (admin-page)))
 
 (defn create-req [contact] (str "<h1>create</h1>"))
 
 (defroutes contact-routes
   ; users
-  (GET "/" [] (new-req))
+  (GET "/" [] (apply str (home-page)))
   (POST "/subscribe" [contact] (create-req contact))
   ; admins
   (GET "/contacts" [] (index-req :html))
