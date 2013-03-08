@@ -6,6 +6,7 @@
 
 (defroutes app-routes
   contacts/contact-routes
+  (route/resources "/")
   (route/not-found "Page Not Found"))
 
 (def app

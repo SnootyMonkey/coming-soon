@@ -16,14 +16,15 @@
 	{	
 		:page-title "Silver Bullet | Launching soon!"
 		:app-title "Silver Bullet"
-		; see http://code.google.com/webfonts for available fonts
-		:app-title-font "Philosopher"
 		:app-summary "It's Clojure powered bad-assery!"
-		:thank-you "Thank you for your interest in Silver Bullet. We'll be in thouch soon!"
-		:bg-color "#FFFFF"
+		; see font advice at http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
+		:app-title-font "Droid Sans" ; see http://code.google.com/webfonts for available fonts
+		:body-font "Droid Serif" ; see http://code.google.com/webfonts for available fonts
+		:bg-color "#FFFFFF"
 		:twitter-handle ""
 		:app-dot-net-handle ""
 		:facebook-page ""
 		:google-analytics-key ""
+		:thank-you "Thank you for your interest in Silver Bullet. We'll be in touch soon!"
 	}
 }
