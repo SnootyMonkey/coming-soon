@@ -2,9 +2,9 @@
   (:use [net.cgrand.enlive-html])
   (:require [coming-soon.config :as config]))
 
-(def backup-fonts "Arial,Helvetica,sans-serif")
-
 (def google-font-url "http://fonts.googleapis.com/css?family=")
+
+(def backup-fonts "Arial,Helvetica,sans-serif")
 
 (deftemplate home-page "coming_soon/templates/home.html" []
   [:title] (content (config/landing-page :page-title))
