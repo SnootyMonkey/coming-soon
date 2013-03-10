@@ -13,5 +13,14 @@
   :plugins [
     [lein-ring "0.8.3"] ; common ring tasks https://github.com/weavejester/lein-ring
     [lein-lobos "1.0.0-beta1"] ; database migration tasks https://github.com/harob/lein-lobos/
+    [lein-cljsbuild "0.3.0"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
   ]
-  :ring {:handler coming-soon.app/app})
+  :ring {:handler coming-soon.app/app}
+  :cljsbuild {:builds [{
+    :source-paths ["src/coming_soon/cljs"] ; CLJS source code path
+    ;; Google Closure (CLS) options configuration
+    :compiler {
+      :output-to "resources/public/js/coming_soon.js" ; generated JS script filename
+      :optimizations :whitespace ; minimal JS optimization directive
+      :pretty-print true ; generated JS code prettyfication
+    }}]})
