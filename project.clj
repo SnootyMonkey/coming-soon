@@ -9,6 +9,7 @@
     [postgresql "9.1-901.jdbc4"] ; SQL DB access
     [lobos "1.0.0-beta1"] ; database migrations http://budu.github.com/lobos/
     [enlive "1.0.1"] ; HTML templates
+    [jayq "2.3.0"] ; ClojureScript wrapper for jQuery
   ]
   :plugins [
     [lein-ring "0.8.3"] ; common ring tasks https://github.com/weavejester/lein-ring
@@ -16,11 +17,16 @@
     [lein-cljsbuild "0.3.0"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
   ]
   :ring {:handler coming-soon.app/app}
-  :cljsbuild {:builds [{
-    :source-paths ["src/coming_soon/cljs"] ; CLJS source code path
-    ;; Google Closure (CLS) options configuration
-    :compiler {
-      :output-to "resources/public/js/coming_soon.js" ; generated JS script filename
-      :optimizations :whitespace ; minimal JS optimization directive
-      :pretty-print true ; generated JS code prettyfication
-    }}]})
+  :cljsbuild {
+    :crossovers [coming-soon.models.contact] ; compile for both Clojure and ClojureScript
+    :builds
+      [{
+      :source-paths ["src/coming_soon/cljs" "src"] ; CLJS source code path
+      ;; Google Closure (CLS) options configuration
+      :compiler {
+        :output-to "resources/public/js/coming_soon.js" ; generated JS script filename
+        :optimizations :simple ; JS optimization directive
+        :pretty-print false ; generated JS code prettyfication
+      }}]
+  }
+)

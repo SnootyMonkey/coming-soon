@@ -1,10 +1,8 @@
 (ns coming-soon.models.contact)
 
-(defn email? [identifier] 
-  false)
+(def email-regex #"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$")
 
-(defn twitter? [identifier]
-  (not (email? identifier)))
-
-(defn exists? [identifier]
-  false)
+(defn valid? [email]
+  (if (re-matches email-regex email)
+  true 
+  false))
