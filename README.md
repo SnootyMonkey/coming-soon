@@ -1,4 +1,6 @@
-# coming-soon - simple landing page email collector, with 100% more parenthesis than the leading brand
+# coming-soon
+
+A simple landing page email collector, with 90% more parentheses than the leading brand.
 
 ## What is coming-soon?
 
