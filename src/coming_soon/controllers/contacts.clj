@@ -4,7 +4,7 @@
 
 (defn index-req [format] (apply str (admin-page)))
 
-(defn create-req [contact] (str "<h1>create</h1>"))
+(defn create-req [contact] {:body (pr-str {:foo "bar"})})
 
 (defroutes contact-routes
   ; users

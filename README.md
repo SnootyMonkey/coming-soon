@@ -1,14 +1,20 @@
 # coming-soon
 
-A simple landing page email collector, with 90% more parentheses than the leading brand.
+A simple landing page email collector, but with 90% more parentheses than the leading brand.
 
 ## What is coming-soon?
 
-**coming-soon** is a simple Clojure/ClojureScript powered "landing page" application that takes just a few minute to setup. It lets you quickly put up a page to publicize your new idea and to collect email addresses for when you are ready to launch your new idea to take over the world.
+**coming-soon** is a simple Clojure/ClojureScript powered "landing page" application that takes just a few minute to setup. With coming-soon you can quickly put up a page to publicize your new idea, and to collect email addresses of people who want to be notified when you are ready to launch.
 
 ![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
-All the text on the page can be configured in a simple text file. Most of the style elements can be configured in the same file, and of course you can also change all the HTML and CSS to put whatever you'd like on the page.
+All the text on the landing page can be configured in a simple text file. Most of the style elements can be configured as well using the same file, and of course you can go beyond the configuration and change all the HTML and CSS to put whatever you'd like on the page.
+
+The above landing page and the following landing pages were configured using just the configuration file.
+
+![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example-2.png)
+
+![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example-3.png)
 
 Google Analytics is supported as a setting, so you can track views and conversion rates for signing up.
 
@@ -18,7 +24,7 @@ coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swans
 
 ## What do I need to use it?
 
-coming-soon can be hosted on Heroku for free, and uses PostgreSQL (Heroku's default) to store the submitted contacts. Once you update the settings, and optionally the HTML and Twitter Bootstrap CSS, you deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
+coming-soon can be hosted on Heroku for free, and uses PostgreSQL (Heroku's default) to store the submitted contacts. Once you update the settings you deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
 ## Quick Start - 10 Steps to Heroku
 
@@ -61,7 +67,13 @@ coming-soon can be hosted on Heroku for free, and uses PostgreSQL (Heroku's defa
 
 	You should see a table listing the name, type and referral URL for anyone that has signed up for your app.
 
+	![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin.png)
+
 1.  You will probably want a custom domain, following the instructions here [http://devcenter.heroku.com/articles/custom-domains]() to setup your domain to point to your brand-new landing page.
+
+## Guide to the configuration file
+
+(todo list and explain the configuration settings)
 
 ## It looks good, but I want it to be more blue
 
@@ -71,9 +83,14 @@ You can modify any of the HTML, CSS and images to customize your page. Just reme
 
 ## It works well, but I want it to make my coffee too
 
-You can modify any of the Clojure or ClojureScript code to customize the behavior of your page. Just remember, you need to push any changes to Heroku so your live page will be updated.
+You can modify any of the Clojure and ClojureScript code to customize the behavior of your landing page. Just remember, you need to push any changes to Heroku so your live page will be updated.
 
 (todo list and explain important code and development steps)
 
+## Who made this treasure? Can I use it? Can I contribute enhancements?
 
+coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).
 
+coming-soon is licensed with the [MIT license](https://github.com/SnootyMonkey/coming-soon/blob/master/MIT-LICENSE.txt), so you are free to use it pretty much however you'd like, in accordance with the license terms.
+
+Please do fork coming-soon if you'd like to enhance it, and send me your pull requests if you'd like to contribute back your enhancements. I promise to look at every pull request and incorporate it, or at least provide feedback if I won't.
