@@ -19,7 +19,7 @@
 ;; submit the provided email to the server with AJAX
 (defn submit [email]
   (log "submitting " email)
-  (xhr/send subscribe-url receive-result "POST" email))
+  (xhr/send subscribe-url receive-result "POST" (str "email=" email)))
 
 ;; validate the provided email address
 (defn validate-email []
