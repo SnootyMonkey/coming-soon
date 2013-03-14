@@ -1,12 +1,4 @@
 {
-	:db
-	{	
-		:classname "org.postgresql.Driver"
-		:subprotocol "postgresql"
-		:subname "//localhost:5432/coming-soon"
-		:user "sean"
-		:password ""
-	}	
 	:coming-soon
 	{	
 		:admin-user "admin"

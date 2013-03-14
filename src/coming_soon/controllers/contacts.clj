@@ -8,7 +8,7 @@
 (defn create-req [email]
   (if-not (contact/valid? email)
     {:status 403 :body (pr-str {:contact "invalid"})}
-    (if (contact/create email)
+    (if (contact/create email "")
       {:status 200 :body (pr-str {:contact "created"})}
       {:status 500 :body (pr-str {:contact "error"})})))
 

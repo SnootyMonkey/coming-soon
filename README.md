@@ -4,7 +4,7 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 ## What is coming-soon?
 
-**coming-soon** is a simple Clojure/ClojureScript powered "landing page" application that takes just a few minute to setup. With coming-soon you can quickly put up a page to publicize your new idea, and to collect email addresses of people who want to be notified when you are ready to launch.
+**coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minute to setup. With coming-soon you can quickly put up a page to publicize your new idea, and to collect email addresses of people who want to be notified when you are ready to launch.
 
 ![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
@@ -24,7 +24,7 @@ coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swans
 
 ## What do I need to use it?
 
-coming-soon can be hosted on Heroku for free, and uses PostgreSQL (Heroku's default) to store the submitted contacts. Once you update the settings you deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
+coming-soon can be hosted on Heroku for free, and uses Redis to store the submitted contacts. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
 ## Quick Start - 10 Steps to Heroku
 
