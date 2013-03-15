@@ -7,9 +7,9 @@
     [org.clojure/clojure "1.5.0"] ; Lisp on the JVM http://clojure.org/documentation
     [ring/ring-jetty-adapter "1.1.8"] ; Web Server
     [compojure "1.1.5"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "1.6.0"] ; Redis client
-    [enlive "1.0.1"] ; HTML templates
-    [jayq "2.3.0"] ; ClojureScript wrapper for jQuery
+    [com.taoensso/carmine "1.6.0"] ; Redis client https://github.com/ptaoussanis/carmine
+    [enlive "1.1.1"] ; HTML templates https://github.com/cgrand/enlive
+    [jayq "2.3.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
   ]
   :plugins [
     [lein-ring "0.8.3"] ; common ring tasks https://github.com/weavejester/lein-ring
