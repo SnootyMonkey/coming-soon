@@ -10,15 +10,15 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 Fantastic Features:
 
-* Capture the user's email, when they signed up and what website they came from.
-* All the text on the landing page can be configured in a simple text file. 
-* Many of the styles can be configured as well using the same file.
-* User defined fonts, logo and background image, you guessed it, using the same file.
-* Google Analytics is supported as a setting, so you can track views and conversion rates for signing up.
-* Twitter, App.net and Facebook page links are supported as a setting.
-* You can go beyond the configuration and change all the HTML and CSS to put whatever you'd like on the page.
-* The CSS is Twitter Bootstrap.
-* No code that's not Clojure or ClojureScript.
+* Captures: email, when they signed up, and what website they came from
+* All the text on the landing page can be configured in a simple config file
+* Many of the styles can be configured as well using the same config file
+* User defined fonts, logo and background image using, you guessed it, the same file
+* Google Analytics is supported as a setting, so you can track views and conversion rates for signing up
+* Twitter, App.net and Facebook page links are supported as a setting in the config file
+* Go beyond the config file and change all the HTML and CSS to put whatever you'd like on the page
+* The CSS is Twitter Bootstrap
+* There's no code that's not Clojure or ClojureScript, so... there's that
 	
 The above landing page and the following landing pages were configured using just the configuration file with no coding.
 
