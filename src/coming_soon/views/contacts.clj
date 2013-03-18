@@ -6,7 +6,8 @@
 
 (def backup-fonts "Arial,Helvetica,sans-serif")
 
-(deftemplate home-page "coming_soon/templates/home.html" []
+(deftemplate home-page "coming_soon/templates/home.html" [ctxt]
+  [:input#referer] (set-attr :value (:referer ctxt))
   [:title] (content (config/landing-page :page-title))
   [:link#google-title-font] (set-attr :href (str google-font-url (config/landing-page :app-title-font)))
   [:link#google-body-font] (set-attr :href (str google-font-url (config/landing-page :body-font)))

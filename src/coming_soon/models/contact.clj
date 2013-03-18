@@ -1,19 +1,10 @@
 (ns coming-soon.models.contact
   (require [taoensso.carmine :as car]))
 
-;; Regex for a valid email address
-(def email-regex #"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$")
-
 ;; A Redis connection with Carmine
 (def redis-pool (car/make-conn-pool))
 (def redis-server-spec (car/make-conn-spec))
 (defmacro with-car [& body] `(car/with-conn redis-pool redis-server-spec ~@body))
-
-(defn valid? [email]
-  "Determine if the specified email address is valid according to our email regex."
-  (if (and (not (nil? email)) (re-matches email-regex email))
-  true 
-  false))
 
 (defn exists? [email]
   "Determine if the specified email address has been collected."

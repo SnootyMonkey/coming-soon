@@ -87,6 +87,10 @@ You can modify any of the Clojure and ClojureScript code to customize the behavi
 
 (todo list and explain important code and development steps)
 
+lein ring server-headless
+lein cljsbuild once
+lein cljsbuild auto
+
 ## Who made this treasure? Can I use it? Can I contribute enhancements?
 
 coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).

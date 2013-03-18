@@ -1,5 +1,5 @@
 (defproject coming-soon "0.0.1-SNAPSHOT"
-  :description "coming-soon is a simple Clojure/ClojureScript 'landing page' application that takes just a few minute to setup"
+  :description "coming-soon is a simple Clojure/ClojureScript/Redis 'landing page' application that takes just a few minute to setup"
   :url "https://github.com/SnootyMonkey/coming-soon/"
   :license {:name "MIT License"
             :url "http://opensource.org/licenses/MIT"}
@@ -17,7 +17,7 @@
   ]
   :ring {:handler coming-soon.app/app}
   :cljsbuild {
-    :crossovers [coming-soon.models.contact] ; compile for both Clojure and ClojureScript
+    :crossovers [coming-soon.models.email] ; compile for both Clojure and ClojureScript
     :builds
       [{
       :source-paths ["src/coming_soon/cljs" "src"] ; CLJS source code path

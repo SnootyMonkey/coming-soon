@@ -3,13 +3,14 @@
             [cljs.reader :as reader])
   (:use [jayq.core :only [$ document-ready bind val]]
         [jayq.util :only [log]]
-        [coming-soon.models.contact :only [valid?]]))
+        [coming-soon.models.email :only [valid?]]))
 
 (def subscribe-url "/subscribe")
 
 ;; jQuery DOM lookups
 (def email ($ :#email))
 (def subscribe ($ :#subscribe))
+(def referer ($ :#referer))
 
 ;; receive the server response to the email submission
 (defn receive-result [event]
@@ -19,7 +20,7 @@
 ;; submit the provided email to the server with AJAX
 (defn submit [email]
   (log "submitting " email)
-  (xhr/send subscribe-url receive-result "POST" (str "email=" email)))
+  (xhr/send subscribe-url receive-result "POST" (str "email=" email "&referer=" (val referer))))
 
 ;; validate the provided email address
 (defn validate-email []
