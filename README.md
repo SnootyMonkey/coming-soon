@@ -8,6 +8,8 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 ![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
+Fantastic Features:
+
 * Capture the user's email, when they signed up and what website they came from.
 * All the text on the landing page can be configured in a simple text file. 
 * Many of the styles can be configured as well using the same file.
