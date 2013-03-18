@@ -8,46 +8,50 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 ![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
-All the text on the landing page can be configured in a simple text file. Most of the style elements can be configured as well using the same file, and of course you can go beyond the configuration and change all the HTML and CSS to put whatever you'd like on the page.
-
+	* Capture the user's email, when they signed up and what website they came from.
+	* All the text on the landing page can be configured in a simple text file. 
+	* Many of the styles can be configured as well using the same file.
+	* User defined fonts, logo and background image, you guessed it, using the same file.
+	* Google Analytics is supported as a setting, so you can track views and conversion rates for signing up.
+	* Twitter, App.net and Facebook page links are supported as a setting.
+	* You can go beyond the configuration and change all the HTML and CSS to put whatever you'd like on the page.
+	* The CSS is Twitter Bootstrap.
+	* No code that's not Clojure or ClojureScript.
+	
 The above landing page and the following landing pages were configured using just the configuration file with no coding.
 
-![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example-2.png)
+![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
-![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example-3.png)
-
-Google Analytics is supported as a setting, so you can track views and conversion rates for signing up.
-
-Twitter, App.net and Facebook page links are supported as a setting.
+![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
 coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
 
 ## What do I need to use it?
 
-coming-soon uses Redis to store the submitted contacts and can be hosted on Heroku for free . Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
+coming-soon uses Redis to store the submitted contacts and can be hosted on [Heroku](http://heroku.com) for free. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
 ## Quick Start - 10 Steps to Heroku
 
 1. Make sure you have the Heroku pre-reqs: [http://devcenter.heroku.com/articles/quickstart#prerequisites]()
 
-1. Setup an account on [Heroku](heroku.com) (you can use a free account)  
+	Setup an account on [Heroku](heroku.com) (you can use a free account)  
 
-	Instructions: [http://devcenter.heroku.com/articles/quickstart]()  
+	Account Setup Instructions: [http://devcenter.heroku.com/articles/quickstart]()  
   
 1. Download coming-soon:
 
 	https://github.com/SnootyMonkey/coming-soon/archive/master.zip
 
-1. Unzip coming-soon and navigate to the directory it creates:
+	Unzip coming-soon and navigate to the directory it creates:
 
 	unzip coming-soon
 	cd coming-soon
 
-1. Open 'config.edn' in a text editor.  You should see a 'db' block where you can enter the details for your database connection, a 'coming-soon' block where you can enter admin access details, and a 'landing-page' block where you can configure the appearance of the landing page (your site's name, a summary, colors, background, etc).
+1. Open 'config.edn' in a text editor.  You should see a 'coming-soon' block where you can enter admin access details, and a 'landing-page' block where you can configure the appearance of the landing page (your site's name, a summary, colors, background, etc).
 
-1. The 'coming-soon' block is where you set the admin username and password for accessing your stored contacts -- **PLEASE CHANGE THIS!**
+	The 'coming-soon' block is where you set the admin username and password for accessing your stored contacts -- **PLEASE CHANGE THIS!**
 
-1. You can set your Google Analytics tracking id in the 'landing-page' block if you have an account.
+	You can set your Google Analytics tracking id in the 'landing-page' block if you have an account.
 
 1. Once you have edited 'config.edn' to add your app's settings, run the following commands from your project folder:
 
