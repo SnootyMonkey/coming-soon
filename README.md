@@ -10,7 +10,7 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 All the text on the landing page can be configured in a simple text file. Most of the style elements can be configured as well using the same file, and of course you can go beyond the configuration and change all the HTML and CSS to put whatever you'd like on the page.
 
-The above landing page and the following landing pages were configured using just the configuration file.
+The above landing page and the following landing pages were configured using just the configuration file with no coding.
 
 ![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example-2.png)
 
@@ -24,7 +24,7 @@ coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swans
 
 ## What do I need to use it?
 
-coming-soon can be hosted on Heroku for free, and uses Redis to store the submitted contacts. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
+coming-soon uses Redis to store the submitted contacts and can be hosted on Heroku for free . Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
 ## Quick Start - 10 Steps to Heroku
 
@@ -95,6 +95,6 @@ lein cljsbuild auto
 
 coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).
 
-coming-soon is licensed with the [MIT license](https://github.com/SnootyMonkey/coming-soon/blob/master/MIT-LICENSE.txt), so you are free to use it pretty much however you'd like, in accordance with the license terms.
+coming-soon is licensed with the [MIT license](https://github.com/SnootyMonkey/coming-soon/blob/master/MIT-LICENSE.txt), so you are free to use it pretty much however you'd like, in accordance with the license terms. It's not required by the license terms, but please [drop me a note](http://snootmonkey.com/contact.html) and let me know the URL of your landing page so I can take a look.
 
-Please do fork coming-soon if you'd like to enhance it, and send me your pull requests if you'd like to contribute back your enhancements. I promise to look at every pull request and incorporate it, or at least provide feedback if I won't.
+Please do fork coming-soon on GitHub if you'd like to enhance it, and send me your pull requests if you'd like to contribute back your enhancements. I promise to look at every pull request and incorporate it, or at least provide feedback on why if I won't.
