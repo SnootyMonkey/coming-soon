@@ -10,7 +10,7 @@
 ;; jQuery DOM lookups
 (def email ($ :#email))
 (def subscribe ($ :#subscribe))
-(def referer ($ :#referer))
+(def referrer ($ :#referrer))
 
 ;; receive the server response to the email submission
 (defn receive-result [event]
@@ -20,7 +20,7 @@
 ;; submit the provided email to the server with AJAX
 (defn submit [email]
   (log "submitting " email)
-  (xhr/send subscribe-url receive-result "POST" (str "email=" email "&referer=" (val referer))))
+  (xhr/send subscribe-url receive-result "POST" (str "email=" email "&referrer=" (val referrer))))
 
 ;; validate the provided email address
 (defn validate-email []

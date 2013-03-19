@@ -1,6 +1,7 @@
 {
 	:coming-soon
 	{	
+		:instance-prefix "sb" ; change if you are sharing a redis instance w/ another coming-soon instance
 		:admin-user "admin"
 		:admin-password "change_me!"
 	}

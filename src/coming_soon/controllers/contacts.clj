@@ -6,19 +6,19 @@
 
 (defn index-req [format] (apply str (admin-page)))
 
-(defn create-req [email referer]
+(defn create-req [email referrer]
   (if-not (email/valid? email)
     {:status 403 :body (pr-str {:contact "invalid"})}
-    (if (contact/create email referer)
+    (if (contact/create email referrer)
       {:status 200 :body (pr-str {:contact "created"})}
       {:status 500 :body (pr-str {:contact "error"})})))
 
 (defroutes contact-routes
   ; users
   (GET "/" [:as {headers :headers}]
-    (apply str (home-page {:referer (get headers "referer" "")})))
-  (POST "/subscribe" [email referer]
-    (create-req email referer))
+    (apply str (home-page (get headers "referer" ""))))
+  (POST "/subscribe" [email referrer]
+    (create-req email referrer))
   ; admins
   (GET "/contacts" [] (index-req :html))
   (GET "/contacts.json" [] (index-req :json))
