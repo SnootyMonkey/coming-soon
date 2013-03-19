@@ -41,9 +41,10 @@
 		:social-hover-color ""
 
 		;; social stuff
-		:twitter-handle "silverbullet"
-		:app-dot-net-handle "silverbullet"
-		:facebook-page "https://www.facebook.com/silverbullet"
+		:twitter-handle "silverbullet" ; OK to be blank
+		:app-dot-net-handle "silverbullet" ; OK to be blank
+		:facebook-page "https://www.facebook.com/silverbullet" ; OK to be blank
+		:blog "http://blog.silverbullet.com" ; OK to be blank
 
 		;; analytics
 		:google-analytics-key ""
