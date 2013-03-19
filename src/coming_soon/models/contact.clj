@@ -15,38 +15,44 @@
 ;; <prefix>:coming-soon-emails - id hashed by email key
 (def coming-soon-emails (str (config/coming-soon :instance-prefix) ":coming-soon-emails"))
 
-(defn exists-by-email? [email]
+(defn exists-by-email?
   "Determine if a contact with the specified email address has been collected."
+  [email]
   (if (= 1 (with-car (car/hexists coming-soon-emails email)))
     true
     false))
 
-(defn exists-by-id? [id]
+(defn exists-by-id?
   "Determine if a contact with the specified id has been collected."
+  [id]
   (if (= 1 (with-car (car/hexists coming-soon-contacts id)))
     true
     false))
 
-(defn contact-by-id [id]
-  "Return the referrer for an id, nil if no contact exists by that id."
+(defn contact-by-id
+  "Return the contact for an id, nil if no contact exists by that id."
+  [id]
   (if (exists-by-id? id)
     (read-string (with-car (car/hget coming-soon-contacts id)))
     nil))
   
-(defn contact-by-email [email]
-  "Return the referrer for an email, nil if the email has not been collected."
+(defn contact-by-email
+  "Return the contact for an email, nil if the email has not been collected."
+  [email]
   (if (exists-by-email? email)
     (let [id (with-car (car/hget coming-soon-emails email))]
       (contact-by-id id))
     nil))
 
-(defn contact-count []
+(defn contact-count
   "Return the number of contacts collected."
+  []
   (with-car (car/hlen coming-soon-contacts)))
 
 ;; TODO
-(defn all []
-  "Return a vector of all the emails that have been collected so far.")
+(defn all
+  "Return a vector of all the emails that have been collected so far."
+  [])
 
 ;; Store the contact by email and by id
 (defn store [id email referrer]
@@ -64,8 +70,9 @@
     ;; commit the transaction
     (car/exec)))
 
-(defn create [email referrer]
+(defn create
   "Store the contact"
+  [email referrer]
   (if (exists-by-email? email)
     ;; use the id we already have for this email to store the contact
     (store (:id (contact-by-email email)) email referrer)
@@ -85,8 +92,9 @@
     ;; commit the transaction
     (car/exec)))
 
-(defn remove-by-email! [email]
+(defn remove-by-email!
   "Remove the contact."
+  [email]
   (if (exists-by-email? email)
     (do 
       (let [id (with-car (car/hget coming-soon-emails email))]
@@ -94,8 +102,9 @@
       true)
     false))
 
-(defn remove-by-id! [id]
+(defn remove-by-id!
   "Remove the contact."
+  [id]
   (if (exists-by-id? id)
     (do 
       (let [email (:email (contact-by-id id))]
@@ -103,8 +112,9 @@
       true)
     false))
 
-(defn empty! []
+(defn empty!
   "USE WITH CAUTION - Wipe out all the stored contacts."
+  []
   (with-car
     ;; start a transaction
     (car/multi)
@@ -116,6 +126,7 @@
     (car/exec))
   true)
 
-(defn sane? []
+(defn sane?
   "Is the contact store in a sane state?"
+  []
   (= (with-car (car/hlen coming-soon-contacts)) (with-car (car/hlen coming-soon-emails))))

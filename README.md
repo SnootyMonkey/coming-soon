@@ -30,7 +30,7 @@ coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swans
 
 ## What do I need to use it?
 
-coming-soon uses Redis to store the submitted contacts and can be hosted on [Heroku](http://heroku.com) for free. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
+coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
 ## Quick Start - 10 Steps to Heroku
 
