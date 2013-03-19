@@ -30,4 +30,7 @@ div.container {
 	padding: 20px;
 	max-width: 650px;
 	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }

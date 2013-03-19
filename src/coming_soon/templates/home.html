@@ -27,17 +27,17 @@
 			
 			<p id="app-summary"></p>
 
-			<h3>Enter your email address and we'll notify you when it's ready.</h3>
+			<h3><span id="instructions"></span></h3>
 			
 			<div id="form_div" class="control-group">
 			  <form id="subscribe" class="form-inline">
-			    <input id="email" type="email" class="input-large" name="email" placeholder="Email Address*" required/>
+			    <input id="email" type="email" class="input-large" name="email" required/>
 			    <input id="referrer" type="hidden" name="refrerer"/>
-			    <button type="submit" class="btn btn-success">Sign up</button>
+			    <button id="submit" type="submit" class="btn btn-success"></button>
 			  </form>
 			</div>
 
-			<p><i>* We won't spam you. We hate spam as much as you do.</i></p>
+			<p><i><span id="spam-msg"></span></i></p>
 
 		</div>
 
