@@ -1,6 +1,8 @@
 (ns coming-soon.models.contact
   (require [taoensso.carmine :as car]
-           [coming-soon.config :as config]))
+           [coming-soon.config :as config])
+  (import java.text.SimpleDateFormat
+          java.util.Calendar))
 
 ;; A Redis connection with Carmine
 (def redis-pool (car/make-conn-pool))
@@ -54,6 +56,10 @@
   "Return a vector of all the emails that have been collected so far."
   [])
 
+;; ISO 8601 timestamp
+(defn current-timestamp [] 
+  (.format (SimpleDateFormat. "yyyy-MM-dd'T'HH:mm:ssZ") (.getTime (Calendar/getInstance))))
+
 ;; Store the contact by email and by id
 (defn store [id email referrer]
   (with-car
@@ -66,7 +72,7 @@
       {:id id 
       :email email
       :referrer referrer
-      :updated-at (System/currentTimeMillis)}))
+      :updated-at (current-timestamp)}))
     ;; commit the transaction
     (car/exec)))
 
