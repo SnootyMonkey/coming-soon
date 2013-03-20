@@ -1,35 +1,50 @@
 (ns coming-soon.views.contacts
-  (:use [net.cgrand.enlive-html])
-  (:require [coming-soon.config :as config]))
+  (:use [clojure.string :only (blank?)]
+        [net.cgrand.enlive-html]
+        [coming-soon.config :only (landing-page)]))
 
 (def google-font-url "http://fonts.googleapis.com/css?family=")
 
+(defn linked-icon [{:keys [link-name icon-name]}]
+  (let [url (landing-page (keyword (str link-name "-url")))]
+    (if-not (blank? url)
+      (str "<li><a class='social-link' href='" url "'><i class='icon-" icon-name " icon-large'></i></a></li>")
+      "")))
+
 (deftemplate home-page "coming_soon/templates/home.html" [referrer]
   ;; head
-  [:title] (content (config/landing-page :page-title))
-  [:link#google-title-font] (set-attr :href (str google-font-url (config/landing-page :app-title-font)))
-  [:link#google-body-font] (set-attr :href (str google-font-url (config/landing-page :body-font)))
+  [:title] (content (landing-page :page-title))
+  [:#google-title-font] (set-attr :href (str google-font-url (landing-page :app-title-font)))
+  [:#google-body-font] (set-attr :href (str google-font-url (landing-page :body-font)))
+  [:#social-link-style] (html-content (str 
+      "a.social-link {color:" (landing-page :social-color) ";}"
+      "a.social-link:hover {color:" (landing-page :social-hover-color) ";}"))
   ;; body
-  [:body] (set-attr :style (str "background-color:" (config/landing-page :bg-color) ";"
-                                "font-family:" (str (config/landing-page :body-font) ","
-                                (config/landing-page :body-backup-fonts) ";")))
+  [:body] (set-attr :style (str "background-color:" (landing-page :bg-color) ";"
+                                "font-family:" (str (landing-page :body-font) ","
+                                (landing-page :body-backup-fonts) ";")))
   ;; container
-  [:div#main-container] (set-attr :style (str "background-color:" (config/landing-page :container-bg-color) ";"))
-  [:span#app-title] (set-attr :style (str "color:" (config/landing-page :app-title-color) ";"
-                                      "font-family:" (str (config/landing-page :app-title-font) ","
-                                      (config/landing-page :app-title-backup-fonts) ";")))
-  [:span#app-title] (content (config/landing-page :app-title))
-  [:span#app-tagline] (set-attr :style (str "color:" (config/landing-page :app-tagline-color) ";"))
-  [:span#app-tagline] (content (config/landing-page :app-tagline))
-  [:p#app-summary] (set-attr :style (str "color:" (config/landing-page :app-summary-color) ";"))
-  [:p#app-summary] (content (config/landing-page :app-summary))
-  [:span#instructions] (set-attr :style (str "color:" (config/landing-page :instructions-color) ";"))
-  [:span#instructions] (content (config/landing-page :instructions))
-  [:input#email] (set-attr :placeholder (config/landing-page :placeholder))
-  [:input#referrer] (set-attr :value referrer)
-  [:button#submit] (content (config/landing-page :sign-up-btn))
-  [:p#spam-msg] (set-attr :style (str "color:" (config/landing-page :spam-msg-color) ";"))
-  [:p#spam-msg] (content (config/landing-page :spam-msg)))
+  [:#main-container] (set-attr :style (str "background-color:" (landing-page :container-bg-color) ";"))
+  [:#app-title] (set-attr :style (str "color:" (landing-page :app-title-color) ";"
+                                      "font-family:" (str (landing-page :app-title-font) ","
+                                      (landing-page :app-title-backup-fonts) ";")))
+  [:#app-title] (html-content (landing-page :app-title))
+  [:#app-tagline] (set-attr :style (str "color:" (landing-page :app-tagline-color) ";"))
+  [:#app-tagline] (html-content (landing-page :app-tagline))
+  [:#app-summary] (set-attr :style (str "color:" (landing-page :app-summary-color) ";"))
+  [:#app-summary] (html-content (landing-page :app-summary))
+  [:#instructions] (set-attr :style (str "color:" (landing-page :instructions-color) ";"))
+  [:#instructions] (html-content (landing-page :instructions))
+  [:#email] (set-attr :placeholder (landing-page :placeholder))
+  [:#referrer] (set-attr :value referrer)
+  [:#submit] (html-content (landing-page :sign-up-btn))
+  [:#spam-msg] (set-attr :style (str "color:" (landing-page :spam-msg-color) ";"))
+  [:#spam-msg] (html-content (landing-page :spam-msg))
+  [:#social-links] (html-content (apply str (map linked-icon
+    [{:link-name "twitter" :icon-name "twitter"}
+    {:link-name "facebook" :icon-name "facebook"}
+    {:link-name "github" :icon-name "github"}
+    {:link-name "blog" :icon-name "rss"}]))))
 
 (deftemplate admin-page "coming_soon/templates/admin.html" []
-  [:title] (content (config/landing-page :page-title)))
+  [:title] (content (landing-page :page-title)))

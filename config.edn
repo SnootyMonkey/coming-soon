@@ -29,23 +29,24 @@
 
 		;; colors
 		:bg-color "#403727" ; brown
-		:container-bg-color "#EEEEEE" ; grey
+		:container-bg-color "#EEEEEE" ; light grey
 		:app-title-color "#63A687" ; greenish
 		:app-tagline-color "#000" ; black
 		:app-summary-color "#000" ; black
 		:instructions-color "#000" ; black
 		:sign-up-btn-color ""
-		:spam-msg-color "#000" ; black
+		:spam-msg-color "#646464" ; dark grey
 		:thank-you-color "#000" ; block
-		:copyright-color ""
-		:social-color ""
-		:social-hover-color ""
+		:copyright-color "#646464" ; dark grey
+		:social-color "#646464" ; dark grey
+		:social-hover-color "#63A687" ; greenish
 
 		;; social stuff
-		:twitter-handle "silverbullet" ; OK to be blank
-		:app-dot-net-handle "silverbullet" ; OK to be blank
-		:facebook-page "https://www.facebook.com/silverbullet" ; OK to be blank
-		:blog "http://blog.silverbullet.com" ; OK to be blank
+		:twitter-url "http://twitter.com/snootymonkey" ; OK to be blank
+		:facebook-url "https://www.facebook.com/bubbletimer" ; OK to be blank
+		:github-url "https://github.com/SnootyMonkey"
+		:blog-url "http://blog.snootymonkey.com/" ; OK to be blank
+		:blog-feed "" ; OK to be blank
 
 		;; analytics
 		:google-analytics-key ""
