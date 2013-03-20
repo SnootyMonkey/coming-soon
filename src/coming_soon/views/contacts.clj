@@ -4,23 +4,28 @@
 
 (def google-font-url "http://fonts.googleapis.com/css?family=")
 
-(def backup-fonts "Arial,Helvetica,sans-serif")
-
 (deftemplate home-page "coming_soon/templates/home.html" [referrer]
+  ;; head
   [:title] (content (config/landing-page :page-title))
   [:link#google-title-font] (set-attr :href (str google-font-url (config/landing-page :app-title-font)))
   [:link#google-body-font] (set-attr :href (str google-font-url (config/landing-page :body-font)))
+  ;; body
   [:body] (set-attr :style (str "background-color:" (config/landing-page :bg-color) ";"
-                                "font-family:" (str (config/landing-page :app-body-font) "," backup-fonts)))
+                                "font-family:" (str (config/landing-page :body-font) ","
+                                (config/landing-page :body-backup-fonts) ";")))
+  ;; container
+  [:div#main-container] (set-attr :style (str "background-color:" (config/landing-page :container-bg-color) ";"))
+  [:span#app-title] (set-attr :style (str "color:" (config/landing-page :app-title-color) ";"
+                                      "font-family:" (str (config/landing-page :app-title-font) ","
+                                      (config/landing-page :app-title-backup-fonts) ";")))
   [:span#app-title] (content (config/landing-page :app-title))
-  [:span#app-title] (set-attr :style (str "font-family:" (str (config/landing-page :app-title-font) "," backup-fonts)))
   [:span#app-tagline] (content (config/landing-page :app-tagline))
   [:p#app-summary] (content (config/landing-page :app-summary))
   [:span#instructions] (content (config/landing-page :instructions))
   [:input#email] (set-attr :placeholder (config/landing-page :placeholder))
+  [:input#referrer] (set-attr :value referrer)
   [:button#submit] (content (config/landing-page :sign-up-btn))
-  [:span#spam-msg] (content (config/landing-page :spam-msg))
-  [:input#referrer] (set-attr :value referrer))
+  [:p#spam-msg] (content (config/landing-page :spam-msg)))
 
 (deftemplate admin-page "coming_soon/templates/admin.html" []
   [:title] (content (config/landing-page :page-title)))

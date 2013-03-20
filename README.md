@@ -55,6 +55,8 @@ coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you upda
 
 	You can set your Google Analytics tracking id in the 'landing-page' block if you have an account.
 
+1. Replace the logo file resources/public/img/logo.png with your own logo.
+
 1. Once you have edited 'config.edn' to add your app's settings, run the following commands from your project folder:
 
 	git init

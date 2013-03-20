@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Silver Bullet | Launching soon!</title>
+		<title></title>
 		<!-- Reset IE -->
 		<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<!-- Google Fonts -->
-		<link id="google-title-font" href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
-		<link id="google-body-font" href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+		<link id="google-title-font" rel="stylesheet" type="text/css">
+		<link id="google-body-font" rel='stylesheet' type='text/css'>
 		<!-- Twitter Boostrap -->
 		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 		<!-- Bootstrap icon fonts -->
@@ -19,7 +19,7 @@
 	</head>
 	<body>
 	
-		<div class="container">
+		<div id="main-container" class="container">
 
 			<h1><img class="logo" src="img/logo.png" alt="Logo - http://openclipart.org/detail/64963/cartoon-bullet-by-laobc"><span id="app-title"></span></h1>
 			
@@ -32,18 +32,18 @@
 			<div id="form_div" class="control-group">
 			  <form id="subscribe" class="form-inline">
 			    <input id="email" type="email" class="input-large" name="email" required/>
-			    <input id="referrer" type="hidden" name="refrerer"/>
+			    <input id="referrer" type="hidden" name="refrerrer"/>
 			    <button id="submit" type="submit" class="btn btn-success"></button>
 			  </form>
 			</div>
 
-			<p><i><span id="spam-msg"></span></i></p>
+			<p id="spam-msg"></p>
 
 		</div>
 
 		<!-- jQuery -->
 		<script src="http://code.jquery.com/jquery.js"></script>
 		<!-- cljsbuild generated js file -->
-    <script src="js/coming_soon.js"></script>
+		<script src="js/coming_soon.js"></script>
 	</body>
 </html>
