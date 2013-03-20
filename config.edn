@@ -31,12 +31,12 @@
 		:bg-color "#403727" ; brown
 		:container-bg-color "#EEEEEE" ; grey
 		:app-title-color "#63A687" ; greenish
-		:app-tagline-color "black"
-		:app-summary-color "black"
-		:instructions-color "black"
+		:app-tagline-color "#000" ; black
+		:app-summary-color "#000" ; black
+		:instructions-color "#000" ; black
 		:sign-up-btn-color ""
-		:spam-msg-color "black"
-		:thank-you-color "black"
+		:spam-msg-color "#000" ; black
+		:thank-you-color "#000" ; block
 		:copyright-color ""
 		:social-color ""
 		:social-hover-color ""
