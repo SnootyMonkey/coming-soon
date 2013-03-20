@@ -15,7 +15,7 @@ Fantastic Features:
 * Many of the styles can be configured as well using the same config file
 * User defined fonts, logo and background image using, you guessed it, the same file
 * Google Analytics is supported as a setting, so you can track views and conversion rates for signing up
-* Twitter, App.net and Facebook page links are supported as a setting in the config file
+* Twitter, Facebook, GitHub and blog links are supported as a setting in the config file
 * Go beyond the config file and change all the HTML and CSS to put whatever you'd like on the page
 * The CSS is Twitter Bootstrap
 * There's no code that's not Clojure or ClojureScript, so... there's that
