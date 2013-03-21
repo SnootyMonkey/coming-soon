@@ -1,9 +1,9 @@
 {
 	:coming-soon
 	{	
-		:instance-prefix "sb" ; make unique if you are sharing a redis instance w/ another coming-soon instance
 		:admin-user "admin"
 		:admin-password "change_me!"
+		:instance-prefix "sb" ; make this unique if you are sharing a redis instance w/ another coming-soon instance
 	}
 	:landing-page
 	{	
@@ -34,7 +34,7 @@
 		:app-tagline-color "#000" ; black
 		:app-summary-color "#000" ; black
 		:instructions-color "#000" ; black
-		:sign-up-btn-color ""
+		:sign-up-btn-class "btn-success" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
 		:spam-msg-color "#646464" ; dark grey
 		:thank-you-color "#000" ; block
 		:copyright-color "#646464" ; dark grey
@@ -49,6 +49,6 @@
 		:blog-feed "" ; OK to be blank
 
 		;; analytics
-		:google-analytics-key ""
+		:google-analytics-key "" ; OK to be blank
 	}
 }

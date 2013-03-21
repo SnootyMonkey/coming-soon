@@ -37,6 +37,7 @@
   [:#instructions] (html-content (landing-page :instructions))
   [:#email] (set-attr :placeholder (landing-page :placeholder))
   [:#referrer] (set-attr :value referrer)
+  [:#submit] (add-class (landing-page :sign-up-btn-class))
   [:#submit] (html-content (landing-page :sign-up-btn))
   [:#spam-msg] (set-attr :style (str "color:" (landing-page :spam-msg-color) ";"))
   [:#spam-msg] (html-content (landing-page :spam-msg))

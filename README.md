@@ -61,7 +61,7 @@ coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you upda
 
 	git init
   git add .
-  git commit -m "setting up my landing page"
+  git commit -m "Setting up my landing page."
 
 1. Now create your Heroku app by running from your project folder:
 
