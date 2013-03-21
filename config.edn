@@ -29,7 +29,7 @@
 
 		;; colors
 		:bg-color "#403727" ; brown
-		:container-bg-color "#EEEEEE" ; light grey
+		:container-bg-color "#EEE" ; light grey
 		:app-title-color "#63A687" ; greenish
 		:app-tagline-color "#000" ; black
 		:app-summary-color "#000" ; black

@@ -44,7 +44,9 @@
     [{:link-name "twitter" :icon-name "twitter"}
     {:link-name "facebook" :icon-name "facebook"}
     {:link-name "github" :icon-name "github"}
-    {:link-name "blog" :icon-name "rss"}]))))
+    {:link-name "blog" :icon-name "rss"}])))
+  [:#copyright] (set-attr :style (str "color:" (landing-page :copyright-color) ";")) 
+  [:#copyright] (html-content (landing-page :copyright)))
 
 (deftemplate admin-page "coming_soon/templates/admin.html" []
   [:title] (content (landing-page :page-title)))

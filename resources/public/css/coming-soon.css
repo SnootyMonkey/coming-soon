@@ -1,3 +1,36 @@
+/* Page structure - Sticky footer details at http://www.martinbean.co.uk/bootstrap/sticky-footer/ */
+
+html,body {
+	height: 100%;
+}
+ 
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -80px;
+}
+
+div#main-container {
+	margin-top: 50px;
+	padding: 35px;
+	max-width: 650px;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#push {
+	height: 100px; /* adjust the size of push as need be to keep your footer below your content */
+}
+
+#footer {
+	height: 80px;
+}
+
+/* Page details */
+
 img.logo {
 	vertical-align: baseline;
 	margin-right: 5px;
@@ -26,16 +59,6 @@ p#spam-msg {
 	font-style: italic;	
 }
 
-div#main-container {
-	margin-top: 50px;
-	padding: 35px;
-	max-width: 650px;
-	text-align: center;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-}
-
 div#social {
 	margin-top: 20px;
 	text-align: center;
@@ -49,4 +72,8 @@ ul#social-links li {
 
 div#social a {
 	text-decoration: none;
+}
+
+div#footer {
+	text-align: center;
 }

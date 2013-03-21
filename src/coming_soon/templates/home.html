@@ -19,29 +19,43 @@
 		<style id="social-link-style" type="text/css" media="screen"></style>
 	</head>
 	<body>
-	
-		<div id="main-container" class="container">
 
-			<h1><img class="logo" src="img/logo.png" alt="Logo"><span id="app-title"></span></h1>
+		<div id="wrap">
+		  
+			<div id="main-container" class="container">
+		
+				<h1><img class="logo" src="img/logo.png" alt="Logo"><span id="app-title"></span></h1>
 			
-			<h2><span id="app-tagline"></span></h2>
+				<h2><span id="app-tagline"></span></h2>
 			
-			<p id="app-summary"></p>
+				<p id="app-summary"></p>
 
-			<h3><span id="instructions"></span></h3>
+				<h3><span id="instructions"></span></h3>
 			
-			<div id="form_div" class="control-group">
-			  <form id="subscribe" class="form-inline">
-			    <input id="email" type="email" class="input-large" name="email" required/>
-			    <input id="referrer" type="hidden" name="refrerrer"/>
-			    <button id="submit" type="submit" class="btn btn-success"></button>
-			  </form>
+				<div id="form_div" class="control-group">
+				  <form id="subscribe" class="form-inline">
+				    <input id="email" type="email" class="input-large" name="email" required/>
+				    <input id="referrer" type="hidden" name="refrerrer"/>
+				    <button id="submit" type="submit" class="btn btn-success"></button>
+				  </form>
+				</div>
+
+				<p id="spam-msg"></p>
+
+				<div id="social">
+					<ul id="social-links"></ul>
+				</div>
+
 			</div>
 
-			<p id="spam-msg"></p>
+			<div id="push"></div>
 
-			<div id="social">
-				<ul id="social-links"></ul>
+		</div>
+
+		<!-- footer -->
+		<div id="footer">
+		 	<div class="container">
+				<p id="copyright"></p>
 			</div>
 		</div>
 
