@@ -35,6 +35,8 @@
   [:#app-summary] (html-content (landing-page :app-summary))
   [:#instructions] (set-attr :style (str "color:" (landing-page :instructions-color) ";"))
   [:#instructions] (html-content (landing-page :instructions))
+  [:#thank-you] (set-attr :style (str "color:" (landing-page :thank-you-color) ";"))
+  [:#thank-you] (html-content (landing-page :thank-you))
   [:#email] (set-attr :placeholder (landing-page :placeholder))
   [:#referrer] (set-attr :value referrer)
   [:#submit] (add-class (landing-page :sign-up-btn-class))
