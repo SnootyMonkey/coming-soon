@@ -23,4 +23,4 @@
   (:require [clojure.browser.repl :as repl]))
 
 ;; Comment in to connect to the browser REPL
-(repl/connect "http://localhost:9000/repl")
+;(repl/connect "http://localhost:9000/repl")
