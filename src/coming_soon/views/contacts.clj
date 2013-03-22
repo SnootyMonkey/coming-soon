@@ -11,6 +11,12 @@
       (str "<li><a class='social-link' href='" url "'><i class='icon-" icon-name " icon-large'></i></a></li>")
       "")))
 
+(defn signup-button-icon []
+  (let [signup-btn-icon-class (landing-page :signup-btn-icon)]
+    (if-not (blank? signup-btn-icon-class)
+      (str "<i id='submit-icon' class='" signup-btn-icon-class "''></i> ")
+      "")))
+
 (deftemplate home-page "coming_soon/templates/home.html" [referrer]
   ;; head
   [:title] (content (landing-page :page-title))
@@ -39,8 +45,8 @@
   [:#thank-you] (html-content (landing-page :thank-you))
   [:#email] (set-attr :placeholder (landing-page :placeholder))
   [:#referrer] (set-attr :value referrer)
-  [:#submit] (add-class (landing-page :sign-up-btn-class))
-  [:#submit] (html-content (landing-page :sign-up-btn))
+  [:#submit] (add-class (landing-page :signup-btn-class))  
+  [:#submit] (html-content (str (signup-button-icon) (landing-page :sign-up-btn)))
   [:#spam-msg] (set-attr :style (str "color:" (landing-page :spam-msg-color) ";"))
   [:#spam-msg] (html-content (landing-page :spam-msg))
   [:#social-links] (html-content (apply str (map linked-icon

@@ -17,7 +17,7 @@
 ;;
 ;; If you get 2, you're all set!
 ;;
-;; To do anything useful, the next thing you probably want to do is (in-ns coming-soon) to switch to coming-soon's client-side namespace.
+;; To do anything useful, the next thing you probably want to do is (in-ns 'coming-soon) to switch to coming-soon's client-side namespace.
 
 (ns connect
   (:require [clojure.browser.repl :as repl]))

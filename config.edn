@@ -34,12 +34,15 @@
 		:app-tagline-color "#000" ; black
 		:app-summary-color "#000" ; black
 		:instructions-color "#000" ; black
-		:sign-up-btn-class "btn-success" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
 		:spam-msg-color "#646464" ; dark grey
 		:thank-you-color "#63A687" ; greenish
 		:copyright-color "#646464" ; dark grey
 		:social-color "#646464" ; dark grey
 		:social-hover-color "#63A687" ; greenish
+
+		;; signup button
+		:signup-btn-icon "icon-envelope-alt" ; see http://fortawesome.github.com/Font-Awesome/ OK to be blank
+		:signup-btn-class "btn-success" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
 
 		;; social stuff
 		:twitter-url "http://twitter.com/snootymonkey" ; OK to be blank
