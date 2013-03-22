@@ -3,21 +3,21 @@
   { 
     :admin-user "admin"
     :admin-password "change_me!"
-    :instance-prefix "coming-soon" ; make this unique if you are sharing a redis instance w/ another coming-soon instance
+    :instance-prefix "ferret" ; make this unique if you are sharing a redis instance w/ another coming-soon instance
   }
   :landing-page
   { 
     ;; copy
-    :page-title "Silver Bullet | Launching soon!"
-    :app-title "Silver Bullet"
-    :app-tagline "Clojure powered bad-assery!"
-    :app-summary "With Silver Bullet, all your problems are gone. Silver Bullet smacks your problems around a bit, and then sends them packing. You want it. You need it."  ; OK to be blank
+    :page-title "IdeaFerret | Launching soon!"
+    :app-title "IdeaFerret"
+    :app-tagline "Find Your Best Idea"
+    :app-summary "Uqiquitous Idea Capture + Rigorous and Systematic Evaluation = Your Best Idea"  ; OK to be blank
     :instructions "We'll notify you when it's ready."
     :placeholder "Email Address*" ; OK to be blank
     :sign-up-btn "Sign up"
     :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
     :thank-you "Thank you! We'll be in touch soon."
-    :copyright "&copy; 2013 Clojurific Studios" ; OK to be blank
+    :copyright "&copy; 2013 Snooty Monkey LLC" ; OK to be blank
 
     ;; fonts
     ;; see font advice at http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
@@ -45,9 +45,9 @@
     :signup-btn-class "btn-success" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
 
     ;; social stuff
-    :twitter-url "http://twitter.com/snootymonkey" ; OK to be blank
-    :facebook-url "https://www.facebook.com/bubbletimer" ; OK to be blank
-    :github-url "https://github.com/SnootyMonkey"
+    :twitter-url "http://twitter.com/ideaferret" ; OK to be blank
+    :facebook-url "" ; OK to be blank
+    :github-url ""
     :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
     :blog-feed "" ; OK to be blank
 
