@@ -30,7 +30,6 @@
     ;; images
     :logo "" ; OK to be blank
     :bg-images ["/img/falklands.jpg"] ; example - ["/img/bg1.jpg"]  example slideshow - ["/img/bg1.jpg" "/img/bg2.jpg"]
-    :background-rotation 4 ; seconds, only used if multiple background images are provided
 
     ;; colors
     :bg-color "#675031" ; brown

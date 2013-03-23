@@ -30,7 +30,6 @@
     ;; images
     :logo "/img/logo.png" ; OK to be blank
     :background-images [] ; example - ["/img/bg1.jpg"]  example slideshow - ["/img/bg1.jpg" "/img/bg2.jpg"]
-    :background-rotation 4 ; seconds, only used if multiple background images are provided
 
     ;; colors
     :bg-color "#403727" ; brown
