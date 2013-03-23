@@ -6,7 +6,7 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 **coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minute to setup. With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
 
-![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
+![Silver Bullet Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
 Fantastic Features:
 
@@ -18,13 +18,20 @@ Fantastic Features:
 * Twitter, Facebook, GitHub and blog links are supported as a setting in the config file
 * Go beyond the config file and change all the HTML and CSS to put whatever you'd like on the page
 * The CSS is Twitter Bootstrap
+* All the third-party resources are hosted on a (CDN)[http://en.wikipedia.org/wiki/Content_delivery_network]
 * There's no code that's not Clojure or ClojureScript, so... there's that
 	
-The above landing page and the following landing pages were configured using just the configuration file with no coding.
+The above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
 
-![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/silver_bullet/config.edn) for the first example.)
 
-![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
+![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)
+
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/falklandsophile/config.edn) for the above example.)
+
+![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
+
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the above example.)
 
 coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
 
