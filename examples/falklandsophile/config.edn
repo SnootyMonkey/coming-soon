@@ -10,9 +10,9 @@
     ;; copy
     :page-title "Falklandsophile | Launching soon!"
     :app-title "Falklandsophile"
-    :app-tagline "The Complete Guide to Falkland Islands Resources"
+    :app-tagline "The Complete Guide to<br>Falkland Islands Resources"
     :app-summary "" ; OK to be blank
-    :instructions "Give us an email, and we'll let you know when it's ready."
+    :instructions "Give us your email, and we'll let you know when it's ready."
     :placeholder "Email Address*" ; OK to be blank
     :sign-up-btn "Sign up"
     :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
@@ -22,32 +22,37 @@
     ;; fonts
     ;; see font advice at http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
     ;; see http://code.google.com/webfonts for available fonts
-    :app-title-font "Droid Sans" ; Google web font
-    :app-title-backup-fonts "Arial,Helvetica,sans-serif" ; Web-safe fonts
-    :body-font "Droid Serif" ; Google web font
-    :body-backup-fonts "Georgia,serif" ; Web-safe fonts
+    :app-title-font "Dancing Script" ; Google web font
+    :app-title-backup-fonts "Georgia, Times, serif" ; Web-safe fonts
+    :body-font "Josefin Sans" ; Google web font
+    :body-backup-fonts "Helvetica, Arial, sans-serif" ; Web-safe fonts
+
+    ;; images
+    :logo "" ; OK to be blank
+    :bg-images ["/img/falklands.jpg"] ; example - ["/img/bg1.jpg"]  example slideshow - ["/img/bg1.jpg" "/img/bg2.jpg"]
+    :background-rotation 4 ; seconds, only used if multiple background images are provided
 
     ;; colors
-    :bg-color "#403727" ; brown
-    :container-bg-color "#EEE" ; light grey
-    :app-title-color "#63A687" ; greenish
-    :app-tagline-color "#000" ; black
-    :app-summary-color "#000" ; black
-    :instructions-color "#000" ; black
+    :bg-color "#675031" ; brown
+    :container-bg-color "#EAFCFE" ; light green
+    :app-title-color "#462A1C" ; dark brown
+    :app-tagline-color "#462A1C" ; dark brown
+    :app-summary-color "#462A1C" ; dark brown
+    :instructions-color "#462A1C" ; dark brown
     :spam-msg-color "#646464" ; dark grey
     :thank-you-color "#63A687" ; greenish
-    :copyright-color "#646464" ; dark grey
-    :social-color "#646464" ; dark grey
-    :social-hover-color "#63A687" ; greenish
+    :copyright-color "#EAFCFE" ; light green
+    :social-color "#96bfdb" ; sky blue
+    :social-hover-color "#462a1c" ; dark brown
 
     ;; signup button
     :signup-btn-icon "icon-envelope-alt" ; see http://fortawesome.github.com/Font-Awesome/ OK to be blank
-    :signup-btn-class "btn-success" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
+    :signup-btn-class "btn-info" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
 
     ;; social stuff
     :twitter-url "" ; OK to be blank
     :facebook-url "" ; OK to be blank
-    :github-url "https://github.com/SnootyMonkey/Falkland-CMS"
+    :github-url "" ; OK to be blank
     :blog-url "" ; OK to be blank
     :blog-feed "" ; OK to be blank
 

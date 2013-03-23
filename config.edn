@@ -27,6 +27,11 @@
     :body-font "Droid Serif" ; Google web font
     :body-backup-fonts "Georgia,serif" ; Web-safe fonts
 
+    ;; images
+    :logo "/img/logo.png" ; OK to be blank
+    :background-images [] ; example - ["/img/bg1.jpg"]  example slideshow - ["/img/bg1.jpg" "/img/bg2.jpg"]
+    :background-rotation 4 ; seconds, only used if multiple background images are provided
+
     ;; colors
     :bg-color "#403727" ; brown
     :container-bg-color "#EEE" ; light grey
@@ -47,7 +52,7 @@
     ;; social stuff
     :twitter-url "http://twitter.com/snootymonkey" ; OK to be blank
     :facebook-url "https://www.facebook.com/bubbletimer" ; OK to be blank
-    :github-url "https://github.com/SnootyMonkey"
+    :github-url "https://github.com/SnootyMonkey" ; OK to be blank
     :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
     :blog-feed "" ; OK to be blank
 

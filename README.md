@@ -8,7 +8,11 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 ![Silver Bullet Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
-Fantastic Features:
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/silver_bullet/config.edn) for the Silver Bullet example.)
+
+## What can it do?
+
+Some of the Fantastic Features:
 
 * Captures: email, when they signed up, and what website they came from
 * All the text on the landing page can be configured in a simple config file
@@ -18,20 +22,18 @@ Fantastic Features:
 * Twitter, Facebook, GitHub and blog links are supported as a setting in the config file
 * Go beyond the config file and change all the HTML and CSS to put whatever you'd like on the page
 * The CSS is Twitter Bootstrap
-* All the third-party resources are hosted on a (CDN)[http://en.wikipedia.org/wiki/Content_delivery_network]
+* All the third-party resources are hosted on a [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
 * There's no code that's not Clojure or ClojureScript, so... there's that
 	
 The above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
 
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/silver_bullet/config.edn) for the first example.)
+[![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
 
-![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)
-
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/falklandsophile/config.edn) for the above example.)
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/falklandsophile/config.edn) for the Falklandsophile example.)
 
 ![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the above example.)
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the IdeaFerret example.)
 
 coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
 

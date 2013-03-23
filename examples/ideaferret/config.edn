@@ -12,7 +12,7 @@
     :app-title "IdeaFerret"
     :app-tagline "Find Your Best Idea"
     :app-summary "Uqiquitous Idea Capture + Rigorous and Systematic Evaluation = Your Best Idea"  ; OK to be blank
-    :instructions "We'll notify you when it's ready."
+    :instructions "Here's an idea! We can notify you when it's ready."
     :placeholder "Email Address*" ; OK to be blank
     :sign-up-btn "Sign up"
     :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
@@ -26,6 +26,11 @@
     :app-title-backup-fonts "Arial,Helvetica,sans-serif" ; Web-safe fonts
     :body-font "Droid Serif" ; Google web font
     :body-backup-fonts "Georgia,serif" ; Web-safe fonts
+
+    ;; images
+    :logo "" ; OK to be blank
+    :bg-images [] ; example - ["/img/bg1.jpg"]  example slideshow - ["/img/bg1.jpg" "/img/bg2.jpg"]
+    :background-rotation 4 ; seconds, only used if multiple background images are provided
 
     ;; colors
     :bg-color "#403727" ; brown
@@ -47,7 +52,7 @@
     ;; social stuff
     :twitter-url "http://twitter.com/ideaferret" ; OK to be blank
     :facebook-url "" ; OK to be blank
-    :github-url ""
+    :github-url "" ; OK to be blank
     :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
     :blog-feed "" ; OK to be blank
 

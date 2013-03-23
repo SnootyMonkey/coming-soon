@@ -20,18 +20,22 @@
 		<link rel="stylesheet" href="css/coming-soon.css" type="text/css" media="screen">
 
 		<!-- CSS styles from the configuration file -->
-		<style id="social-link-style" type="text/css" media="screen"></style>
+		<style id="configured-styles" type="text/css" media="screen"></style>
 
 		<!-- Custom CSS overrides -->
 		<link rel="stylesheet" href="css/custom.css" type="text/css" media="screen">
 	</head>
 	<body>
 
+		<!-- container for data on the background image(s) -->
+		<div id="bg-image"></div>
+
+		<!-- content -->
 		<div id="wrap">
 		  
 			<div id="main-container" class="container">
 		
-				<h1><img class="logo" src="img/logo.png" alt="Logo"><span id="app-title"></span></h1>
+				<h1><img class="logo" class="logo" alt="Logo"><span id="app-title"></span></h1>
 			
 				<h2><span id="app-tagline"></span></h2>
 			
@@ -68,7 +72,9 @@
 		</div>
 
 		<!-- jQuery -->
-		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- jQuery Backstretch - you can comment this out if you aren't using a background image -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.3/jquery.backstretch.min.js"></script>
 		<!-- cljsbuild generated js file -->
 		<script src="js/coming_soon.js"></script>
 	</body>
