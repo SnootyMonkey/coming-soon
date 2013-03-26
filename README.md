@@ -10,7 +10,21 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 (Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/silver_bullet/config.edn) for the Silver Bullet example.)
 
-## What can it do?
+coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
+
+## Why use coming-soon?
+
+The above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
+
+[![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
+
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/falklandsophile/config.edn) for the Falklandsophile example.)
+
+![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
+
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the IdeaFerret example.)
+
+## What can coming-soon do?
 
 Some of the Fantastic Features:
 
@@ -25,23 +39,11 @@ Some of the Fantastic Features:
 * All the third-party resources are hosted on a [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
 * There's no code that's not Clojure or ClojureScript, so... there's that
 	
-The above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
-
-[![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
-
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/falklandsophile/config.edn) for the Falklandsophile example.)
-
-![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
-
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the IdeaFerret example.)
-
-coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
-
 ## What do I need to use it?
 
 coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
-## Quick Start - 10 Steps to Heroku
+## Quick Start - 10 Minutes to Heroku
 
 1. Make sure you have the Heroku pre-reqs: [http://devcenter.heroku.com/articles/quickstart#prerequisites]()
 
