@@ -12,18 +12,6 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
 
-## Why use coming-soon?
-
-The above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
-
-[![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
-
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/falklandsophile/config.edn) for the Falklandsophile example.)
-
-![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
-
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the IdeaFerret example.)
-
 ## What can coming-soon do?
 
 Some of the Fantastic Features:
@@ -38,6 +26,41 @@ Some of the Fantastic Features:
 * The CSS is Twitter Bootstrap
 * All the third-party resources are hosted on a [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
 * There's no code that's not Clojure or ClojureScript, so... there's that
+
+## Why use coming-soon?
+
+It's very simple and very free (as in, there is no cost). Edit the config file. Deploy to Heroku. Then get on with building your app. It's probably even faster than using a lot of the software as a service options.
+
+As an example, the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
+
+[![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
+
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/falklandsophile/config.edn) for the Falklandsophile example.)
+
+![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
+
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the IdeaFerret example.)
+
+It's also very free (as in, free to do whatever you like with it), so if it only does 80% of what you want, and you prefer to do the other 20% in Clojure/ClojureScript, it's probably for you. 
+
+Or if you want to go nuts on the templates and build some truly custom HTML and CSS for your landing page, then you have that option. You aren't locked into off-the-shelf templates or WYSIWYG editors or limited customization options like you are with many of the software as a service landing pages.
+
+## Why NOT to use coming-soon?
+
+Can you answer the question, "Why do you want to host your own lander (even if Heroku is doing it for you) with open source software rather than use a service?"
+
+If you don't have a great answer, there are LOTS of fully hosted alternatives for landing pages, it's a crowded space for these services, and there is likely a better option for you in this list:
+
+* [Launch Rock](http://launchrock.co/) - the granddaddy of launch page services, tries to get users to share
+* [Unbounce](http://unbounce.com) - lots of templates, A/B testing, drag n' drop WYSIWYG, on the expensive side
+* [Strikingly](https://www.strikingly.com/) - for small general websites, but has email capture
+* [Kickofflabs](http://www.kickofflabs.com/) - fairly comprehensive, widgets for external integrations, email campaigns
+* [My Beta List](http://my.betali.st/) - also focused on user sharing
+* [Launch Effect](http://launcheffectapp.com/) - Wordpress theme
+* [Prefinery](http://www.prefinery.com/) - fairly comprehensive beta management, invite codes, viral sharing, feedback and surveys
+* [ooomf](http://ooomf.com) - for mobile apps
+* [LaunchGator](http://launch.deskgator.com/)
+* [Mailchimp](http://mailchimp.com) - you probably think of them as the email list back end only, but they can serve up the email capture page too
 	
 ## What do I need to use it?
 
@@ -99,6 +122,8 @@ coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you upda
 You can modify any of the HTML, CSS and images to customize your page. Just remember, you need to push any changes to Heroku so your live page will be updated.
 
 (todo list and explain HTML and CSS)
+
+(todo list all the significant IDs and classes in the HTML)
 
 ## It works well, but I want it to make my coffee too
 
