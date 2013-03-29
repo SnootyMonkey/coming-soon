@@ -2,7 +2,7 @@
   (:use [clojure.string :only (blank?)]
         [net.cgrand.enlive-html]
         [coming-soon.config :only (landing-page)]
-        [tinter.core :only (hex-str-to-dec)]))
+        [coming-soon.helpers.colors :only (rgb-color rgba-color)]))
 
 (def google-font-url "http://fonts.googleapis.com/css?family=")
 
@@ -23,14 +23,6 @@
     (if-not (blank? image-url)
       (str "$.backstretch('" image-url "');")
       "")))
-
-(defn rgb-color [hex-color]
-    (let [color (last (clojure.string/split hex-color #"#"))]
-      (str "rgb(" (clojure.string/join "," (hex-str-to-dec color)) ")")))
-
-(defn rgba-color [hex-color alpha]
-    (let [color (last (clojure.string/split hex-color #"#"))]
-      (str "rgba(" (clojure.string/join "," (hex-str-to-dec color)) "," alpha ")")))
 
 (deftemplate home-page "coming_soon/templates/home.html" [referrer]
   ;; head
