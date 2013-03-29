@@ -29,11 +29,12 @@
 
     ;; images
     :logo "" ; OK to be blank
-    :bg-images ["/img/falklands.jpg"] ; example - ["/img/bg1.jpg"]  example slideshow - ["/img/bg1.jpg" "/img/bg2.jpg"]
+    :background-image "/img/falklands.jpg" ; OK to be blank
 
     ;; colors
-    :bg-color "#675031" ; brown
+    :background-color "#675031" ; brown
     :container-bg-color "#EAFCFE" ; light green
+    :container-opacity "0.9" ; 1 for solid, 0 for no container, 0.x for some transparency
     :app-title-color "#462A1C" ; dark brown
     :app-tagline-color "#462A1C" ; dark brown
     :app-summary-color "#462A1C" ; dark brown

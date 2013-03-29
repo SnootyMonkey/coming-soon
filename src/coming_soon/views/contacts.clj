@@ -1,7 +1,8 @@
 (ns coming-soon.views.contacts
   (:use [clojure.string :only (blank?)]
         [net.cgrand.enlive-html]
-        [coming-soon.config :only (landing-page)]))
+        [coming-soon.config :only (landing-page)]
+        [tinter.core :only (hex-str-to-dec)]))
 
 (def google-font-url "http://fonts.googleapis.com/css?family=")
 
@@ -17,15 +18,30 @@
       (str "<i id='submit-icon' class='" signup-btn-icon-class "''></i> ")
       "")))
 
+(defn background-image []
+  (let [image-url (landing-page :background-image)]
+    (if-not (blank? image-url)
+      (str "$.backstretch('" image-url "');")
+      "")))
+
+(defn rgb-color [hex-color]
+    (let [color (last (clojure.string/split hex-color #"#"))]
+      (str "rgb(" (clojure.string/join "," (hex-str-to-dec color)) ")")))
+
+(defn rgba-color [hex-color alpha]
+    (let [color (last (clojure.string/split hex-color #"#"))]
+      (str "rgba(" (clojure.string/join "," (hex-str-to-dec color)) "," alpha ")")))
+
 (deftemplate home-page "coming_soon/templates/home.html" [referrer]
   ;; head
   [:title] (content (landing-page :page-title))
   [:#google-title-font] (set-attr :href (str google-font-url (landing-page :app-title-font)))
   [:#google-body-font] (set-attr :href (str google-font-url (landing-page :body-font)))
   [:#configured-styles] (html-content (str 
-    "body {background-color:" (landing-page :bg-color) ";"
+    "body {background-color:" (landing-page :background-color) ";"
       "font-family:" (landing-page :body-font) "," (landing-page :body-backup-fonts) ";}"
-    "#main-container {background-color:" (landing-page :container-bg-color) ";}"
+    "#main-container {background:" (rgb-color (landing-page :container-bg-color)) ";"
+    "background:" (rgba-color (landing-page :container-bg-color) (landing-page :container-opacity)) ";}"
     "img.logo {display:" (if (blank? (landing-page :logo)) "none" "inline") ";}"
     "#app-title {color:" (landing-page :app-title-color) ";"
       "font-family:" (landing-page :app-title-font) "," (landing-page :app-title-backup-fonts) ";}"
@@ -37,6 +53,9 @@
     "a.social-link {color:" (landing-page :social-color) ";}"
     "a.social-link:hover {color:" (landing-page :social-hover-color) ";}"
     "#copyright {color:" (landing-page :copyright-color) ";}"))
+
+  ;; body
+  [:#backstretch] (html-content (background-image))
 
   ;; container
   [:img.logo] (set-attr :src (landing-page :logo))

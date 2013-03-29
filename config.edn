@@ -29,11 +29,12 @@
 
     ;; images
     :logo "/img/logo.png" ; OK to be blank
-    :background-images [] ; example - ["/img/bg1.jpg"]  example slideshow - ["/img/bg1.jpg" "/img/bg2.jpg"]
+    :background-image "" ; OK to be blank
 
     ;; colors
-    :bg-color "#403727" ; brown
+    :background-color "#403727" ; brown
     :container-bg-color "#EEE" ; light grey
+    :container-opacity "1" ; 1 for solid, 0 for no container, 0.x for some transparency
     :app-title-color "#63A687" ; greenish
     :app-tagline-color "#000" ; black
     :app-summary-color "#000" ; black
