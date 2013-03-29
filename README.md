@@ -1,8 +1,10 @@
-# coming-soon
+coming-soon
+===========
 
 A simple landing page email collector, but with 90% more parentheses than the leading brand.
 
-## What is coming-soon?
+What is coming-soon?
+--------------------
 
 **coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minute to setup. With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
 
@@ -12,7 +14,8 @@ A simple landing page email collector, but with 90% more parentheses than the le
 
 coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
 
-## What can coming-soon do?
+What can coming-soon do?
+------------------------
 
 Some of the Fantastic Features:
 
@@ -27,9 +30,10 @@ Some of the Fantastic Features:
 * All the third-party resources are hosted on a [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
 * There's no code that's not Clojure or ClojureScript, so... there's that
 
-## Why use coming-soon?
+Why use coming-soon?
+--------------------
 
-It's very simple and very free (as in, there is no cost). Edit the config file. Deploy to Heroku for free. Then get on with building your app. It's faster than using many of the software as a service options.
+It's very simple and very free (as in, there is no cost). Edit the config file. Deploy to Heroku for free. Then get on with building your app. It's even faster than using many of the software as a service options.
 
 As an example, the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
 
@@ -45,7 +49,12 @@ It's also very free (as in, free to do whatever you like with it), so if it only
 
 Or if you want to go nuts on the templates and build some truly custom HTML and CSS for your landing page, then you have that option. You aren't locked into off-the-shelf templates or WYSIWYG editors or limited customization options like you are with many of the software as a service landing pages.
 
-## Why NOT to use coming-soon?
+Here is the same landing page with just n lines of CSS.
+
+![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
+
+Why NOT to use coming-soon?
+---------------------------
 
 Can you answer the question, "Why do you want to host your own lander (even if Heroku is doing it for you) with open source software rather than use a service?"
 
@@ -62,11 +71,13 @@ If you don't have a great answer, there are LOTS of fully hosted alternatives fo
 * [LaunchGator](http://launch.deskgator.com/)
 * [Mailchimp](http://mailchimp.com) - you probably think of them as the email list back end only, but they can serve up the email capture page too
 	
-## What do I need to use it?
+What do I need to have to use it?
+---------------------------------
 
 coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
-## Quick Start - 10 Minutes to Heroku
+Quick Start - 10 Minutes to Heroku
+----------------------------------
 
 1. Make sure you have the Heroku pre-reqs: [http://devcenter.heroku.com/articles/quickstart#prerequisites]()
 
@@ -135,10 +146,24 @@ lein ring server-headless
 lein cljsbuild once
 lein cljsbuild auto
 
-## Who made this treasure? Can I use it? Can I contribute enhancements?
+Who made this treasure? Can I use it? Can I contribute enhancements?
+--------------------------------------------------------------------
 
 coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).
 
-coming-soon is licensed with the [MIT license](https://github.com/SnootyMonkey/coming-soon/blob/master/MIT-LICENSE.txt), so you are free to use it pretty much however you'd like, in accordance with the license terms. It's not required by the license terms, but please [drop me a note](http://snootmonkey.com/contact.html) and let me know the URL of your landing page so I can take a look.
+coming-soon is licensed with the [MIT license](https://github.com/SnootyMonkey/coming-soon/blob/master/MIT-LICENSE.txt), so you are free to use it pretty much however you'd like, in accordance with the license terms.
 
-Please do fork coming-soon on GitHub if you'd like to enhance it, and send me your pull requests if you'd like to contribute back your enhancements. I promise to look at every pull request and incorporate it, or at least provide feedback on why if I won't.
+It's not required by the license terms, but please [drop me a note](http://snootmonkey.com/contact.html) and let me know the URL of your landing page so I can take a look.
+
+Please fork coming-soon on GitHub if you'd like to enhance it, and send me your pull requests if you'd like to contribute back your enhancements. I promise to look at every pull request and incorporate it, or at least provide feedback on why if I won't.
+
+Development Progress
+--------------------
+Please refer to [Milestones.md](Milestones.md) for a breakdown of development progress.
+
+Links
+-----
+* [GitHub Project](http://github.com/SnootyMonkey/coming-soon)
+* [Issue Tracker](http://github.com/SnootyMonkey/coming-soon/issues)
+* [Development Roadmap](Milestones.md)
+* [Live Demo Example]()
