@@ -1,5 +1,6 @@
 (ns coming-soon.controllers.redis
   (:use [compojure.core :only (defroutes GET)])
+  (use [coming-soon.lib.redis :only (redis-pool redis-server-spec)])
   (:require [taoensso.carmine :as car]))
 
 (def pre "<html><head><title>Redis Test</title></head>")
@@ -16,7 +17,7 @@
 (defn redis-test []
   (try
     (let [response
-      (car/with-conn (car/make-conn-pool) (car/make-conn-spec) (car/ping))]
+      (car/with-conn redis-pool redis-server-spec (car/ping))]
       (if (= response "PONG")
         redis-ok
         redis-borked))

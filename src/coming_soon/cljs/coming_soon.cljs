@@ -90,16 +90,10 @@
           (js/alert "Please provide a valid email address.")))))
   false) ; prevent the form from submitting on its own
 
-(defn setup-bg
-  ""
-  [])
-  ;($ :.backstretch "/img/falklands.jpg"))
-
 (defn init
   "define the function to attach validate-email to the submit event of the form"
   []
   (log "ClojureScript is working... that's good.")
-  (setup-bg)
   (bind $subscribe :submit validate-email-and-submit))
 
 ;; initialize once the HTML page has loaded

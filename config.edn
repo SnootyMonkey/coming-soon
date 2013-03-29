@@ -1,25 +1,32 @@
 {
   :coming-soon
   { 
-    :admin-user "admin"
-    :admin-password "change_me!"
-    :instance-prefix "coming-soon" ; make this unique if you are sharing a redis instance w/ another coming-soon instance
+    :admin-user "admin" ; CHANGE THIS!
+    :admin-password "change_me!" ; CHANGE THIS!
+    :instance-prefix "coming-soon" ; make this unique if you are sharing a single redis instance w/ another coming-soon instance
   }
   :redis
   {
-    ;; If you are running Redis locally on your same dev. machine or server on the default 6379 port, then leave everything commented out
-    ;;:redis-connect-URL "" ; Comment in for self-hosted redis not on port 6379 of localhost
-    ;;:redis-env-variable "MYREDIS_URL" ; Comment in for MyRedis on Heroku
-    ;;:redis-env-variable "REDISTOGO_URL" ; Comment in for Redis To Go on Heroku
-    ;;:redis-env-variable "REDISCLOUD_URL" ; Comment in for Redis Cloud on Heroku
+    ;; If you're running Redis locally on the same machine and the default 6379 port, leave everything in this section commented out
+
+    ;; HEROKU REDIS - uncomment the selected provider
+    ;; :redis-env-variable "MYREDIS_URL" ; Comment in for MyRedis on Heroku
+    ;; :redis-env-variable "REDISTOGO_URL" ; Comment in for Redis To Go on Heroku
+    ;; :redis-env-variable "REDISCLOUD_URL" ; Comment in for Redis Cloud on Heroku
+
+    ;; SELF HOSTED REDIS
+    ;; A different port on the same machine might be: redis://localhost:7000/
+    ;; Default port, but on a different server might be: redis://10.1.0.70/ 
+    ;; Local on the default port, but with authentication might be: redis://admin:supersecret@localhost/
+    ;; :redis-connect-URI "redis://user:pass@host:port/" ; Comment in for self-hosted redis that's not on port 6379 of localhost
   }
   :landing-page
   { 
-    ;; copy
+    ;; Copy
     :page-title "Silver Bullet | Launching soon!"
     :app-title "Silver Bullet"
     :app-tagline "Clojure powered bad-assery!"
-    :app-summary "With Silver Bullet, all your problems are gone. Silver Bullet smacks your problems around a bit, and then sends them packing. You want it. You need it."  ; OK to be blank
+    :app-summary "With Silver Bullet, all your problems are gone.<br>Silver Bullet smacks your problems around a bit, then sends them packing.<br>You want it. You need it."  ; OK to be blank
     :instructions "We'll notify you when it's ready."
     :placeholder "Email Address*" ; OK to be blank
     :sign-up-btn "Sign up"
@@ -27,24 +34,24 @@
     :thank-you "Thank you! We'll be in touch soon."
     :copyright "&copy; 2013 Clojurific Studios" ; OK to be blank
 
-    ;; fonts
-    ;;
+    ;; Fonts
+
     ;; see font advice at:
     ;; http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
     ;; http://designshack.net/articles/typography/10-more-great-google-font-combinations-you-can-copy/
     ;; http://www.insquaremedia.com/blog/15-web-design-stuff/50-our-favourite-google-font-combinations
-    ;;
+    
     ;; see http://code.google.com/webfonts for available fonts
     :app-title-font "Droid Sans" ; Google web font
     :app-title-backup-fonts "Arial,Helvetica,sans-serif" ; Web-safe fonts
     :body-font "Droid Serif" ; Google web font
     :body-backup-fonts "Georgia,serif" ; Web-safe fonts
 
-    ;; images
+    ;; Images
     :logo "/img/logo.png" ; OK to be blank
     :background-image "" ; OK to be blank
 
-    ;; colors
+    ;; Colors
     :background-color "#403727" ; brown
     :container-bg-color "#EEE" ; light grey
     :container-opacity "1" ; 1 for solid, 0 for no container, 0.x for some transparency
@@ -58,18 +65,18 @@
     :social-color "#646464" ; dark grey
     :social-hover-color "#63A687" ; greenish
 
-    ;; signup button
+    ;; Signup button
     :signup-btn-icon "icon-envelope-alt" ; see http://fortawesome.github.com/Font-Awesome/ OK to be blank
     :signup-btn-class "btn-success" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
 
-    ;; social stuff
+    ;; Social stuff
     :twitter-url "http://twitter.com/snootymonkey" ; OK to be blank
     :facebook-url "https://www.facebook.com/bubbletimer" ; OK to be blank
     :github-url "https://github.com/SnootyMonkey" ; OK to be blank
     :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
     :blog-feed "" ; OK to be blank
 
-    ;; analytics
+    ;; Analytics
     :google-analytics-key "" ; OK to be blank
   }
 }

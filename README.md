@@ -95,7 +95,9 @@ cd coming-soon
 
 3) Open the file called **config.edn** in a text editor. You should see a **:coming-soon** block where you can enter admin access details, and a **:landing-page** block where you can configure the appearance of the landing page (your site's name, app summary, colors, background, etc).
 
-The **:coming-soon** block is where you set the admin username and password for accessing your stored contacts -- **PLEASE CHANGE THIS!**
+The **:coming-soon** block is where you set the admin username and password for accessing your stored contacts.
+
+	**-- PLEASE CHANGE YOUR USERNAME AND PASSWORD! --**
 
 You can set your Google Analytics tracking id in the **:google-analytics-key** setting of the **:landing-page** block if you have a Google Analytics account you'd like to use.
 
@@ -213,7 +215,7 @@ Other Frequently Asked Questions
 --------------------------------
 
 **Q:** Why is it so slow to load the landing page sometimes?  
-**A:** Unless you are paying Heroku to host at least 2 dynos for you, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky sole to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
+**A:** Unless you are paying Heroku to host at least 2 dynos, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky sole to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
 
 **Q:** Who made this treasure?  
 **A:** coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).

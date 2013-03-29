@@ -1,21 +1,16 @@
 (ns coming-soon.models.contact
-  (require [taoensso.carmine :as car]
-           [coming-soon.config :as config])
+  (require [taoensso.carmine :as car])
+  (use [coming-soon.lib.redis :only (prefix with-car)])
   (import java.text.SimpleDateFormat
           java.util.Calendar))
 
-;; A Redis connection with Carmine
-(def redis-pool (car/make-conn-pool))
-(def redis-server-spec (car/make-conn-spec))
-(defmacro with-car [& body] `(car/with-conn redis-pool redis-server-spec ~@body))
-
 ;; Redis "schema"
 ;; <prefix>:coming-soon-id - increment counter
-(def coming-soon-id (str (config/coming-soon :instance-prefix) ":coming-soon-id")) 
+(def coming-soon-id (str prefix ":coming-soon-id")) 
 ;; <prefix>:coming-soon-contacts - contact hash by counter id key
-(def coming-soon-contacts (str (config/coming-soon :instance-prefix) ":coming-soon-contacts"))
+(def coming-soon-contacts (str prefix ":coming-soon-contacts"))
 ;; <prefix>:coming-soon-emails - id hashed by email key
-(def coming-soon-emails (str (config/coming-soon :instance-prefix) ":coming-soon-emails"))
+(def coming-soon-emails (str prefix ":coming-soon-emails"))
 
 (defn exists-by-email?
   "Determine if a contact with the specified email address has been collected."

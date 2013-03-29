@@ -1,13 +1,28 @@
 {
   :coming-soon
   { 
-    :admin-user "admin"
-    :admin-password "change_me!"
-    :instance-prefix "falklands" ; make this unique if you are sharing a redis instance w/ another coming-soon instance
+    :admin-user "admin" ; CHANGE THIS!
+    :admin-password "change_me!" ; CHANGE THIS!
+    :instance-prefix "falklands" ; make this unique if you are sharing a single redis instance w/ another coming-soon instance
+  }
+  :redis
+  {
+    ;; If you're running Redis locally on the same machine and the default 6379 port, leave everything in this section commented out
+
+    ;; HEROKU REDIS - uncomment the selected provider
+    ;; :redis-env-variable "MYREDIS_URL" ; Comment in for MyRedis on Heroku
+    ;; :redis-env-variable "REDISTOGO_URL" ; Comment in for Redis To Go on Heroku
+    ;; :redis-env-variable "REDISCLOUD_URL" ; Comment in for Redis Cloud on Heroku
+
+    ;; SELF HOSTED REDIS
+    ;; A different port on the same machine might be: redis://localhost:7000/
+    ;; Default port, but on a different server might be: redis://10.1.0.70/ 
+    ;; Local on the default port, but with authentication might be: redis://admin:supersecret@localhost/
+    ;; :redis-connect-URL "redis://user:pass@host:port/" ; Comment in for self-hosted redis that's not on port 6379 of localhost
   }
   :landing-page
   { 
-    ;; copy
+    ;; Copy
     :page-title "Falklandsophile | Launching soon!"
     :app-title "Falklandsophile"
     :app-tagline "The Complete Guide to<br>Falkland Islands Resources"
@@ -19,24 +34,24 @@
     :thank-you "Thank you! We'll be in touch soon."
     :copyright "&copy; 2013 Snooty Monkey, LLC" ; OK to be blank
 
-    ;; fonts
-    ;;
+    ;; Fonts
+
     ;; see font advice at:
     ;; http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
     ;; http://designshack.net/articles/typography/10-more-great-google-font-combinations-you-can-copy/
     ;; http://www.insquaremedia.com/blog/15-web-design-stuff/50-our-favourite-google-font-combinations
-    ;;
+
     ;; see http://code.google.com/webfonts for available fonts
     :app-title-font "Dancing Script" ; Google web font
     :app-title-backup-fonts "Georgia, Times, serif" ; Web-safe fonts
     :body-font "Josefin Sans" ; Google web font
     :body-backup-fonts "Helvetica, Arial, sans-serif" ; Web-safe fonts
 
-    ;; images
+    ;; Images
     :logo "" ; OK to be blank
     :background-image "/img/falklands.jpg" ; OK to be blank
 
-    ;; colors
+    ;; Colors
     :background-color "#675031" ; brown
     :container-bg-color "#EAFCFE" ; light green
     :container-opacity "0.9" ; 1 for solid, 0 for no container, 0.x for some transparency
@@ -50,18 +65,18 @@
     :social-color "#96bfdb" ; sky blue
     :social-hover-color "#462a1c" ; dark brown
 
-    ;; signup button
+    ;; Signup button
     :signup-btn-icon "icon-envelope-alt" ; see http://fortawesome.github.com/Font-Awesome/ OK to be blank
     :signup-btn-class "btn-info" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
 
-    ;; social stuff
+    ;; Social stuff
     :twitter-url "" ; OK to be blank
     :facebook-url "" ; OK to be blank
     :github-url "" ; OK to be blank
     :blog-url "" ; OK to be blank
     :blog-feed "" ; OK to be blank
 
-    ;; analytics
+    ;; Analytics
     :google-analytics-key "" ; OK to be blank
   }
 }
