@@ -107,7 +107,7 @@ cd coming-soon
 git init
 git add .
 git commit -m "Setting up my landing page."
-```console
+```
 
 1. Now create your Heroku app by running from your project folder:
 
