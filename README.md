@@ -93,15 +93,15 @@ unzip coming-soon
 cd coming-soon
 ```
 
-3) Open the file called 'config.edn' in a text editor. You should see a 'coming-soon' block where you can enter admin access details, and a 'landing-page' block where you can configure the appearance of the landing page (your site's name, a summary, colors, background, etc).
+3) Open the file called **config.edn** in a text editor. You should see a **:coming-soon** block where you can enter admin access details, and a **:landing-page** block where you can configure the appearance of the landing page (your site's name, app summary, colors, background, etc).
 
-The 'coming-soon' block is where you set the admin username and password for accessing your stored contacts -- **PLEASE CHANGE THIS!**
+The **:coming-soon** block is where you set the admin username and password for accessing your stored contacts -- **PLEASE CHANGE THIS!**
 
-You can set your Google Analytics tracking id in the 'landing-page' block if you have an account.
+You can set your Google Analytics tracking id in the **:google-analytics-key** setting of the **:landing-page** block if you have a Google Analytics account you'd like to use.
 
-Replace the logo file resources/public/img/logo.png with your own logo or edit the config file to include an empty string "" rather than "/img/logo.png".
+Replace the logo file **resources/public/img/logo.png** with your own logo, or edit the config file to include an empty string **""** rather than **"/img/logo.png"** for the **:logo** setting.
 
-4) Once you have edited 'config.edn' to add your app's settings, run the following commands in your coming-soon folder to create a [git](http://git-scm.com/) repository out of your files:
+4) Once you have completed editing **config.edn** to add your app's settings, run the following commands in your coming-soon folder to create a [git](http://git-scm.com/) repository out of your app's files:
 
 ```console
 git init
@@ -141,20 +141,20 @@ To use [Redis Cloud](https://addons.heroku.com/rediscloud), run this command:
 heroku addons:add rediscloud:20
 ```
 
-In your text editor comment in the :redis-env-variable line in the :redis section of the 'config.edn' file that matches the Redis provider you selected. Then commit your change to git.
+In your text editor comment in the **:redis-env-variable** line in the **:redis** section of the **config.edn** file that matches the Redis provider you selected. Then commit your change to git.
 
 ```console
 git add .
 git commit -m "Selecting my Redis provider."
 ```
 
-7) Now push the code of your app up to the Heroku cloud.
+7) Push the code of your app up to the Heroku cloud.
 
 ```console
 git push heroku master
 ```
 
-8) Now test out your landing page. 
+8) Congratulations! Now test out your landing page. 
 
 Launch your app in your browser.
 
@@ -164,7 +164,7 @@ heroku open
 
 This will open a browser and you should see your landing page. Note the ugly URL Heroku created for you so you can get back to your page.
 
-Now test Redis connectivity by adding /redis-test to your browser's URL after the URL for your app on heroku
+Test Redis connectivity by adding /redis-test to your browser's URL after the URL for your app on heroku
 
 For instance, if you app is **http://your-heroku-machine-name.heroku.com/** then you should load **http://your-heroku-machine-name.heroku.com/redis-test**
 
@@ -172,7 +172,7 @@ You should see: "Connection to Redis is: OK"
 
 Go back to your landing page by removing the /redis-test from the URL and enter in your email address to signup for your own app.
 
-To view the contact information that's been entered into your landing page, navigate to **http://your-heroku-machine-name.heroku.com/contacts**.  You will need to enter the admin username and password that you setup in 'config.edn'.  
+To view the contact information that's been entered into your landing page, navigate to **http://your-heroku-machine-name.heroku.com/contacts**.  You will need to enter the admin username and password that you setup in **config.edn**.  
 
 You should see a table listing the name, type and referral URL for everyone that has signed up for your app.
 
