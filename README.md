@@ -3,8 +3,8 @@ coming-soon
 
 A simple landing page email collector, but with 90% more parentheses than the leading brand.
 
-What is coming-soon?
---------------------
+What coming-soon is
+-------------------
 
 **coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minute to setup. With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
 
@@ -14,8 +14,8 @@ What is coming-soon?
 
 coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
 
-What can coming-soon do?
-------------------------
+What coming-soon can do
+-----------------------
 
 Some of the Fantastic Features:
 
@@ -30,8 +30,8 @@ Some of the Fantastic Features:
 * All the third-party resources are hosted on a [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
 * There's no code that's not Clojure or ClojureScript, so... there's that
 
-Why use coming-soon?
---------------------
+Why you should use coming-soon
+------------------------------
 
 It's very simple and very free (as in, there is no cost). Edit the config file. Deploy to Heroku for free. Then get on with building your app. It's even faster than using many of the software as a service options.
 
@@ -53,12 +53,12 @@ Here is the same landing page with just some simple [custom CSS](https://github.
 
 [![IdeaFerret Custom Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-full.png)
 
-Why NOT to use coming-soon?
----------------------------
+Why you should NOT use coming-soon
+----------------------------------
 
-Can you answer the question, "Why do you want to host your own lander (even if Heroku is doing it for you) with open source software rather than use a service?"
+Can you answer the question, "Why do you want to host your own landing page (even if Heroku is doing the hosting for you) with open source software rather than using a landing page service?"
 
-If you don't have a great answer, there are LOTS of fully hosted alternatives for landing pages, it's a crowded space for these services, and there is likely a better option for you in this list:
+If you don't have a great answer to that question, then there are LOTS of fully hosted alternatives for landing pages, it's a crowded space for these services, and there is likely a better option for you in this list:
 
 * [Launch Rock](http://launchrock.co/) - the granddaddy of launch page services, tries to get users to share
 * [Unbounce](http://unbounce.com) - lots of templates, A/B testing, drag n' drop WYSIWYG, on the expensive side
@@ -71,8 +71,8 @@ If you don't have a great answer, there are LOTS of fully hosted alternatives fo
 * [LaunchGator](http://launch.deskgator.com/)
 * [Mailchimp](http://mailchimp.com) - you probably think of them as the email list back end only, but they can serve up the email capture page too
 	
-What do I need to have to use it?
----------------------------------
+What you need to have to use it
+-------------------------------
 
 coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
@@ -157,13 +157,8 @@ It's not required by the license terms, but please [drop me a note](http://snoot
 
 Please fork coming-soon on GitHub if you'd like to enhance it, and send me your pull requests if you'd like to contribute back your enhancements. I promise to look at every pull request and incorporate it, or at least provide feedback on why if I won't.
 
-Development Progress
---------------------
-Please refer to [Milestones.md](Milestones.md) for a breakdown of development progress.
-
 Links
 -----
 * [GitHub Project](http://github.com/SnootyMonkey/coming-soon)
 * [Issue Tracker](http://github.com/SnootyMonkey/coming-soon/issues)
-* [Development Roadmap](Milestones.md)
 * [Live Demo Example]()
