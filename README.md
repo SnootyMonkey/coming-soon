@@ -123,6 +123,12 @@ heroku create
 
 6) Attach a free redis instance to your app. As of this writing, there are 3 options for free redis on Heroku.
 
+To use [Redis Cloud](https://addons.heroku.com/rediscloud), run this command:
+
+```console
+heroku addons:add rediscloud:20
+```
+
 To use [MyRedis](https://addons.heroku.com/myredis), run this command:
 
 ```console
@@ -133,12 +139,6 @@ To use [Redis To Go](https://addons.heroku.com/redistogo), run this command:
 
 ```console
 heroku addons:add redistogo:nano
-```
-
-To use [Redis Cloud](https://addons.heroku.com/rediscloud), run this command:
-
-```console
-heroku addons:add rediscloud:20
 ```
 
 In your text editor comment in the **:redis-env-variable** line in the **:redis** section of the **config.edn** file that matches the Redis provider you selected. Then commit your change to git.
