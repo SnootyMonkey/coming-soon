@@ -5,6 +5,14 @@
     :admin-password "change_me!"
     :instance-prefix "coming-soon" ; make this unique if you are sharing a redis instance w/ another coming-soon instance
   }
+  :redis
+  {
+    ;; If you are running Redis locally on your same dev. machine or server on the default 6379 port, then leave everything commented out
+    ;;:redis-connect-URL "" ; Comment in for self-hosted redis not on port 6379 of localhost
+    ;;:redis-env-variable "MYREDIS_URL" ; Comment in for MyRedis on Heroku
+    ;;:redis-env-variable "REDISTOGO_URL" ; Comment in for Redis To Go on Heroku
+    ;;:redis-env-variable "REDISCLOUD_URL" ; Comment in for Redis Cloud on Heroku
+  }
   :landing-page
   { 
     ;; copy
