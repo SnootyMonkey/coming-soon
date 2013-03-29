@@ -6,7 +6,6 @@
 /lib
 /classes
 /checkouts
-/img/falklands.jpg
 pom.xml
 *.jar
 *.class
@@ -15,3 +14,6 @@ pom.xml
 .lein-plugins
 
 resources/public/js/coming_soon.js
+
+resources/public/img/falklands.jpg
+resources/public/img/ferret.jpg

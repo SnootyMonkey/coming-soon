@@ -20,7 +20,12 @@
     :copyright "&copy; 2013 Snooty Monkey, LLC" ; OK to be blank
 
     ;; fonts
-    ;; see font advice at http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
+    ;;
+    ;; see font advice at:
+    ;; http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
+    ;; http://designshack.net/articles/typography/10-more-great-google-font-combinations-you-can-copy/
+    ;; http://www.insquaremedia.com/blog/15-web-design-stuff/50-our-favourite-google-font-combinations
+    ;;
     ;; see http://code.google.com/webfonts for available fonts
     :app-title-font "Dancing Script" ; Google web font
     :app-title-backup-fonts "Georgia, Times, serif" ; Web-safe fonts
