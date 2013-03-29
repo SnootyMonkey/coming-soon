@@ -11,7 +11,7 @@
     :page-title "IdeaFerret | Launching soon!"
     :app-title "IdeaFerret"
     :app-tagline "Find Your Best Idea"
-    :app-summary "Uqiquitous Idea Capture + Rigorous and Systematic Evaluation = Your Best Idea"  ; OK to be blank
+    :app-summary "&nbsp;&nbsp;&nbsp;Uqiquitous Idea Capture<br>+ Rigorous and Systematic Evaluation<br>= <span class='sum'>Your Best Idea</span>"  ; OK to be blank
     :instructions "Here's an idea! We can notify you when it's ready."
     :placeholder "you@email.com" ; OK to be blank
     :sign-up-btn "Sign up"

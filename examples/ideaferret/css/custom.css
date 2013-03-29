@@ -1,0 +1,40 @@
+/* Put your customized CSS styles here */
+div#main-container {
+	margin-top: 50px;
+	padding: 0px;
+	max-width: 10000px;
+	text-align: left;}
+
+div#social {
+	float: right;
+	margin-top: -455px;
+	padding-right: 30px;
+}
+
+p#app-summary {margin: 0 0 0 0;}
+
+h3.instructions {margin-top: 50px;}
+
+input#email {
+	border: 0px solid;
+	box-shadow: none;
+	height: 60px;
+	width: 320px;
+	font-size: 1.7em;}
+
+form {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	margin: 0 0 0 0;
+	width: 470px;
+}
+
+button.btn {
+	height: 50px;
+	width: 120px;
+	font-size: 1.6em;
+}
+
+p#app-summary {font-size: 1.5em; line-height: 1.6em;}
+
+span.sum {color: #853124;}

@@ -49,9 +49,9 @@ It's also very free (as in, free to do whatever you like with it), so if it only
 
 Or if you want to go nuts on the templates and build some truly custom HTML and CSS for your landing page, then you have that option. You aren't locked into off-the-shelf templates or WYSIWYG editors or limited customization options like you are with many of the software as a service landing pages.
 
-Here is the same landing page with just n lines of CSS.
+Here is the same landing page with just some simple [custom CSS](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/css/custom.css).
 
-![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
+[![IdeaFerret Custom Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-full.png)
 
 Why NOT to use coming-soon?
 ---------------------------
