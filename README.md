@@ -86,11 +86,12 @@ Quick Start - 10 Minutes to Heroku
 
 [https://github.com/SnootyMonkey/coming-soon/archive/master.zip](https://github.com/SnootyMonkey/coming-soon/archive/master.zip)
 
-Unzip coming-soon and navigate to the directory it creates:
+Unzip coming-soon, rename it to what you'd like, and navigate to the directory:
 
 ```console
-unzip coming-soon
-cd coming-soon
+unzip coming-soon-master.zip
+mv coming-soon-master my-lander
+cd my-lander
 ```
 
 **3)** Open the file called **config.edn** in a text editor. You should see a **:coming-soon** block where you can enter admin access details, and a **:landing-page** block where you can configure the appearance of the landing page (your site's name, app summary, colors, background, etc).
