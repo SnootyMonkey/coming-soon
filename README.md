@@ -72,8 +72,8 @@ If you don't have a great answer to that question, then there are **lots** of fu
 * [LaunchGator](http://launch.deskgator.com/)
 * [Mailchimp](http://mailchimp.com) - you probably think of them as the email list back end only, but they can serve up the email capture page too
 	
-What you need to have to use it
--------------------------------
+What it takes to use it
+-----------------------
 
 coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
@@ -210,22 +210,22 @@ lein cljsbuild auto
 Other Frequently Asked Questions
 --------------------------------
 
-**Q:** Why is it so slow to load the landing page sometimes?
+**Q:** Why is it so slow to load the landing page sometimes?  
 **A:** Unless you are paying Heroku to host at least 2 dynos for you, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky sole to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
 
-**Q:** Who made this treasure?
+**Q:** Who made this treasure?  
 **A:** coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).
 
-**Q:** How can I ever repay you for creating such a treasure?
+**Q:** How can I ever repay you for creating such a treasure?  
 **A:** It's not required by the license terms, but please [drop me a note](http://snootmonkey.com/contact.html) and let me know the URL of your landing page so I can take a look.
 
-**Q:** Can I use it for X?
+**Q:** Can I use it for X?  
 **A:** coming-soon is licensed with the [MIT license](https://github.com/SnootyMonkey/coming-soon/blob/master/MIT-LICENSE.txt), so you are free to use it pretty much however you'd like, in accordance with the license terms.
  
-**Q:** Can I add X to it?
+**Q:** Can I add X to it?  
 **A:** Sure, please fork coming-soon on GitHub if you'd like to enhance it.
 
-**Q:** Can I contribute my enhancements back to the project?
+**Q:** Can I contribute my enhancements back to the project?  
 **A:** Sure, send me your pull requests if you'd like to contribute back your enhancements. I promise to look at every pull request and incorporate it, or at least provide feedback on why if I won't.
 
 Links
