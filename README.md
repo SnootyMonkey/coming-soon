@@ -80,9 +80,9 @@ coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you upda
 Quick Start - 10 Minutes to Heroku
 ----------------------------------
 
-1) Follow the [Getting Started with Heroku](https://devcenter.heroku.com/articles/quickstart) quick start steps to setup your free and instant account and the heroku toolbelt on your local machine.
+**1)** Follow the [Getting Started with Heroku](https://devcenter.heroku.com/articles/quickstart) quick start steps to setup your free and instant account and the heroku toolbelt on your local machine.
 
-2) Download coming-soon:
+**2)** Download coming-soon:
 
 [https://github.com/SnootyMonkey/coming-soon/archive/master.zip](https://github.com/SnootyMonkey/coming-soon/archive/master.zip)
 
@@ -93,7 +93,7 @@ unzip coming-soon
 cd coming-soon
 ```
 
-3) Open the file called **config.edn** in a text editor. You should see a **:coming-soon** block where you can enter admin access details, and a **:landing-page** block where you can configure the appearance of the landing page (your site's name, app summary, colors, background, etc).
+**3)** Open the file called **config.edn** in a text editor. You should see a **:coming-soon** block where you can enter admin access details, and a **:landing-page** block where you can configure the appearance of the landing page (your site's name, app summary, colors, background, etc).
 
 The **:coming-soon** block is where you set the admin username and password for accessing your stored contacts. **PLEASE CHANGE YOUR USERNAME AND PASSWORD!**
 
@@ -101,7 +101,7 @@ You can set your Google Analytics tracking id in the **:google-analytics-key** s
 
 Replace the logo file **resources/public/img/logo.png** with your own logo, or edit the config file to include an empty string **""** rather than **"/img/logo.png"** for the **:logo** setting.
 
-4) Once you have completed editing **config.edn** to add your app's settings, run the following commands in your coming-soon folder to create a [git](http://git-scm.com/) repository out of your app's files:
+**4)** Once you have completed editing **config.edn** to add your app's settings, run the following commands in your coming-soon folder to create a [git](http://git-scm.com/) repository out of your app's files:
 
 ```console
 git init
@@ -109,7 +109,7 @@ git add .
 git commit -m "Setting up my landing page."
 ```
 
-5) Now create your Heroku app by running from your project folder:
+**5)** Now create your Heroku app by running from your project folder:
 
 ```console
 heroku login
@@ -121,7 +121,7 @@ Provide the email and password you used when creating your account when prompted
 heroku create
 ```
 
-6) Attach a free redis instance to your app. As of this writing, there are 3 options for free redis on Heroku.
+**6)** Attach a free redis instance to your app. As of this writing, there are 3 options for free redis on Heroku.
 
 To use [Redis Cloud](https://addons.heroku.com/rediscloud), run this command:
 
@@ -148,13 +148,13 @@ git add .
 git commit -m "Selecting my Redis provider."
 ```
 
-7) Push the code of your app up to the Heroku cloud.
+**7)** Push the code of your app up to the Heroku cloud.
 
 ```console
 git push heroku master
 ```
 
-8) Congratulations! Now test out your landing page. 
+**8)** Congratulations! Now test out your landing page. 
 
 Launch your app in your browser.
 
@@ -178,11 +178,11 @@ You should see a table listing the name, type and referral URL for everyone that
 
 ![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin.png)
 
-9) Setup a custom domain.
+**9)** Setup a custom domain.
 
 You will probably want a custom domain rather than Heroku's default. Follow [Heroku's instructions](http://devcenter.heroku.com/articles/custom-domains) to setup your domain to point to your brand-new landing page.
 
-10) Now get back to coding your app!
+**10)** Now get back to coding your app!
 
 Guide to the configuration file
 -------------------------------
