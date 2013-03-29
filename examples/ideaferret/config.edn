@@ -17,7 +17,7 @@
     :sign-up-btn "Sign up"
     :spam-msg "" ; OK to be blank
     :thank-you "Thank you! We'll be in touch soon."
-    :copyright "&copy; 2013 Snooty Monkey LLC" ; OK to be blank
+    :copyright "" ; OK to be blank
 
     ;; fonts
     ;;
