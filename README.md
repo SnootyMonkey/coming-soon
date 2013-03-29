@@ -82,7 +82,7 @@ Quick Start - 10 Minutes to Heroku
 
 1. Follow the [Getting Started with Heroku](https://devcenter.heroku.com/articles/quickstart) quick start steps to setup your free and instant account and the heroku toolbelt on your local machine.
 
-1. Download coming-soon:
+2. Download coming-soon:
 
 	[https://github.com/SnootyMonkey/coming-soon/archive/master.zip]()
 
@@ -93,15 +93,15 @@ unzip coming-soon
 cd coming-soon
 ```
 
-1. Open the file called 'config.edn' in a text editor. You should see a 'coming-soon' block where you can enter admin access details, and a 'landing-page' block where you can configure the appearance of the landing page (your site's name, a summary, colors, background, etc).
+3. Open the file called 'config.edn' in a text editor. You should see a 'coming-soon' block where you can enter admin access details, and a 'landing-page' block where you can configure the appearance of the landing page (your site's name, a summary, colors, background, etc).
 
 	The 'coming-soon' block is where you set the admin username and password for accessing your stored contacts -- **PLEASE CHANGE THIS!**
 
 	You can set your Google Analytics tracking id in the 'landing-page' block if you have an account.
 
-1. Replace the logo file resources/public/img/logo.png with your own logo or edit the config file to include an empty string "" rather than "/img/logo.png".
+	Replace the logo file resources/public/img/logo.png with your own logo or edit the config file to include an empty string "" rather than "/img/logo.png".
 
-1. Once you have edited 'config.edn' to add your app's settings, run the following commands in your coming-soon folder to create a [git](http://git-scm.com/) repository out of your files:
+4. Once you have edited 'config.edn' to add your app's settings, run the following commands in your coming-soon folder to create a [git](http://git-scm.com/) repository out of your files:
 
 ```console
 git init
@@ -109,7 +109,7 @@ git add .
 git commit -m "Setting up my landing page."
 ```
 
-1. Now create your Heroku app by running from your project folder:
+5. Now create your Heroku app by running from your project folder:
 
 ```console
 heroku login
@@ -121,7 +121,7 @@ heroku login
 heroku create
 ```
 
-1. Attach a free redis instance to your app. As of this writing, there are 3 options for free redis on Heroku.
+6. Attach a free redis instance to your app. As of this writing, there are 3 options for free redis on Heroku.
 
 	To use [MyRedis](https://addons.heroku.com/myredis), run this command:
 
@@ -141,20 +141,22 @@ heroku addons:add redistogo:nano
 heroku addons:add rediscloud:20
 ```
 
-1. In your text editor comment in the :redis-env-variable line in the :redis section of the 'config.edn' file that matches the Redis provider you selected. Then commit your change to git.
+	In your text editor comment in the :redis-env-variable line in the :redis section of the 'config.edn' file that matches the Redis provider you selected. Then commit your change to git.
 
 ```console
 git add .
 git commit -m "Selecting my redis provider."
 ```
 
-1. Now push the code of your app up to the Heroku cloud.
+7. Now push the code of your app up to the Heroku cloud.
 
 ```console
 git push heroku master
 ```
 
-1. Launch your app in your browser.
+8. Now test out your landing page. 
+
+	Launch your app in your browser.
 
 ```console
 heroku open
@@ -162,23 +164,23 @@ heroku open
 
 	This will open a browser and you should see your landing page. Note the ugly URL Heroku created for you so you can get back to your page.
 
-1. Now test redis connectivity by adding /redis-test to your browser's URL after the URL for your app on heroku
+	Now test redis connectivity by adding /redis-test to your browser's URL after the URL for your app on heroku
 
 	For instance, if you app is **http://your-heroku-machine-name.heroku.com/** then you should load **http://your-heroku-machine-name.heroku.com/redis-test**
 
 	You should see: "Connection to Redis is: OK"
 
-1. Go back to your landing page by removing the /redis-test from the URL and enter in your email address to signup for your own app.
+	Go back to your landing page by removing the /redis-test from the URL and enter in your email address to signup for your own app.
 
-1.	To view the contact information that's been entered into your landing page, navigate to **http://your-heroku-machine-name.heroku.com/contacts**.  You will need to enter the admin username and password that you setup in 'config.edn'.  
+	To view the contact information that's been entered into your landing page, navigate to **http://your-heroku-machine-name.heroku.com/contacts**.  You will need to enter the admin username and password that you setup in 'config.edn'.  
 
 	You should see a table listing the name, type and referral URL for everyone that has signed up for your app.
 
 	![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin.png)
 
-1.  Next, you will probably want a custom domain rather than Heroku's default. Follow [Heroku's instructions](http://devcenter.heroku.com/articles/custom-domains) to setup your domain to point to your brand-new landing page.
+9.  Next, you will probably want a custom domain rather than Heroku's default. Follow [Heroku's instructions](http://devcenter.heroku.com/articles/custom-domains) to setup your domain to point to your brand-new landing page.
 
-1. Now get back to coding your app!
+10. Now get back to coding your app!
 
 Guide to the configuration file
 -------------------------------
