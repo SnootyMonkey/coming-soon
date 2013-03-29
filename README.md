@@ -84,7 +84,7 @@ Quick Start - 10 Minutes to Heroku
 
 2) Download coming-soon:
 
-	[https://github.com/SnootyMonkey/coming-soon/archive/master.zip]()
+	[https://github.com/SnootyMonkey/coming-soon/archive/master.zip](https://github.com/SnootyMonkey/coming-soon/archive/master.zip)
 
 Unzip coming-soon and navigate to the directory it creates:
 
@@ -97,7 +97,7 @@ cd coming-soon
 
 The **:coming-soon** block is where you set the admin username and password for accessing your stored contacts.
 
-	**-- PLEASE CHANGE YOUR USERNAME AND PASSWORD! --**
+**PLEASE CHANGE YOUR USERNAME AND PASSWORD!**
 
 You can set your Google Analytics tracking id in the **:google-analytics-key** setting of the **:landing-page** block if you have a Google Analytics account you'd like to use.
 
