@@ -172,7 +172,7 @@ For instance, if you app is **http://your-heroku-machine-name.heroku.com/** then
 
 You should see: "Connection to Redis is: OK"
 
-Go back to your landing page by removing the /redis-test from the URL and enter in your email address to signup for your own app.
+Go back to your landing page by removing the /redis-test from the URL and enter in your email address to test signing up for your own app.
 
 To view the contact information that's been entered into your landing page, navigate to **http://your-heroku-machine-name.heroku.com/contacts**.  You will need to enter the admin username and password that you setup in **config.edn**.  
 
