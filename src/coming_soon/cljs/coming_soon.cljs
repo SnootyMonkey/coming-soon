@@ -91,10 +91,11 @@
   false) ; prevent the form from submitting on its own
 
 (defn init
-  "define the function to attach validate-email to the submit event of the form"
+  "define the function to attach validate-email to the submit event of the form, focus on the email field"
   []
   (log "ClojureScript is working... that's good.")
-  (bind $subscribe :submit validate-email-and-submit))
+  (bind $subscribe :submit validate-email-and-submit)
+  (.focus $email))
 
 ;; initialize once the HTML page has loaded
 (document-ready init)
