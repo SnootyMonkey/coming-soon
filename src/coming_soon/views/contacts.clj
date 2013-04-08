@@ -6,6 +6,13 @@
 
 (def google-font-url "http://fonts.googleapis.com/css?family=")
 
+(defn analytics-content []
+  (let [analytics (first (html-resource "coming_soon/templates/analytics.html"))]
+    ;; strip the <html></html> tags if neccessary
+    (if (= :html (:tag analytics))
+      (:content analytics)
+      analytics)))
+
 (defn linked-icon [{:keys [link-name icon-name]}]
   (let [url (landing-page (keyword (str link-name "-url")))]
     (if-not (blank? url)
@@ -68,7 +75,13 @@
     {:link-name "blog" :icon-name "rss"}])))
 
   ;; footer
-  [:#copyright] (html-content (landing-page :copyright)))
+  [:#copyright] (html-content (landing-page :copyright))
+
+  ;; scripts
+  [:body] (append
+    (if (landing-page :analytics) 
+      (analytics-content)
+      "")))
 
 (deftemplate admin-page "coming_soon/templates/admin.html" []
   [:title] (content (landing-page :page-title)))

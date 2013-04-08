@@ -77,6 +77,6 @@
     :blog-feed "" ; OK to be blank
 
     ;; Analytics
-    :google-analytics-key "" ; OK to be blank
+    :analytics false ; include the analytics snippet in src/coming-soon/templates/analytics.html
   }
 }

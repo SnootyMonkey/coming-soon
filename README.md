@@ -106,7 +106,7 @@ Update the copy to describe your application and change the colors, fonts, and o
 
 Replace the logo file **resources/public/img/logo.png** with your own logo, or edit the config file to include an empty string **""** rather than **"/img/logo.png"** for the **:logo** setting.
 
-You can set your Google Analytics tracking id in the **:google-analytics-key** setting of the **:landing-page** block if you have a Google Analytics account you'd like to use.
+If you want to use web analytics on your page, set the **:analytics** setting of the **:landing-page** block to **true**, and replace the contents of the **src/coming_soon/templates/analytics.html** file with the snippet of code provided by your analytics provider.
 
 **4)** Create a git repository for your app.
 
