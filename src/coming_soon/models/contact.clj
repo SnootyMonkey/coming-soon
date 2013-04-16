@@ -5,11 +5,11 @@
           java.util.Calendar))
 
 ;; Redis "schema"
-;; <prefix>:coming-soon-id - increment counter
+;; <prefix>:coming-soon-id - a simple incrementing counter
 (def coming-soon-id (str prefix ":coming-soon-id")) 
-;; <prefix>:coming-soon-contacts - contact hash by counter id key
+;; <prefix>:coming-soon-contacts - hash of all contacts by id
 (def coming-soon-contacts (str prefix ":coming-soon-contacts"))
-;; <prefix>:coming-soon-emails - id hashed by email key
+;; <prefix>:coming-soon-emails - hash of all ids, hashed by email (a secondary index)
 (def coming-soon-emails (str prefix ":coming-soon-emails"))
 
 (defn exists-by-email?
@@ -46,10 +46,20 @@
   []
   (with-car (car/hlen coming-soon-contacts)))
 
-;; TODO
-(defn all
-  "Return a vector of all the emails that have been collected so far."
-  [])
+(defn all-contacts
+  "Return all the contacts that have been collected so far in date of collection order."
+  []
+  (sort-by :updated-at (map read-string (with-car (car/hvals coming-soon-contacts)))))
+
+(defn all-emails
+  "Return all the emails that have been collected so far in date of collection order."
+  []
+  (map :email (all-contacts)))
+
+(defn all-referrers
+  "Return all the referral URLs and the # of referrals by that URL, in order of most referrals."
+  []
+  (sort-by last > (map identity (frequencies (map :referrer (all-contacts))))))
 
 ;; ISO 8601 timestamp
 (defn current-timestamp [] 
