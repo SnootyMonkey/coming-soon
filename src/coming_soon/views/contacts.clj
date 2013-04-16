@@ -8,7 +8,7 @@
 
 (defn analytics-content []
   (let [analytics (first (html-resource "coming_soon/templates/analytics.html"))]
-    ;; strip the <html></html> tags if neccessary
+    ;; strip the <html></html> tags if necessary
     (if (= :html (:tag analytics))
       (:content analytics)
       analytics)))
@@ -82,6 +82,3 @@
     (if (landing-page :analytics) 
       (analytics-content)
       "")))
-
-(deftemplate admin-page "coming_soon/templates/admin.html" []
-  [:title] (content (landing-page :page-title)))

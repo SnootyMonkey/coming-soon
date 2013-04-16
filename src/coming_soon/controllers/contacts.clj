@@ -2,9 +2,10 @@
   (:use [compojure.core :only (defroutes GET POST)]
         [coming-soon.models.contact :as contact]
         [coming-soon.models.email :as email]
-    		coming-soon.views.contacts))
+    		coming-soon.views.contacts
+        coming-soon.views.admin))
 
-(defn index-req [format] (apply str (admin-page)))
+(defn index-req [format] (apply str (admin-page (all-contacts))))
 
 (defn create-req [email referrer]
   (if-not (email/valid? email)

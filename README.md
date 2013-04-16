@@ -82,7 +82,7 @@ Quick Start - 10 Minutes to Heroku
 
 **1)** Signup for Heroku and setup the Heroku tools on your machine (if you've never used Heroku before).
 
-Follow the [Getting Started with Heroku](https://devcenter.heroku.com/articles/quickstart) quick start steps to setup your free and instant account and the heroku toolbelt on your local machine.
+Follow the [Getting Started with Heroku](https://devcenter.heroku.com/articles/quickstart) quick start steps to setup your free and instant account and the Heroku toolbelt on your local machine.
 
 **2)** Download coming-soon.
 
@@ -175,7 +175,7 @@ heroku open
 
 This will open a browser and you should see your landing page. Note the ugly URL Heroku created for you so you can get back to your page.
 
-Test Redis connectivity by adding /redis-test to your browser's URL after the URL for your app on heroku
+Test Redis connectivity by adding /redis-test to your browser's URL after the URL for your app on Heroku
 
 For instance, if you app is **http://your-heroku-machine-name.heroku.com/** then you should load **http://your-heroku-machine-name.heroku.com/redis-test**
 
