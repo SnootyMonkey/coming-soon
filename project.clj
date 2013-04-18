@@ -11,6 +11,7 @@
     [enlive "1.1.1"] ; HTML templates https://github.com/cgrand/enlive
     [jayq "2.3.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
+    [clj-time "0.5.0"] ; DateTime utilities
   ]
   :plugins [
     [lein-ring "0.8.3"] ; common ring tasks https://github.com/weavejester/lein-ring
