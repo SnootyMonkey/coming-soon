@@ -1,8 +1,8 @@
 (ns coming-soon.models.contact
   (require [taoensso.carmine :as car])
-  (use [coming-soon.lib.redis :only (prefix with-car)])
-  (import java.text.SimpleDateFormat
-          java.util.Calendar))
+  (use [coming-soon.lib.redis :only (prefix with-car)]
+       [clj-time.format :only (formatters unparse)]
+       [clj-time.core :only (now)]))
 
 ;; Redis "schema"
 ;; <prefix>:coming-soon-id - a simple incrementing counter
@@ -11,6 +11,8 @@
 (def coming-soon-contacts (str prefix ":coming-soon-contacts"))
 ;; <prefix>:coming-soon-emails - hash of all ids, hashed by email (a secondary index)
 (def coming-soon-emails (str prefix ":coming-soon-emails"))
+
+(def timestamp-format (formatters :date-time-no-ms))
 
 (defn exists-by-email?
   "Determine if a contact with the specified email address has been collected."
@@ -63,7 +65,7 @@
 
 ;; ISO 8601 timestamp
 (defn current-timestamp [] 
-  (.format (SimpleDateFormat. "yyyy-MM-dd'T'HH:mm:ssZ") (.getTime (Calendar/getInstance))))
+  (unparse timestamp-format (now)))
 
 ;; Store the contact by email and by id
 (defn store [id email referrer]
@@ -124,7 +126,7 @@
     false))
 
 (defn empty!
-  "USE WITH CAUTION - Wipe out all the stored contacts."
+  "USE WITH CAUTION - Wipes out all the stored contacts."
   []
   (with-car
     ;; start a transaction
