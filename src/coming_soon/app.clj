@@ -3,11 +3,13 @@
         [ring.middleware.params :only (wrap-params)]
         [ring.adapter.jetty :as ring])
   (:require [coming-soon.controllers.contacts :as contacts]
+            [coming-soon.controllers.admin :as admin]
             [coming-soon.controllers.redis :as redis]
             [compojure.route :as route]))
 
 (defroutes app-routes
   contacts/contact-routes
+  admin/admin-routes
   redis/test-routes
   (route/resources "/")
   (route/not-found "Page Not Found"))

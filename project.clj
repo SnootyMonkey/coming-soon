@@ -5,7 +5,8 @@
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [
     [org.clojure/clojure "1.5.0"] ; Lisp on the JVM http://clojure.org/documentation
-    [ring/ring-jetty-adapter "1.1.8"] ; Web Server
+    [ring/ring-jetty-adapter "1.1.8"] ; Web Server https://github.com/ring-clojure/ring
+    [ring-basic-authentication "1.0.2"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.1.5"] ; Web routing http://github.com/weavejester/compojure
     [com.taoensso/carmine "1.6.0"] ; Redis client https://github.com/ptaoussanis/carmine
     [enlive "1.1.1"] ; HTML templates https://github.com/cgrand/enlive
