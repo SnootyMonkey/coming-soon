@@ -185,7 +185,7 @@ Go back to your landing page by removing the /redis-test from the URL and enter 
 
 To view the contact information that's been entered into your landing page, navigate to **http://your-heroku-machine-name.heroku.com/contacts**.  You will need to enter the admin username and password that you setup in **config.edn**.  
 
-You should see a table listing the name, type and referral URL for everyone that has signed up for your app.
+You should see a table listing the email and referral URL for everyone that has signed up for your app.
 
 [![Admin Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin-full.png)
 
