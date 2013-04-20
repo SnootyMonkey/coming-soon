@@ -6,6 +6,9 @@
 		<!-- Reset IE -->
 		<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
+		<!-- Google Fonts -->
+		<link id="google-title-font" rel="stylesheet" type="text/css">
+
 		<!-- Twitter Boostrap -->
 		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
@@ -14,27 +17,36 @@
 
 		<!-- coming-soon CSS -->
 		<link rel="stylesheet" href="css/admin.css" type="text/css" media="screen">
+
+		<!-- CSS styles from the configuration file -->
+		<style id="configured-styles" type="text/css" media="screen"></style>
+
+		<!-- Custom CSS overrides -->
+		<link rel="stylesheet" href="css/custom.css" type="text/css" media="screen">
+
 	</head>
 	<body>
-
-		<table class="table table-striped table-hover contacts"
-			<thead>
-				<tr>
-					<th>#</th>
-					<th>email</th>
-					<th>referrer</th>
-					<th>when</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>foo@bar.com</td>
-					<td>http://bar.com/</td>
-					<td>1/13/2013</td>
-				</tr>
-			</tbody>
-		</table>
+		<div id="main-container" class="container">
+			<h1 id="app-title"></h1>
+			<table class="table table-striped table-hover table-condensed contacts"
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>email</th>
+						<th>referrer</th>
+						<th>when</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>foo@bar.com</td>
+						<td>http://bar.com/</td>
+						<td>1/13/2013</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>

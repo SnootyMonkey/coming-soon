@@ -187,7 +187,7 @@ To view the contact information that's been entered into your landing page, navi
 
 You should see a table listing the name, type and referral URL for everyone that has signed up for your app.
 
-![](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin.png)
+[![Admin Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin-full.png)
 
 **9)** Setup a custom domain.
 

@@ -1,0 +1,8 @@
+div#main-container {
+	margin-top: 50px;
+	padding: 35px;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
