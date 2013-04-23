@@ -29,6 +29,7 @@ Some of the Fantastic Features:
 * The CSS is Twitter Bootstrap
 * All the third-party resources are hosted on a [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
 * coming-soon makes no attempt to promote itself on your page... that's just tacky
+* Admin page to view sign-ups and export them as [JSON](http://en.wikipedia.org/wiki/JSON), [XML](http://en.wikipedia.org/wiki/XML) or [CSV](http://en.wikipedia.org/wiki/Comma-separated_values)
 * There's no code that's not Clojure or ClojureScript, so... there's that
 
 Why you should use coming-soon
