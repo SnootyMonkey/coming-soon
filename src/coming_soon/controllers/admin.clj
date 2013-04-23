@@ -2,9 +2,16 @@
   (:use [compojure.core :only (defroutes GET POST)]
         [coming-soon.models.contact :only (all-contacts)]
         [coming-soon.config :only (coming-soon)]
-        coming-soon.views.admin))
+        coming-soon.views.admin)
+  (:require [clj-json.core :as json]))
 
-(defn index-req [format] (apply str (admin-page (all-contacts))))
+(defn html-contacts []
+  (apply str (admin-page (all-contacts))))
+
+(defn json-contacts []
+  {:status 200
+   :headers {"Content-Type" "application/json"}
+   :body (json/generate-string (all-contacts))})
 
 (defn authenticated? [username password]
   (and 
@@ -12,7 +19,7 @@
     (= password (coming-soon :admin-password))))
 
 (defroutes admin-routes
-  (GET "/contacts" [] (index-req :html))
-  (GET "/contacts.json" [] (index-req :json))
-  (GET "/contacts.csv" [] (index-req :csv))
-  (GET "/contacts.xml" [] (index-req :xml)))
+  (GET "/contacts" [] (html-contacts))
+  (GET "/contacts.json" [] (json-contacts)))
+  ;(GET "/contacts.csv" [] (index-req :csv))
+  ;(GET "/contacts.xml" [] (index-req :xml)))
