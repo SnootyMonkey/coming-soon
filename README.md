@@ -51,7 +51,7 @@ It's also very free (as in, free to do whatever you like with it), so if it only
 
 Or if you want to go nuts on the templates and build some truly custom HTML and CSS for your landing page, then you have that option. You aren't locked into off-the-shelf templates or WYSIWYG editors or limited customization options like you are with many of the software as a service landing pages.
 
-Here is the same landing page with just some simple [custom CSS](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/css/custom.css).
+Here is the same landing page with just [this simple custom CSS](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/css/custom.css).
 
 [![IdeaFerret Custom Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-full.png)
 
@@ -224,11 +224,16 @@ lein cljsbuild auto
 Other Frequently Asked Questions
 --------------------------------
 
+Here are some questions about coming-soon that I get asked all the time (or maybe I just made them all up, you decide).
+
+**Q:** Can I host it somewhere other than Heroku?  
+**A:** Sure, nothing about coming-soon is Heroku specific.
+
 **Q:** Why is it so slow to load the landing page sometimes?  
 **A:** Unless you are paying Heroku to host at least 2 dynos, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky soul to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
 
 **Q:** How many signups can I store before my Redis instance runs out of space?  
-**A:** (TODO)
+**A:** That's a very optimistic question. I like you; you've got gumption. (TODO)
 
 **Q:** Who made this treasure?  
 **A:** coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).
