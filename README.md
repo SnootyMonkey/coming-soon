@@ -35,7 +35,7 @@ Here are just some of the Fantastic Features<sup>TM</sup> you can expect:
 Why you should use coming-soon
 ------------------------------
 
-It's very simple and very free (as in, there is no cost). Edit the config file. Deploy to Heroku for free. Then get on with building your app. It's even faster than using many of the software as a service options.
+It's very simple and very free. Edit the config file and deploy it to Heroku for free. Then get on with building your app. It's even faster than using many of the software as a service options.
 
 As an example, the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
 
