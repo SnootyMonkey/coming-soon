@@ -37,7 +37,7 @@ Why you should use coming-soon
 
 It's very simple and very free. Edit the config file and deploy it to Heroku for free. Then get on with building your app. It's even faster than using many of the software as a service options.
 
-As an example, the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
+As an example, both the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
 
 [![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
 
