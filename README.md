@@ -17,7 +17,7 @@ coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swans
 What coming-soon can do
 -----------------------
 
-Some of the Fantastic Features:
+Here are just some of the Fantastic Features &tm;:
 
 * Captures: email, when they signed up, and what website they came from
 * All the text on the landing page can be configured in a simple config file
