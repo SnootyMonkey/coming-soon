@@ -3,7 +3,7 @@ coming-soon
 
 A simple landing page email collector, but with 90% more parentheses than the leading brand.
 
-What coming-soon is
+What is coming-soon
 -------------------
 
 **coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minute to setup. With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
