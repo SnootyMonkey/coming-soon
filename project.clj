@@ -11,6 +11,7 @@
     [com.taoensso/carmine "1.6.0"] ; Redis client https://github.com/ptaoussanis/carmine
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.7"] ; XML encoding https://github.com/clojure/data.xml
+    [clojure-csv/clojure-csv "2.0.0-alpha2"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.1"] ; HTML templates https://github.com/cgrand/enlive
     [jayq "2.3.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
