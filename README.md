@@ -32,6 +32,24 @@ Here are just some of the Fantastic Features<sup>TM</sup> you can expect:
 * Admin page to view sign-ups and export them as [JSON](http://en.wikipedia.org/wiki/JSON), [XML](http://en.wikipedia.org/wiki/XML) or [CSV](http://en.wikipedia.org/wiki/Comma-separated_values)
 * There's no code that's not Clojure or ClojureScript, so... there's that
 
+Why you should NOT use coming-soon
+----------------------------------
+
+Can you answer the question, "Why do you want to host your own landing page (even if Heroku is doing the hosting for you) with open source software rather than using a landing page service?"
+
+If you don't have a great answer to that question, then there are **lots** of fully hosted alternatives for landing pages, it's a crowded space for these services, so there is likely a better option for you in this list:
+
+* [Launch Rock](http://launchrock.co/) - the granddaddy of launch page services, tries to get users to share
+* [Unbounce](http://unbounce.com) - lots of templates, A/B testing, drag n' drop WYSIWYG, on the expensive side
+* [Strikingly](https://www.strikingly.com/) - for small general websites, but has email capture
+* [Kickofflabs](http://www.kickofflabs.com/) - fairly comprehensive, widgets for external integrations, email campaigns
+* [My Beta List](http://my.betali.st/) - also focused on user sharing
+* [Launch Effect](http://launcheffectapp.com/) - Wordpress theme
+* [Prefinery](http://www.prefinery.com/) - fairly comprehensive beta management, invite codes, viral sharing, feedback and surveys
+* [ooomf](http://ooomf.com) - for mobile apps
+* [LaunchGator](http://launch.deskgator.com/)
+* [Mailchimp](http://mailchimp.com) - you probably think of them as the email list back end only, but they can serve up the email capture page too
+
 Why you should use coming-soon
 ------------------------------
 
@@ -55,24 +73,6 @@ Here is the same landing page with just [this simple custom CSS](https://github.
 
 [![IdeaFerret Custom Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-full.png)
 
-Why you should NOT use coming-soon
-----------------------------------
-
-Can you answer the question, "Why do you want to host your own landing page (even if Heroku is doing the hosting for you) with open source software rather than using a landing page service?"
-
-If you don't have a great answer to that question, then there are **lots** of fully hosted alternatives for landing pages, it's a crowded space for these services, so there is likely a better option for you in this list:
-
-* [Launch Rock](http://launchrock.co/) - the granddaddy of launch page services, tries to get users to share
-* [Unbounce](http://unbounce.com) - lots of templates, A/B testing, drag n' drop WYSIWYG, on the expensive side
-* [Strikingly](https://www.strikingly.com/) - for small general websites, but has email capture
-* [Kickofflabs](http://www.kickofflabs.com/) - fairly comprehensive, widgets for external integrations, email campaigns
-* [My Beta List](http://my.betali.st/) - also focused on user sharing
-* [Launch Effect](http://launcheffectapp.com/) - Wordpress theme
-* [Prefinery](http://www.prefinery.com/) - fairly comprehensive beta management, invite codes, viral sharing, feedback and surveys
-* [ooomf](http://ooomf.com) - for mobile apps
-* [LaunchGator](http://launch.deskgator.com/)
-* [Mailchimp](http://mailchimp.com) - you probably think of them as the email list back end only, but they can serve up the email capture page too
-	
 What it takes to use it
 -----------------------
 
