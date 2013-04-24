@@ -225,7 +225,7 @@ Other Frequently Asked Questions
 --------------------------------
 
 **Q:** Why is it so slow to load the landing page sometimes?  
-**A:** Unless you are paying Heroku to host at least 2 dynos, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky sole to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
+**A:** Unless you are paying Heroku to host at least 2 dynos, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky soul to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
 
 **Q:** How many signups can I store before my Redis instance runs out of space?  
 **A:** (TODO)
