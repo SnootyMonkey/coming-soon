@@ -3,7 +3,7 @@ coming-soon
 
 A simple landing page email collector, but with 90% more parentheses than the leading brand.
 
-What coming-soon is
+What is coming-soon
 -------------------
 
 **coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minute to setup. With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
@@ -17,7 +17,7 @@ coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swans
 What coming-soon can do
 -----------------------
 
-Some of the Fantastic Features:
+Here are just some of the Fantastic Features<sup>TM</sup> you can expect:
 
 * Captures: email, when they signed up, and what website they came from
 * All the text on the landing page can be configured in a simple config file
@@ -31,29 +31,6 @@ Some of the Fantastic Features:
 * coming-soon makes no attempt to promote itself on your page... that's just tacky
 * Admin page to view sign-ups and export them as [JSON](http://en.wikipedia.org/wiki/JSON), [XML](http://en.wikipedia.org/wiki/XML) or [CSV](http://en.wikipedia.org/wiki/Comma-separated_values)
 * There's no code that's not Clojure or ClojureScript, so... there's that
-
-Why you should use coming-soon
-------------------------------
-
-It's very simple and very free (as in, there is no cost). Edit the config file. Deploy to Heroku for free. Then get on with building your app. It's even faster than using many of the software as a service options.
-
-As an example, the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
-
-[![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
-
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/falklandsophile/config.edn) for the Falklandsophile example.)
-
-[![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example3-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example3-full.png)
-
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the IdeaFerret example.)
-
-It's also very free (as in, free to do whatever you like with it), so if it only does 80% of what you want, and you prefer to do the other 20% in Clojure/ClojureScript, it's probably for you. 
-
-Or if you want to go nuts on the templates and build some truly custom HTML and CSS for your landing page, then you have that option. You aren't locked into off-the-shelf templates or WYSIWYG editors or limited customization options like you are with many of the software as a service landing pages.
-
-Here is the same landing page with just some simple [custom CSS](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/css/custom.css).
-
-[![IdeaFerret Custom Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-full.png)
 
 Why you should NOT use coming-soon
 ----------------------------------
@@ -72,7 +49,30 @@ If you don't have a great answer to that question, then there are **lots** of fu
 * [ooomf](http://ooomf.com) - for mobile apps
 * [LaunchGator](http://launch.deskgator.com/)
 * [Mailchimp](http://mailchimp.com) - you probably think of them as the email list back end only, but they can serve up the email capture page too
-	
+
+Why you should use coming-soon
+------------------------------
+
+It's very simple and very free. Edit the config file and deploy it to Heroku for free. Then get on with building your app. It's even faster than using many of the software as a service options.
+
+As an example, both the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
+
+[![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
+
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/falklandsophile/config.edn) for the Falklandsophile example.)
+
+[![IdeaFerret Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example3-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example3-full.png)
+
+(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the IdeaFerret example.)
+
+It's also very free (as in, free to do whatever you like with it), so if it only does 80% of what you want, and you prefer to do the other 20% in Clojure/ClojureScript, it's probably for you. 
+
+Or if you want to go nuts on the templates and build some truly custom HTML and CSS for your landing page, then you have that option. You aren't locked into off-the-shelf templates or WYSIWYG editors or limited customization options like you are with many of the software as a service landing pages.
+
+Here is the same landing page with just [this simple custom CSS](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/css/custom.css).
+
+[![IdeaFerret Custom Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-full.png)
+
 What it takes to use it
 -----------------------
 
@@ -224,11 +224,16 @@ lein cljsbuild auto
 Other Frequently Asked Questions
 --------------------------------
 
+Here are some questions about coming-soon that I get asked all the time (or maybe I just made them all up, you decide).
+
+**Q:** Can I host it somewhere other than Heroku?  
+**A:** Sure, nothing about coming-soon is Heroku specific.
+
 **Q:** Why is it so slow to load the landing page sometimes?  
 **A:** Unless you are paying Heroku to host at least 2 dynos, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky soul to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
 
 **Q:** How many signups can I store before my Redis instance runs out of space?  
-**A:** (TODO)
+**A:** That's a very optimistic question. I like you; you've got gumption. (TODO)
 
 **Q:** Who made this treasure?  
 **A:** coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).
