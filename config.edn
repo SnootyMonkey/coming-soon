@@ -9,7 +9,7 @@
   {
     ;; If you're running Redis locally on the same machine and the default 6379 port, leave everything in this section commented out
 
-    ;; HEROKU REDIS - uncomment the selected provider
+    ;; HEROKU REDIS - uncomment the selected provider line below
     ;; :redis-env-variable "REDISCLOUD_URL" ; Comment in for Redis Cloud on Heroku
     ;; :redis-env-variable "MYREDIS_URL" ; Comment in for MyRedis on Heroku
     ;; :redis-env-variable "REDISTOGO_URL" ; Comment in for Redis To Go on Heroku
@@ -74,7 +74,7 @@
     :facebook-url "https://www.facebook.com/bubbletimer" ; OK to be blank
     :github-url "https://github.com/SnootyMonkey" ; OK to be blank
     :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
-    :blog-feed "" ; OK to be blank
+    :blog-feed "http://feeds.feedburner.com/snootymonkey" ; OK to be blank
 
     ;; Analytics
     :analytics false ; include the analytics snippet in src/coming-soon/templates/analytics.html

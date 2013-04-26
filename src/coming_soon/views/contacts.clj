@@ -14,6 +14,9 @@
       (:content analytics)
       analytics)))
 
+(defn blog-feed-content []
+  (html [:link {:rel "alternate" :type "application/rss+xml" :href (landing-page :blog-feed)}]))
+
 (defn linked-icon [{:keys [link-name icon-name]}]
   (let [url (landing-page (keyword (str link-name "-url")))]
     (if-not (blank? url)
@@ -51,6 +54,10 @@
     "a.social-link {color:" (landing-page :social-color) ";}"
     "a.social-link:hover {color:" (landing-page :social-hover-color) ";}"
     "#copyright {color:" (landing-page :copyright-color) ";}"))
+  ; [:head] (append
+  ;   (if-not (blank? (landing-page :blog-feed))
+  ;     (content (blog-feed-content))
+  ;     ""))
 
   ;; body
   [:#backstretch] (html-content (background-image))

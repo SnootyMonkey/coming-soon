@@ -74,7 +74,7 @@
     :facebook-url "https://www.facebook.com/bubbletimer" ; OK to be blank
     :github-url "https://github.com/SnootyMonkey" ; OK to be blank
     :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
-    :blog-feed "" ; OK to be blank
+    :blog-feed "http://feeds.feedburner.com/snootymonkey" ; OK to be blank
 
     ;; Analytics
     :analytics false ; include the analytics snippet in src/coming-soon/templates/analytics.html
