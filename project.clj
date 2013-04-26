@@ -13,6 +13,7 @@
     [org.clojure/data.xml "0.0.7"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.0-alpha2"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.1"] ; HTML templates https://github.com/cgrand/enlive
+    [hiccup "1.0.3"] ; HTML generation https://github.com/weavejester/hiccup
     [jayq "2.3.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.5.0"] ; DateTime utilities https://github.com/clj-time/clj-time

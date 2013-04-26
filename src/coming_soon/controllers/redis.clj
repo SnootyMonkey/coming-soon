@@ -1,18 +1,20 @@
 (ns coming-soon.controllers.redis
   (:require [compojure.core :refer (defroutes GET)]
+            [hiccup.core :refer (html)]
             [coming-soon.lib.redis :refer (redis-pool redis-server-spec)]
             [taoensso.carmine :as car]))
 
-(def pre "<html><head><title>Redis Test</title></head>")
-(defn body [status] 
+(def head (html [:head [:title "Redis Test"]]))
+
+(defn response-content [status] 
   (let [
     color (if status "green" "red")
     label (if status "OK" "BORKED")]
-    (str "<body>Connection to Redis is: <span style='font-weight: bold;color:" color ";'>" label "</span></body>")))
-(def post "</html>")
+    (html [:html head [:body "Connection to Redis is: "
+          [:span {:style (str "font-weight: bold;color:" color ";")} label]]]))) 
 
-(def redis-ok {:status 200 :body (str pre (body true) post)})
-(def redis-borked {:status 500 :body (str pre (body false) post)})
+(def redis-ok {:status 200 :body (response-content true)})
+(def redis-borked {:status 500 :body (response-content false)})
 
 (defn redis-test []
   (try

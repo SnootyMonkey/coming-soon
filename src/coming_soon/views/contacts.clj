@@ -1,6 +1,7 @@
 (ns coming-soon.views.contacts
   (:use [net.cgrand.enlive-html])
   (:require [clojure.string :refer (blank?)]
+            [hiccup.core :refer (html)]
             [coming-soon.config :refer (landing-page)]
             [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
 
@@ -16,14 +17,12 @@
 (defn linked-icon [{:keys [link-name icon-name]}]
   (let [url (landing-page (keyword (str link-name "-url")))]
     (if-not (blank? url)
-      (str "<li><a class='social-link' href='" url "'><i class='icon-" icon-name " icon-large'></i></a></li>")
-      "")))
+      (html [:li [:a {:class "social-link" :href url :target "_new"} [:i {:class (str "icon-" icon-name " icon-large")}]]]))))
 
 (defn signup-button-icon []
   (let [signup-btn-icon-class (landing-page :signup-btn-icon)]
     (if-not (blank? signup-btn-icon-class)
-      (str "<i id='submit-icon' class='" signup-btn-icon-class "''></i> ")
-      "")))
+      (html [:i {:id "submit-icon" :class signup-btn-icon-class}] "&nbsp;"))))
 
 (defn background-image []
   (let [image-url (landing-page :background-image)]
