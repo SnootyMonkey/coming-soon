@@ -1,8 +1,8 @@
 (ns coming-soon.models.contact
-  (require [taoensso.carmine :as car])
-  (use [coming-soon.lib.redis :only (prefix with-car)]
-       [clj-time.format :only (formatters unparse)]
-       [clj-time.core :only (now)]))
+  (:require [taoensso.carmine :as car]
+            [coming-soon.lib.redis :refer (prefix with-car)]
+            [clj-time.format :refer (formatters unparse)]
+            [clj-time.core :refer (now)]))
 
 ;; Redis "schema"
 ;; <prefix>:coming-soon-id - a simple incrementing counter

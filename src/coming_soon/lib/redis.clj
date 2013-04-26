@@ -1,7 +1,7 @@
 (ns coming-soon.lib.redis
   (:require [taoensso.carmine :as car]
-            [coming-soon.config :as config])
-  (:use [clojure.string :only (blank?)]))
+            [coming-soon.config :as config]
+            [clojure.string :refer (blank?)]))
 
 (defn conn-spec
   "Determine if we should connect with a Redis URI, and if so, which one"

@@ -1,9 +1,9 @@
 (ns coming-soon
   (:require [goog.net.XhrIo :as xhr]
-            [cljs.reader :as reader])
-  (:use [jayq.core :only [$ document-ready bind val css attr remove-attr add-class remove-class]]
-        [jayq.util :only [log]]
-        [coming-soon.models.email :only [valid?]]))
+            [cljs.reader :as reader]
+            [jayq.core :refer [$ document-ready bind val css attr remove-attr add-class remove-class]]
+            [jayq.util :refer [log]]
+            [coming-soon.models.email :refer [valid?]]))
 
 (def subscribe-url "/subscribe")
 

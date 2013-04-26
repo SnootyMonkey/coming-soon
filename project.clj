@@ -1,4 +1,4 @@
-(defproject coming-soon "0.0.2-SNAPSHOT"
+(defproject coming-soon "0.0.3-SNAPSHOT"
   :description "coming-soon is a simple Clojure/ClojureScript/Redis 'landing page' application that takes just a few minute to setup"
   :url "https://github.com/SnootyMonkey/coming-soon/"
   :license {:name "MIT License"

@@ -1,7 +1,7 @@
 (ns coming-soon.controllers.redis
-  (:use [compojure.core :only (defroutes GET)])
-  (use [coming-soon.lib.redis :only (redis-pool redis-server-spec)])
-  (:require [taoensso.carmine :as car]))
+  (:require [compojure.core :refer (defroutes GET)]
+            [coming-soon.lib.redis :refer (redis-pool redis-server-spec)]
+            [taoensso.carmine :as car]))
 
 (def pre "<html><head><title>Redis Test</title></head>")
 (defn body [status] 

@@ -1,12 +1,12 @@
 (ns coming-soon.controllers.admin
-  (:use [compojure.core :only (defroutes GET POST)]
-        [coming-soon.models.contact :only (all-contacts)]
-        [coming-soon.config :only (coming-soon)]
-        coming-soon.views.admin)
-  (:require [clj-json.core :as json]
+  (:require [compojure.core :refer (defroutes GET POST)]
+            [clj-json.core :as json]
             [clojure.data.xml :as xml]
-            [clojure-csv.core :as csv]))
-
+            [clojure-csv.core :as csv]
+            [coming-soon.models.contact :refer (all-contacts)]
+            [coming-soon.config :refer (coming-soon)]
+            [coming-soon.views.admin :as view]))
+            
 (defn headers [mime-type extension]
   {
     "Cache-Control" "must-revalidate"
@@ -14,6 +14,11 @@
     "Content-Type" (str mime-type ";charset=utf-8")
     "Content-Disposition" (str "attachment;filename=contacts." extension)
   })
+
+(defn authenticated? [username password]
+  (and 
+    (= username (coming-soon :admin-user))
+    (= password (coming-soon :admin-password))))
 
 (defn json-contacts []
   {:status 200
@@ -47,12 +52,7 @@
    :body (csv/write-csv (cons csv-header (map csv-contact (all-contacts))))})
 
 (defn html-contacts []
-  (apply str (admin-page (all-contacts))))
-
-(defn authenticated? [username password]
-  (and 
-    (= username (coming-soon :admin-user))
-    (= password (coming-soon :admin-password))))
+  (apply str (view/admin-page (all-contacts))))
 
 (defroutes admin-routes
   (GET "/contacts" [] (html-contacts))

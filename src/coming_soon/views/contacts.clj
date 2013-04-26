@@ -1,8 +1,8 @@
 (ns coming-soon.views.contacts
-  (:use [clojure.string :only (blank?)]
-        [net.cgrand.enlive-html]
-        [coming-soon.config :only (landing-page)]
-        [coming-soon.helpers.colors :only (rgb-color rgba-color)]))
+  (:use [net.cgrand.enlive-html])
+  (:require [clojure.string :refer (blank?)]
+            [coming-soon.config :refer (landing-page)]
+            [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
 
 (def google-font-url "http://fonts.googleapis.com/css?family=")
 

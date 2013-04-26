@@ -1,6 +1,6 @@
 (ns coming-soon.helpers.colors
-  (:use [clojure.contrib.string :only (map-str)]
-        [tinter.core :only (hex-str-to-dec)]))
+  (:require [clojure.contrib.string :refer (map-str)]
+            [tinter.core :refer (hex-str-to-dec)]))
 
 (defn rgb-tuple [hex-color]
   ;; strip off the prefixed # if there is one

@@ -1,8 +1,8 @@
 (ns coming-soon.controllers.contacts
-  (:use [compojure.core :only (defroutes GET POST)]
-        [coming-soon.models.contact :as contact]
-        [coming-soon.models.email :as email]
-    		coming-soon.views.contacts))
+  (:require [compojure.core :refer (defroutes GET POST)]
+            [coming-soon.models.contact :as contact]
+            [coming-soon.models.email :as email]
+    		    [coming-soon.views.contacts :as view]))
 
 (defn create-req [email referrer]
   (if-not (email/valid? email)
@@ -13,6 +13,6 @@
 
 (defroutes contact-routes
   (GET "/" [:as {headers :headers}]
-    (apply str (home-page (get headers "referer" ""))))
+    (apply str (view/home-page (get headers "referer" ""))))
   (POST "/subscribe" [email referrer]
     (create-req email referrer)))
