@@ -7,7 +7,7 @@
             [coming-soon.config :refer (coming-soon)]
             [coming-soon.views.admin :as view]))
             
-(defn headers [mime-type extension]
+(defn- headers [mime-type extension]
   {
     "Cache-Control" "must-revalidate"
     "Pragma" "must-revalidate"
@@ -20,12 +20,12 @@
     (= username (coming-soon :admin-user))
     (= password (coming-soon :admin-password))))
 
-(defn json-contacts []
+(defn- json-contacts []
   {:status 200
    :headers (headers "application/json" "json")
    :body (json/generate-string (all-contacts))})
 
-(defn xml-contact 
+(defn- xml-contact 
   "Return the specified contact as an XML element"
   [contact]
   (xml/element :contact {:id (str (:id contact))} [
@@ -33,7 +33,7 @@
     (xml/element :referrer {} (:referrer contact))
     (xml/element :updated-at {} (:updated-at contact))]))
 
-(defn xml-contacts []
+(defn- xml-contacts []
   {:status 200
    :headers (headers "application/xml" "xml")
    :body (xml/emit-str (xml/element :contacts {} 
@@ -41,17 +41,17 @@
 
 (def csv-header ["id" "email" "referrer" "updated-at"])
 
-(defn csv-contact 
+(defn- csv-contact 
   "Return the specified contact as a vector for CSV encoding"
   [contact]
   (list (str (:id contact)) (:email contact) (:referrer contact) (:updated-at contact)))
 
-(defn csv-contacts []
+(defn- csv-contacts []
   {:status 200
    :headers (headers "text/csv" "csv")
    :body (csv/write-csv (cons csv-header (map csv-contact (all-contacts))))})
 
-(defn html-contacts []
+(defn- html-contacts []
   (apply str (view/admin-page (all-contacts))))
 
 (defroutes admin-routes

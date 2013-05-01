@@ -7,27 +7,27 @@
 
 (def google-font-url "http://fonts.googleapis.com/css?family=")
 
-(defn analytics-content []
+(defn- analytics-content []
   (let [analytics (first (html-resource "coming_soon/templates/analytics.html"))]
     ;; strip the <html></html> tags if necessary
     (if (= :html (:tag analytics))
       (:content analytics)
       analytics)))
 
-(defn blog-feed-content []
+(defn- blog-feed-content []
   (html [:link {:rel "alternate" :type "application/rss+xml" :href (landing-page :blog-feed)}]))
 
-(defn linked-icon [{:keys [link-name icon-name]}]
+(defn- linked-icon [{:keys [link-name icon-name]}]
   (let [url (landing-page (keyword (str link-name "-url")))]
     (if-not (blank? url)
       (html [:li [:a {:class "social-link" :href url :target "_new"} [:i {:class (str "icon-" icon-name " icon-large")}]]]))))
 
-(defn signup-button-icon []
+(defn- signup-button-icon []
   (let [signup-btn-icon-class (landing-page :signup-btn-icon)]
     (if-not (blank? signup-btn-icon-class)
       (html [:i {:id "submit-icon" :class signup-btn-icon-class}] "&nbsp;"))))
 
-(defn background-image []
+(defn- background-image []
   (let [image-url (landing-page :background-image)]
     (if-not (blank? image-url)
       (str "$.backstretch('" image-url "');")

@@ -4,7 +4,7 @@
             [coming-soon.models.email :as email]
     		    [coming-soon.views.contacts :as view]))
 
-(defn create-req [email referrer]
+(defn- create-req [email referrer]
   (if-not (email/valid? email)
     {:status 403 :body (pr-str {:contact "invalid"})}
     (if (contact/create email referrer)

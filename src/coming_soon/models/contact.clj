@@ -64,11 +64,11 @@
   (sort-by last > (map identity (frequencies (map :referrer (all-contacts))))))
 
 ;; ISO 8601 timestamp
-(defn current-timestamp [] 
+(defn- current-timestamp [] 
   (unparse timestamp-format (now)))
 
 ;; Store the contact by email and by id
-(defn store [id email referrer]
+(defn- store [id email referrer]
   (with-car
     ;; start a transaction
     (car/multi)
@@ -95,7 +95,7 @@
   true)
 
 ;; Remove the contact from the hash by id and the hash by email
-(defn remove! [id email]
+(defn- remove! [id email]
   (with-car
     ;; start a transaction
     (car/multi)

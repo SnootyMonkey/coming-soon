@@ -10,11 +10,11 @@
 
 (defroutes app-routes
   contacts/contact-routes
-  (wrap-basic-authentication admin/admin-routes admin/authenticated?)
   redis/test-routes
   (route/resources "/")
+  (wrap-basic-authentication admin/admin-routes admin/authenticated?)
   (route/not-found "Page Not Found"))
-
+  
 (def app (wrap-params app-routes))
 
 (defn start [port]

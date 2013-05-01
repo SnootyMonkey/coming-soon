@@ -2,7 +2,7 @@
   (:require [clojure.contrib.string :refer (map-str)]
             [tinter.core :refer (hex-str-to-dec)]))
 
-(defn rgb-tuple [hex-color]
+(defn- rgb-tuple [hex-color]
   ;; strip off the prefixed # if there is one
   (let [color (last (clojure.string/split hex-color #"#"))]
     (let [full-color
