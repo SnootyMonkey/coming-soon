@@ -54,10 +54,10 @@
     "a.social-link {color:" (landing-page :social-color) ";}"
     "a.social-link:hover {color:" (landing-page :social-hover-color) ";}"
     "#copyright {color:" (landing-page :copyright-color) ";}"))
-  ; [:head] (append
-  ;   (if-not (blank? (landing-page :blog-feed))
-  ;     (content (blog-feed-content))
-  ;     ""))
+  [:head] (append
+    (if-not (blank? (landing-page :blog-feed))
+      (-> (blog-feed-content) html-snippet)
+      ""))
 
   ;; body
   [:#backstretch] (html-content (background-image))
