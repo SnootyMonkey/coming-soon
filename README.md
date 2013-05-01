@@ -10,7 +10,7 @@ What is coming-soon
 
 ![Silver Bullet Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
-(Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/silver_bullet/config.edn) for the Silver Bullet example.)
+(Here is the coming-soon [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/silver_bullet/config.edn) for the Silver Bullet example.)
 
 coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
 
