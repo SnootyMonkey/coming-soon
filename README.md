@@ -6,7 +6,7 @@ A simple landing page email collector, but with 90% more parentheses than the le
 What is coming-soon
 -------------------
 
-**coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minute to setup. With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
+**coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minutes to setup on [Heroku](http://heroku.com/). With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
 
 ![Silver Bullet Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
