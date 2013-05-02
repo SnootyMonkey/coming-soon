@@ -22,9 +22,9 @@ What coming-soon can do
 Here are just some of the Fantastic Features<sup>TM</sup> you can enjoy:
 
 * Captures email, when they signed up, and what website they came from
-* All the text on the landing page can be configured in a simple config file
-* Many of the styles can be configured as well using the same config file
-* User defined fonts, logo and background image using, you guessed it, the same file
+* All the text on the landing page can be configured in a simple [config file](https://github.com/SnootyMonkey/coming-soon/blob/master/config.edn)
+* Many of the styles can be configured as well using the same [config file](https://github.com/SnootyMonkey/coming-soon/blob/master/config.edn)
+* User defined fonts, logo and background image using, you guessed it, the same [file](https://github.com/SnootyMonkey/coming-soon/blob/master/config.edn)
 * Drop in your code snippet from your web analytics provider, such as Google Analytics, and you can track views and conversion rates for signing up
 * Twitter, Facebook, GitHub and blog links are supported as a setting in the config file
 * Go beyond the config file and change all the HTML and CSS to put whatever you'd like on the page
