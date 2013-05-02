@@ -1,5 +1,5 @@
 (ns coming-soon.app
-  (:require [compojure.core :refer (defroutes)]
+  (:require [compojure.core :refer (defroutes ANY)]
             [ring.middleware.params :refer (wrap-params)]
             [ring.adapter.jetty :as ring]
             [ring.middleware.basic-authentication :refer (wrap-basic-authentication)]
@@ -11,8 +11,9 @@
 (defroutes app-routes
   contacts/contact-routes
   redis/test-routes
+  (ANY "/contacts*" []
+    (wrap-basic-authentication admin/admin-routes admin/authenticated?))
   (route/resources "/")
-  (wrap-basic-authentication admin/admin-routes admin/authenticated?)
   (route/not-found "Page Not Found"))
   
 (def app (wrap-params app-routes))
