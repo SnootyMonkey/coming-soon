@@ -8,7 +8,7 @@ What is coming-soon
 
 **coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minutes to setup on [Heroku](http://heroku.com/). With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
 
-You can see a [live demo](http://coming-soon-demo.heroku.com/) of coming-soon, or the screenshot below to get a sense of what it does.
+You can see a [live demo](http://coming-soon.heroku.com/) of coming-soon, or the screenshot below to get a sense of what it does.
 
 ![Silver Bullet Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
@@ -106,12 +106,11 @@ Replace the logo file **resources/public/img/logo.png** with your own logo, or e
 
 If you want to use web analytics on your page, set the **:analytics** setting of the **:landing-page** block to **true**, and replace the contents of the **src/coming_soon/templates/analytics.html** file with the snippet of code provided by your analytics provider.
 
-**4)** Create a git repository for your app.
+**4)** Commit the configuration changes for your app.
 
-Once you have completed editing **config.edn** to add your app's settings, run the following commands in your coming-soon folder to create a [git](http://git-scm.com/) repository out of your app's files:
+Once you have completed editing **config.edn** to add your app's settings, run the following commands in your coming-soon folder to commit the changes to your local [git](http://git-scm.com/) repository:
 
 ```console
-git init
 git add .
 git commit -m "Setting up my landing page."
 ```
@@ -260,7 +259,7 @@ Links
 -----
 * [GitHub Project](http://github.com/SnootyMonkey/coming-soon)
 * [Issue Tracker](http://github.com/SnootyMonkey/coming-soon/issues)
-* [Live Demo Example](http://coming-soon-demo.herokuapp.com)
-* [Live Admin Demo](http://coming-soon-demo.herokuapp.com/contacts) - login as admin / admin
+* [Live Demo Example](http://coming-soon.herokuapp.com)
+* [Live Admin Demo](http://coming-soon-admin.herokuapp.com/contacts) - login as admin / admin
 * [IdeaFerret](http://ideaferret.com) - a coming-soon powered landing page
 * [Falklandsophile](http://falklandsophile.com) - another coming-soon powered landing page
