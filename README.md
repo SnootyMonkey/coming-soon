@@ -8,6 +8,8 @@ What is coming-soon
 
 **coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minutes to setup on [Heroku](http://heroku.com/). With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
 
+You can see a (live demo)[http://coming-soon-demo.heroku.com/] of coming-soon, or the screenshot below to get a sense of what it does.
+
 ![Silver Bullet Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
 (Here is the coming-soon [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/silver_bullet/config.edn) for the Silver Bullet example above.)
@@ -17,19 +19,19 @@ coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swans
 What coming-soon can do
 -----------------------
 
-Here are just some of the Fantastic Features<sup>TM</sup> you can expect:
+Here are just some of the Fantastic Features<sup>TM</sup> you can enjoy:
 
-* Captures: email, when they signed up, and what website they came from
+* Captures email, when they signed up, and what website they came from
 * All the text on the landing page can be configured in a simple config file
 * Many of the styles can be configured as well using the same config file
 * User defined fonts, logo and background image using, you guessed it, the same file
-* Easy spot to add the code snippet from your web analytics provider, such as Google Analytics, so you can track views and conversion rates for signing up
+* Drop in your code snippet from your web analytics provider, such as Google Analytics, and you can track views and conversion rates for signing up
 * Twitter, Facebook, GitHub and blog links are supported as a setting in the config file
 * Go beyond the config file and change all the HTML and CSS to put whatever you'd like on the page
 * The CSS is Twitter Bootstrap
 * All the third-party resources are hosted on a [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
 * coming-soon makes no attempt to promote itself on your page... that's just tacky
-* Admin page to view sign-ups and export them as [JSON](http://en.wikipedia.org/wiki/JSON), [XML](http://en.wikipedia.org/wiki/XML) or [CSV](http://en.wikipedia.org/wiki/Comma-separated_values)
+* Has an (admin page)[http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin.png] to view sign-ups and export them as [JSON](http://en.wikipedia.org/wiki/JSON), [XML](http://en.wikipedia.org/wiki/XML) or [CSV](http://en.wikipedia.org/wiki/Comma-separated_values)
 * There's no code that's not Clojure or ClojureScript, so... there's that
 
 Why you should NOT use coming-soon
@@ -50,12 +52,12 @@ If you don't have a great answer to that question, then there are **lots** of fu
 * [LaunchGator](http://launch.deskgator.com/)
 * [Mailchimp](http://mailchimp.com) - you probably think of them as the email list back end only, but they can serve up the email capture page too
 
-Why you should use coming-soon
+Why you SHOULD use coming-soon
 ------------------------------
 
-It's very simple and very free. Edit the config file and deploy it to Heroku for free. Then get on with building your app. It's even faster than using many of the software as a service options.
+It's very simple and it's very free. Just edit the config file, deploy it to Heroku for free, then get on with building your app. It's even faster than using many of the software as a service options.
 
-As an example, both the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
+As an example, the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
 
 [![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
 
@@ -65,7 +67,7 @@ As an example, both the above landing page and the following landing pages were 
 
 (Here is the [configuration file](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/config.edn) for the IdeaFerret example.)
 
-It's also very free (as in, free to do whatever you like with it), so if it only does 80% of what you want, and you prefer to do the other 20% in Clojure/ClojureScript, it's probably for you. 
+It's also very free (as in free to do whatever you like with it), so if it only does 80% of what you want, and you prefer to do the other 20% in Clojure/ClojureScript, it's probably for you. 
 
 Or if you want to go nuts on the templates and build some truly custom HTML and CSS for your landing page, then you have that option. You aren't locked into off-the-shelf templates or WYSIWYG editors or limited customization options like you are with many of the software as a service landing pages.
 
@@ -85,16 +87,11 @@ Quick Start - 10 Minutes to Heroku
 
 Follow the [Getting Started with Heroku](https://devcenter.heroku.com/articles/quickstart) quick start steps to setup your free and instant account and the Heroku toolbelt on your local machine.
 
-**2)** Download coming-soon.
-
-[https://github.com/SnootyMonkey/coming-soon/archive/master.zip](https://github.com/SnootyMonkey/coming-soon/archive/master.zip)
-
-Unzip coming-soon, rename it to what you'd like, and navigate to the directory:
+**2)** Download coming-soon from GitHub using git.
 
 ```console
-unzip coming-soon-master.zip
-mv coming-soon-master my-lander
-cd my-lander
+git clone git://github.com/SnootyMonkey/coming-soon.git
+cd coming-soon
 ```
 
 **3)** Edit the file called **config.edn** in a text editor.
@@ -196,30 +193,39 @@ You will probably want a custom domain rather than Heroku's default. Follow [Her
 
 **10)** Now get back to coding your app!
 
-Guide to the configuration file
--------------------------------
-
-(TODO list and explain the configuration settings)
-
 It looks good, but I want it to be more blue
 --------------------------------------------
 
 You can modify any of the HTML, CSS and images to customize your page. Just remember, you need to push any changes to Heroku so your live page will be updated.
 
-(TODO list and explain HTML and CSS)
-
-(TODO list all the significant IDs and classes in the HTML)
+```console
+git add .
+git commit -m 'Made the HTML and CSS more pretty.'
+git push heroku
+```
 
 It works well, but I want it to make my coffee too
 --------------------------------------------------
 
 You can modify any of the Clojure and ClojureScript code to customize the behavior of your landing page. Just remember, you need to push any changes to Heroku so your live page will be updated.
 
-(TODO list and explain important code and development steps)
+To run coming-soon locally:
 
+```console
 lein ring server-headless
+```
+
+To build the ClojureScript code:
+
+```console
 lein cljsbuild once
+```
+
+To watch the ClojureScript code and build it each time it changes:
+
+```console
 lein cljsbuild auto
+```
 
 Other Frequently Asked Questions
 --------------------------------
@@ -233,7 +239,7 @@ Here are some questions about coming-soon that I get asked all the time (or mayb
 **A:** Unless you are paying Heroku to host at least 2 dynos, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky soul to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
 
 **Q:** How many signups can I store before my Redis instance runs out of space?  
-**A:** That's a very optimistic question. I like you; you've got gumption. (TODO)
+**A:** That's a very optimistic question. I like you; you've got gumption.
 
 **Q:** Who made this treasure?  
 **A:** coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).
@@ -254,4 +260,7 @@ Links
 -----
 * [GitHub Project](http://github.com/SnootyMonkey/coming-soon)
 * [Issue Tracker](http://github.com/SnootyMonkey/coming-soon/issues)
-* [Live Demo Example](http://polar-waters-1973.herokuapp.com)
+* [Live Demo Example](http://coming-soon-demo.herokuapp.com)
+* [Live Admin Demo](http://coming-soon-demo.herokuapp.com/contacts) - login as admin / admin
+* [IdeaFerret](http://ideaferret.com) - a coming-soon powered landing page
+* [Falklandsophile](http://falklandsophile.com) - another coming-soon powered landing page
