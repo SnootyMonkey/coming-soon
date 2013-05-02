@@ -35,4 +35,5 @@
         :pretty-print false ; generated JS code prettyfication
       }}]
   }
+  :min-lein-version "2.0.0"
   :main coming-soon.app)
