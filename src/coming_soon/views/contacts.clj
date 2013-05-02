@@ -1,7 +1,6 @@
 (ns coming-soon.views.contacts
   (:use [net.cgrand.enlive-html])
   (:require [clojure.string :refer (blank?)]
-            [hiccup.core :refer (html)]
             [coming-soon.config :refer (landing-page)]
             [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
 
@@ -25,7 +24,7 @@
 (defn- signup-button-icon []
   (let [signup-btn-icon-class (landing-page :signup-btn-icon)]
     (if-not (blank? signup-btn-icon-class)
-      (html [:i {:id "submit-icon" :class signup-btn-icon-class}] "&nbsp;"))))
+      (html [:i {:id "submit-icon" :class signup-btn-icon-class}] " "))))
 
 (defn- background-image []
   (let [image-url (landing-page :background-image)]
@@ -56,7 +55,7 @@
     "#copyright {color:" (landing-page :copyright-color) ";}"))
   [:head] (append
     (if-not (blank? (landing-page :blog-feed))
-      (-> (blog-feed-content) html-snippet)
+      (blog-feed-content)
       ""))
 
   ;; body
@@ -72,13 +71,13 @@
   [:#email] (set-attr :placeholder (landing-page :placeholder))
   [:#referrer] (set-attr :value referrer)
   [:#submit] (add-class (landing-page :signup-btn-class))  
-  [:#submit] (html-content (str (signup-button-icon) (landing-page :sign-up-btn)))
+  [:#submit] (content (signup-button-icon) (landing-page :sign-up-btn))
   [:#spam-msg] (html-content (landing-page :spam-msg))
-  [:#social-links] (html-content (apply str (map linked-icon
+  [:#social-links] (content (map linked-icon
     [{:link-name "twitter" :icon-name "twitter"}
     {:link-name "facebook" :icon-name "facebook"}
     {:link-name "github" :icon-name "github"}
-    {:link-name "blog" :icon-name "rss"}])))
+    {:link-name "blog" :icon-name "rss"}]))
 
   ;; footer
   [:#copyright] (html-content (landing-page :copyright))
