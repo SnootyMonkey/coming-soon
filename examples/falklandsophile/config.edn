@@ -9,16 +9,17 @@
   {
     ;; If you're running Redis locally on the same machine and the default 6379 port, leave everything in this section commented out
 
-    ;; HEROKU REDIS - uncomment the selected provider
+    ;; HEROKU REDIS - uncomment the selected provider (remove the ;;)
     ;; :redis-env-variable "REDISCLOUD_URL" ; Comment in for Redis Cloud on Heroku
     ;; :redis-env-variable "MYREDIS_URL" ; Comment in for MyRedis on Heroku
     ;; :redis-env-variable "REDISTOGO_URL" ; Comment in for Redis To Go on Heroku
 
     ;; SELF HOSTED REDIS
-    ;; A different port on the same machine might be: redis://localhost:7000/
-    ;; Default port, but on a different server might be: redis://10.1.0.70/ 
+    ;; A different port on the local machine might be: redis://localhost:7000/
+    ;; The default port, but on a different server might be: redis://10.1.0.70/ 
     ;; Local on the default port, but with authentication might be: redis://admin:supersecret@localhost/
-    ;; :redis-connect-URL "redis://user:pass@host:port/" ; Comment in for self-hosted redis that's not on port 6379 of localhost
+    ;; Uncomment (remove the ;;) the line below for self-hosted redis that's not on port 6379 of localhost
+    ;; :redis-connect-URL "redis://user:pass@host:port/"
   }
   :landing-page
   { 
