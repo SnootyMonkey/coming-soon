@@ -8,7 +8,7 @@ What is coming-soon
 
 **coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minutes to setup on [Heroku](http://heroku.com/). With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
 
-You can see a [live demo](http://coming-soon.heroku.com/) of coming-soon, or the screenshot below to get a sense of what it does.
+You can see a [live demo](http://coming-soon-demo.heroku.com/) of coming-soon, or the screenshot below to get a sense of what it does.
 
 ![Silver Bullet Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example.png)
 
@@ -259,7 +259,7 @@ Links
 -----
 * [GitHub Project](http://github.com/SnootyMonkey/coming-soon)
 * [Issue Tracker](http://github.com/SnootyMonkey/coming-soon/issues)
-* [Live Demo Example](http://coming-soon.herokuapp.com)
+* [Live Demo Example](http://coming-soon-demo.herokuapp.com)
 * [Live Admin Demo](http://coming-soon-admin.herokuapp.com/contacts) - login as admin / admin
 * [IdeaFerret](http://ideaferret.com) - a coming-soon powered landing page
 * [Falklandsophile](http://falklandsophile.com) - another coming-soon powered landing page
