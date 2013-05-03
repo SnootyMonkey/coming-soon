@@ -117,14 +117,19 @@ git commit -m "Setting up my landing page."
 
 **5)** Create your Heroku app.
 
+Login to Heroku from the commandline.
+
 ```console
 heroku login
 ```
 
 Provide the email and password you used when creating your Heroku account when you are prompted for them.
 
+Now create the new Heroku app and provide it a custom buildpack that can handle our ClojureScript compilation.
+
 ```console
 heroku create
+heroku config:add BUILDPACK_URL=https://github.com/kolov/heroku-buildpack-clojure
 ```
 
 **6)** Attach a free Redis instance to your app.
