@@ -35,5 +35,6 @@
         :pretty-print false ; generated JS code prettyfication
       }}]
   }
+  :hooks [leiningen.cljsbuild]
   :min-lein-version "2.0.0"
   :main coming-soon.app)
