@@ -131,7 +131,7 @@
   (with-car
     ;; start a transaction
     (car/multi)
-    ;; remove the hashs and counter
+    ;; remove the hashes and counter
     (car/del coming-soon-id)
     (car/del coming-soon-contacts)
     (car/del coming-soon-emails)
