@@ -4,13 +4,13 @@
             [clojure.string :refer (blank?)]))
 
 (defn conn-spec
-  "Determine if we should connect with a Redis URI, and if so, which one"
+  "Determine if we should connect with a Redis URL, and if so, which one"
   []
   (let [
-    uri (config/redis :redis-connect-URI)
+    url (config/redis :redis-connect-URL)
     env (config/redis :redis-env-variable)]
-    (if-not (blank? uri)
-      (car/make-conn-spec :uri uri)
+    (if-not (blank? url)
+      (car/make-conn-spec :uri url)
       (if-not (blank? env)
         (car/make-conn-spec :uri (get (System/getenv) env))
         (car/make-conn-spec)))))
