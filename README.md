@@ -80,7 +80,7 @@ What it takes to use it
 
 coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
-Quick Start - 10 Minutes to Heroku
+Quick Start - 10 Steps to Heroku
 ----------------------------------
 
 **1) Signup for Heroku and setup the Heroku tools on your machine.**
