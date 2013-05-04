@@ -249,7 +249,7 @@ Here are some questions about coming-soon that I get asked all the time (or mayb
 **A:** coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com).
 
 **Q:** How can I ever repay you for creating such a treasure?  
-**A:** It's not required by the license terms, but please [drop me a note](http://snootmonkey.com/contact.html) and let me know the URL of your landing page so I can take a look.
+**A:** It's not required by the license terms, but please [drop me a note](http://snootymonkey.com/contact.html) and let me know the URL of your landing page so I can take a look.
 
 **Q:** Can I use it for X?  
 **A:** coming-soon is licensed with the [MIT license](https://github.com/SnootyMonkey/coming-soon/blob/master/MIT-LICENSE.txt), so you are free to use it pretty much however you'd like, in accordance with the license terms.
