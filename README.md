@@ -83,18 +83,22 @@ coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you upda
 Quick Start - 10 Minutes to Heroku
 ----------------------------------
 
-**1)** Signup for Heroku and setup the Heroku tools on your machine (if you've never used Heroku before).
+**1) Signup for Heroku and setup the Heroku tools on your machine.**
 
-Follow the [Getting Started with Heroku](https://devcenter.heroku.com/articles/quickstart) quick start steps to setup your free and instant account and the Heroku toolbelt on your local machine.
+If you haven't used Heroku before on your current computer, follow the [Getting Started with Heroku](https://devcenter.heroku.com/articles/quickstart) quick start steps to setup your free and instant account and the Heroku toolbelt on your local machine.
 
-**2)** Download coming-soon from GitHub using git.
+**2) Download coming-soon from GitHub using git.**
+
+Run the following at the console.
 
 ```console
 git clone git://github.com/SnootyMonkey/coming-soon.git
 cd coming-soon
 ```
 
-**3)** Edit the file called **config.edn** in a text editor.
+**3) Customize the configuration for your page.**
+
+Edit the file called **config.edn** in a text editor.
 
 You should see a **:coming-soon** block where you can enter admin access details for accessing your stored contacts. **PLEASE CHANGE YOUR USERNAME AND PASSWORD!**
 
@@ -106,7 +110,7 @@ Replace the logo file **resources/public/img/logo.png** with your own logo, or e
 
 If you want to use web analytics on your page, set the **:analytics** setting of the **:landing-page** block to **true**, and replace the contents of the **src/coming_soon/templates/analytics.html** file with the snippet of code provided by your analytics provider.
 
-**4)** Commit the configuration changes for your app.
+**4) Commit the configuration changes for your app.**
 
 Once you have completed editing **config.edn** to add your app's settings, run the following commands in your coming-soon folder to commit the changes to your local [git](http://git-scm.com/) repository:
 
@@ -115,15 +119,13 @@ git add .
 git commit -m "Setting up my landing page."
 ```
 
-**5)** Create your Heroku app.
+**5) Create your Heroku app.**
 
-Login to Heroku from the commandline.
+If you haven't used Heroku before on your current computer, login to Heroku from the commandline. Provide the email and password you used when creating your Heroku account when you are prompted for them. (If you have used Heroku from the commandline on your current computer, you can skip the login).
 
 ```console
 heroku login
 ```
-
-Provide the email and password you used when creating your Heroku account when you are prompted for them.
 
 Now create the new Heroku app and provide it a custom buildpack that can handle our ClojureScript compilation.
 
@@ -132,7 +134,7 @@ heroku create
 heroku config:add BUILDPACK_URL=https://github.com/kolov/heroku-buildpack-clojure
 ```
 
-**6)** Attach a free Redis instance to your app.
+**6) Attach a free Redis instance to your app.**
 
 As of this writing, there are 3 options for free Redis on Heroku.
 
@@ -161,13 +163,13 @@ git add .
 git commit -m "Selecting my Redis provider."
 ```
 
-**7)** Push the code of your app up to the Heroku cloud.
+**7) Push the code of your app up to the Heroku cloud.**
 
 ```console
 git push heroku master
 ```
 
-**8)** Congratulations! Now test out your landing page. 
+**8) Congratulations! Now test out your landing page.**
 
 Launch your app in your browser.
 
@@ -191,11 +193,11 @@ You should see a table listing the email and referral URL for everyone that has 
 
 [![Admin Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin-full.png)
 
-**9)** Setup a custom domain.
+**9) Setup your custom domain.**
 
 You will probably want a custom domain rather than Heroku's default. Follow [Heroku's instructions](http://devcenter.heroku.com/articles/custom-domains) to setup your domain to point to your brand-new landing page.
 
-**10)** Now get back to coding your app!
+**10) Now get back to coding your app!**
 
 It looks good, but I want it to be more blue
 --------------------------------------------
