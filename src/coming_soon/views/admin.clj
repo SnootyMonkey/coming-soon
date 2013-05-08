@@ -21,5 +21,5 @@
   [:table.contacts :tbody :tr] (clone-for [contact contacts]
     [:tr first-child] (content (str (:id contact)))
     [:tr (nth-child 2)] (content (:email contact))
-    [:tr (nth-child 3)] (content (:referrer contact))
-    [:tr last-child] (content (unparse output-format (to-time-zone (parse timestamp-format (:updated-at contact)) (default-time-zone))))))
+    [:tr (nth-child 3)] (content (html [:a {:href (:referrer contact) :target "_new"} (:referrer contact)]))
+    [:tr (nth-child 4)] (content (unparse output-format (to-time-zone (parse timestamp-format (:updated-at contact)) (default-time-zone))))))
