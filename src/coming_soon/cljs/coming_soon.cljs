@@ -1,8 +1,9 @@
 (ns coming-soon
   (:require [goog.net.XhrIo :as xhr]
             [cljs.reader :as reader]
+            [clojure.string :refer [join]]
             [jayq.core :refer [$ document-ready bind val css attr remove-attr add-class remove-class]]
-            [jayq.util :refer [log]]
+            [jayq.util :as util]
             [coming-soon.models.email :refer [valid?]]))
 
 (def subscribe-url "/subscribe")
@@ -17,6 +18,12 @@
 (def $subscribe ($ :#subscribe))
 (def $referrer ($ :#referrer))
 (def $spam-msg ($ :#spam-msg))
+
+(defn log
+  "log to the console only if we have a console (so not in old versions of IE)"
+  [& msg]
+  (if-not (= js/console js/undefined) 
+    (util/log (join msg))))
 
 (defn disable-submission []
   ;; disable the submit button
