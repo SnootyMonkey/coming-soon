@@ -236,7 +236,7 @@ lein cljsbuild auto
 Other Frequently Asked Questions
 --------------------------------
 
-Here are some questions about coming-soon that I get asked all the time (or maybe I just made them all up, you decide).
+Here are some questions about coming-soon that I get asked all the time (or maybe I just made them all up).
 
 **Q:** Can I host it somewhere other than Heroku?  
 **A:** Sure, nothing about coming-soon is Heroku specific.
