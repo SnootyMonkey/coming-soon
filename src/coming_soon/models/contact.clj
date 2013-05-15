@@ -125,7 +125,7 @@
       true)
     false))
 
-(defn empty!
+(defn erase!
   "USE WITH CAUTION - Wipes out all the stored contacts."
   []
   (with-car
@@ -143,3 +143,9 @@
   "Is the contact store in a sane state?"
   []
   (= (with-car (car/hlen coming-soon-contacts)) (with-car (car/hlen coming-soon-emails))))
+
+(defn test-populate [n]
+  "Create n many test registrations for whatever reason you may have for doing so"
+  (when (< 0 n)
+    (create (str "test.user" n "@testing.com") (str "http://testing" n ".com/article/test.html"))
+    (recur (dec n))))

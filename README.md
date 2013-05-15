@@ -245,7 +245,7 @@ Here are some questions about coming-soon that I get asked all the time (or mayb
 **A:** Unless you are paying Heroku to host at least 2 dynos, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky soul to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
 
 **Q:** How many signups can I store before my Redis instance runs out of space?  
-**A:** That's a very optimistic question. I like you; you've got gumption.
+**A:** That's a very optimistic question. I like you; you've got gumption. A good rule of thumb is that an empty Redis instance is ~1MB and coming-soon uses (very conservatively) ~.5MB per 1,000 registrations. The .5MB per 1,000 registrations estimate is providing for a fairly long and unique referrer URL for every user, a fairly long email addresses for every user, and 25% overhead for memory fragmentation, so your actual results will likely be better. Assuming the conservative rule of thumb, and a free 20MB Redis service, you'll get over 38,000 registrations before it fills up and you have to start paying for Redis.
 
 **Q:** Who made this treasure?  
 **A:** coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com/).
