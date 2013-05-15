@@ -102,7 +102,7 @@ Edit the file called **config.edn** in a text editor.
 
 You should see a **:coming-soon** block where you can enter admin access details for accessing your stored contacts. **PLEASE CHANGE YOUR USERNAME AND PASSWORD!**
 
-You should also see a **:landing-page** block where you can configure the appearance of the landing page (your site's name, app summary, colors, background, etc). There are guide images for changing the [text](http://coming-soon-resources.s3.amazonaws.com/coming-soon-configuration-text.png), [fonts](http://coming-soon-resources.s3.amazonaws.com/coming-soon-configuration-fonts.png), [images](http://coming-soon-resources.s3.amazonaws.com/coming-soon-configuration-images.png), and [colors](http://coming-soon-resources.s3.amazonaws.com/coming-soon-configuration-colors.png).
+You should also see a **:landing-page** block where you can configure the appearance of your landing page. There are guide images for changing the [text](http://coming-soon-resources.s3.amazonaws.com/coming-soon-configuration-text.png), [fonts](http://coming-soon-resources.s3.amazonaws.com/coming-soon-configuration-fonts.png), [images](http://coming-soon-resources.s3.amazonaws.com/coming-soon-configuration-images.png), and [colors](http://coming-soon-resources.s3.amazonaws.com/coming-soon-configuration-colors.png).
 
 Update the copy to describe your application and change the colors, fonts, and other elements to customize your landing page.
 
