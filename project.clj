@@ -20,9 +20,8 @@
   ]
   :plugins [
     [lein-ring "0.8.3"] ; common ring tasks https://github.com/weavejester/lein-ring
-    [lein-cljsbuild "0.3.0"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
+    [lein-cljsbuild "0.3.2"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
   ]
-  :ring {:handler coming-soon.app/app}
   :cljsbuild {
     :crossovers [coming-soon.models.email] ; compile for both Clojure and ClojureScript
     :builds
@@ -35,5 +34,6 @@
         :pretty-print false ; generated JS code prettyfication
       }}]
   }
+  :ring {:handler coming-soon.app/app}
   :min-lein-version "2.0.0"
   :main coming-soon.app)
