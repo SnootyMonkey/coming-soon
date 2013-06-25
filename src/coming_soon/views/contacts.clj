@@ -17,9 +17,11 @@
   (html [:link {:rel "alternate" :type "application/rss+xml" :href (landing-page :blog-feed)}]))
 
 (defn- linked-icon [{:keys [link-name icon-name]}]
-  (let [url (landing-page (keyword (str link-name "-url")))]
+  (let [url (landing-page (keyword (str link-name "-url")))
+    title (landing-page (keyword (str link-name "-title")))]
     (if-not (blank? url)
-      (html [:li [:a {:class "social-link" :href url :target "_new"} [:i {:class (str "icon-" icon-name " icon-large")}]]]))))
+      (html [:li [:a {:href url :title title :class "social-link" :target "_new"}
+        [:i {:class (str "icon-" icon-name " icon-large")}]]]))))
 
 (defn- signup-button-icon []
   (let [signup-btn-icon-class (landing-page :signup-btn-icon)]
@@ -73,8 +75,9 @@
   [:#submit] (add-class (landing-page :signup-btn-class))  
   [:#submit] (content (signup-button-icon) (landing-page :sign-up-btn))
   [:#spam-msg] (html-content (landing-page :spam-msg))
-  [:#social-links] (content (map linked-icon
-    [{:link-name "twitter" :icon-name "twitter"}
+  [:#social-links] (content (map linked-icon [
+    {:link-name "twitter" :icon-name "twitter"}
+    {:link-name "app-net" :icon-name "adn"}
     {:link-name "facebook" :icon-name "facebook"}
     {:link-name "github" :icon-name "github"}
     {:link-name "blog" :icon-name "rss"}]))

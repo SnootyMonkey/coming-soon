@@ -72,9 +72,15 @@
 
     ;; Social stuff
     :twitter-url "http://twitter.com/ideaferret" ; OK to be blank
+    :twitter-title "" ; OK to be blank
+    :app-net-url "" ; OK to be blank
+    :app-net-title "" ; OK to be blank
     :facebook-url "" ; OK to be blank
+    :facebook-title "" ; OK to be blank
     :github-url "" ; OK to be blank
+    :github-title "" ; OK to be blank
     :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
+    :blog-title "" ; OK to be blank
     :blog-feed "http://feeds.feedburner.com/snootymonkey" ; OK to be blank
 
     ;; Analytics

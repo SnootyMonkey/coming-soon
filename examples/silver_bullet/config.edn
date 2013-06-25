@@ -72,9 +72,15 @@
 
     ;; Social stuff
     :twitter-url "http://twitter.com/snootymonkey" ; OK to be blank
+    :twitter-title "Follow Snooty Monkey on Twitter" ; OK to be blank
+    :app-net-url "http://alpha.app.net/snootymonkey" ; OK to be blank
+    :app-net-title "Follow Snooty Monkey on App.net" ; OK to be blank
     :facebook-url "https://www.facebook.com/bubbletimer" ; OK to be blank
+    :facebook-title "BubbleTimer is on Facebook" ; OK to be blank
     :github-url "https://github.com/SnootyMonkey" ; OK to be blank
+    :github-title "Snooty Monkey's open source GitHub repositiories" ; OK to be blank
     :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
+    :blog-title "Subscribe to Monkey Opus, the Snooty Monkey blog" ; OK to be blank
     :blog-feed "http://feeds.feedburner.com/snootymonkey" ; OK to be blank
 
     ;; Analytics

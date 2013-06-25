@@ -26,7 +26,7 @@ Here are just some of the Fantastic Features<sup>TM</sup> you can enjoy:
 * Many of the styles can be configured as well using the same [config file](https://github.com/SnootyMonkey/coming-soon/blob/master/config.edn)
 * User defined fonts, logo and background image using, you guessed it, the same [file](https://github.com/SnootyMonkey/coming-soon/blob/master/config.edn)
 * Drop in your code snippet from your web analytics provider, such as Google Analytics, and you can track views and conversion rates for signing up
-* Twitter, Facebook, GitHub and blog links are supported as a setting in the config file
+* Twitter, Facebook, App.net, GitHub and blog links are supported as a setting in the config file
 * Go beyond the config file and change all the HTML and CSS to put whatever you'd like on the page
 * The CSS is Twitter Bootstrap
 * All the third-party resources are hosted on a [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
@@ -265,6 +265,7 @@ Here are some questions about coming-soon that I get asked all the time (or mayb
 Links
 -----
 * [GitHub Project](http://github.com/SnootyMonkey/coming-soon)
+* [Change Log](http://github.com/SnootyMonkey/coming-soon/blob/master/CHANGELOG.md)
 * [Issue Tracker](http://github.com/SnootyMonkey/coming-soon/issues)
 * [Live Demo Example](http://coming-soon-demo.herokuapp.com)
 * [Live Admin Demo](http://coming-soon-admin.herokuapp.com/contacts) - login as admin / admin
