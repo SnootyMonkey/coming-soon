@@ -16,7 +16,7 @@
         (car/make-conn-spec)))))
 
 ;; A Redis connection with Carmine
-(def redis-pool (car/make-conn-pool))
+(defonce redis-pool (car/make-conn-pool))
 (def redis-server-spec (conn-spec))
 (defmacro with-car [& body] `(car/with-conn redis-pool redis-server-spec ~@body))
 

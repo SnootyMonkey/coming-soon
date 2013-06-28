@@ -17,10 +17,12 @@
     [jayq "2.3.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.5.0"] ; DateTime utilities https://github.com/clj-time/clj-time
+    [expectations "1.4.49"] ; Unit testing https://github.com/jaycfields/expectations
   ]
   :plugins [
-    [lein-ring "0.8.3"] ; common ring tasks https://github.com/weavejester/lein-ring
+    [lein-ring "0.8.3"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-cljsbuild "0.3.2"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
+    [lein-expectations "0.0.7"] ; Unit testing https://github.com/gar3thjon3s/lein-expectations
   ]
   :cljsbuild {
     :crossovers [coming-soon.models.email] ; compile for both Clojure and ClojureScript
