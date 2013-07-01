@@ -4,7 +4,7 @@
   :license {:name "MIT License"
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [
-    [org.clojure/clojure "1.5.0"] ; Lisp on the JVM http://clojure.org/documentation
+    [org.clojure/clojure "1.5.1"] ; Lisp on the JVM http://clojure.org/documentation
     [ring/ring-jetty-adapter "1.1.8"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.2"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.1.5"] ; Web routing http://github.com/weavejester/compojure
@@ -23,6 +23,7 @@
     [lein-ring "0.8.3"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-cljsbuild "0.3.2"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
     [lein-expectations "0.0.7"] ; Unit testing https://github.com/gar3thjon3s/lein-expectations
+    [lein-cucumber "1.0.2"] ; cucumber-jvm (BDD testing) tasks https://github.com/nilswloka/lein-cucumber
   ]
   :cljsbuild {
     :crossovers [coming-soon.models.email] ; compile for both Clojure and ClojureScript
