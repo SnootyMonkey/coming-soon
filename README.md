@@ -233,6 +233,13 @@ To watch the ClojureScript code and build it each time it changes:
 lein cljsbuild auto
 ```
 
+To run the tests:
+
+```console
+lein expectations
+lein cucumber
+```
+
 Other Frequently Asked Questions
 --------------------------------
 
