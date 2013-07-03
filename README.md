@@ -6,7 +6,9 @@ A simple landing page email collector, but with 90% more parentheses than the le
 What is coming-soon
 -------------------
 
-**coming-soon** is a simple Clojure/ClojureScript/Redis powered "landing page" application that takes just a few minutes to setup on [Heroku](http://heroku.com/). With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
+**coming-soon** is a simple "landing page" application that takes just a few minutes to setup on [Heroku](http://heroku.com/). With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
+
+It's powered by Clojure, ClojureScript and Redis.
 
 You can see a [live demo](http://coming-soon-demo.heroku.com/) of coming-soon, or the screenshot below to get a sense of what it does.
 
@@ -23,7 +25,7 @@ Here are just some of the Fantastic Features<sup>TM</sup> you can enjoy:
 
 * Captures email, when they signed up, and what website they came from
 * All the text on the landing page can be configured in a simple [config file](https://github.com/SnootyMonkey/coming-soon/blob/master/config.edn)
-* Many of the styles can be configured as well using the same [config file](https://github.com/SnootyMonkey/coming-soon/blob/master/config.edn)
+* Most of the styles can be configured as well using the same [config file](https://github.com/SnootyMonkey/coming-soon/blob/master/config.edn)
 * User defined fonts, logo and background image using, you guessed it, the same [file](https://github.com/SnootyMonkey/coming-soon/blob/master/config.edn)
 * Drop in your code snippet from your web analytics provider, such as Google Analytics, and you can track views and conversion rates for signing up
 * Twitter, Facebook, App.net, GitHub and blog links are supported as a setting in the config file
@@ -92,7 +94,7 @@ If you haven't used Heroku before on your current computer, follow the [Getting 
 Run the following at the console.
 
 ```console
-git clone git://github.com/SnootyMonkey/coming-soon.git
+git clone https://github.com/SnootyMonkey/coming-soon.git
 cd coming-soon
 ```
 
