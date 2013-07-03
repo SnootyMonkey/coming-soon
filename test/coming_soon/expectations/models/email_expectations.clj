@@ -1,4 +1,4 @@
-(ns coming-soon.models.email-expectations
+(ns coming-soon.expectations.models.email-expectations
   (:require [expectations :refer (given expect)]
             [coming-soon.models.email :refer (valid?)]))
 

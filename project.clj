@@ -38,6 +38,7 @@
         :pretty-print false ; generated JS code prettyfication
       }}]
   }
+  :cucumber-feature-paths ["test/coming_soon/features"]
   :ring {:handler coming-soon.app/app}
   :min-lein-version "2.0.0"
   :main coming-soon.app)
