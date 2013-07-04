@@ -2,7 +2,7 @@
 
 Feature: Adding Contacts
 
-	The system should collect contacts so they can be notified later about important developments.
+	The system should collect valid contacts so they can be notified later about important developments.
 
 	Background:
 		Given I have no contacts

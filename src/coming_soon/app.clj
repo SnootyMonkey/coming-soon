@@ -23,5 +23,5 @@
 
 (defn -main []
   (let [port (Integer/parseInt 
-       (or (System/getenv "PORT") "8000"))]
+       (or (System/getenv "PORT") "3000"))]
   (start port)))

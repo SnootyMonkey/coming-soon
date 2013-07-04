@@ -220,7 +220,7 @@ You can modify any of the Clojure and ClojureScript code to customize the behavi
 To run coming-soon locally:
 
 ```console
-lein ring server-headless
+lein run
 ```
 
 To build the ClojureScript code:
