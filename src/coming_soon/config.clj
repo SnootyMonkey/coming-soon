@@ -1,6 +1,12 @@
-(ns coming-soon.config)
+(ns coming-soon.config
+  (:require [clojure.string :refer (lower-case)]))
 
-(def config (read-string (slurp "config.edn")))
+(def env (or (System/getenv "ENV") "prod"))
+
+(def config (read-string (slurp 
+  (if (= (lower-case env) "test")
+    "test/test-config.edn"
+    "config.edn"))))
 
 (def coming-soon (config :coming-soon))
 

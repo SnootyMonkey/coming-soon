@@ -1,0 +1,78 @@
+{
+  :coming-soon
+  { 
+    :admin-user "admin" ; CHANGE THIS!
+    :admin-password "change_me!" ; CHANGE THIS!
+    :instance-prefix "test" ; make this unique if you are sharing a single redis instance w/ another coming-soon instance
+  }
+  :redis
+  {
+    ;; Redis Cloud powered test instance
+    :redis-connect-URL "redis://coming-soon-test:coming-soon-test@pub-redis-13960.us-east-1-1.2.ec2.garantiadata.com:13960"
+  }
+  :landing-page
+  { 
+    ;; Copy
+    :page-title "Silver Bullet | Launching soon!"
+    :app-title "Silver Bullet"
+    :app-tagline "Clojure powered bad-assery!"
+    :app-summary "With Silver Bullet, all your problems are gone.<br>Silver Bullet smacks your problems around a bit, then sends them packing.<br>You want it. You need it."  ; OK to be blank
+    :instructions "We'll notify you when it's ready."
+    :placeholder "Email Address*" ; OK to be blank
+    :sign-up-btn "Sign up"
+    :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
+    :thank-you "Thank you! We'll be in touch soon."
+    :copyright "&copy; 2013 Clojurific Studios" ; OK to be blank
+
+    ;; Fonts
+
+    ;; see font advice at:
+    ;; http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
+    ;; http://designshack.net/articles/typography/10-more-great-google-font-combinations-you-can-copy/
+    ;; http://www.insquaremedia.com/blog/15-web-design-stuff/50-our-favourite-google-font-combinations
+    
+    ;; see http://code.google.com/webfonts for available fonts
+    :app-title-font "Droid Sans" ; Google web font
+    :app-title-backup-fonts "Arial,Helvetica,sans-serif" ; Web-safe fonts
+    :body-font "Droid Serif" ; Google web font
+    :body-backup-fonts "Georgia,serif" ; Web-safe fonts
+
+    ;; Images
+    :logo "/img/logo.png" ; OK to be blank
+    :background-image "" ; OK to be blank
+
+    ;; Colors
+    :background-color "#403727" ; brown
+    :container-bg-color "#EEE" ; light grey
+    :container-opacity "1" ; 1 for solid, 0 for no container, 0.x for some transparency
+    :app-title-color "#63A687" ; greenish
+    :app-tagline-color "#000" ; black
+    :app-summary-color "#000" ; black
+    :instructions-color "#000" ; black
+    :spam-msg-color "#646464" ; dark grey
+    :thank-you-color "#63A687" ; greenish
+    :copyright-color "#646464" ; dark grey
+    :social-color "#646464" ; dark grey
+    :social-hover-color "#63A687" ; greenish
+
+    ;; Signup button
+    :signup-btn-icon "icon-envelope-alt" ; see http://fortawesome.github.com/Font-Awesome/ OK to be blank
+    :signup-btn-class "btn-success" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
+
+    ;; Social stuff
+    :twitter-url "http://twitter.com/snootymonkey" ; OK to be blank
+    :twitter-title "Follow Snooty Monkey on Twitter" ; OK to be blank
+    :app-net-url "http://alpha.app.net/snootymonkey" ; OK to be blank
+    :app-net-title "Follow Snooty Monkey on App.net" ; OK to be blank
+    :facebook-url "https://www.facebook.com/bubbletimer" ; OK to be blank
+    :facebook-title "BubbleTimer is on Facebook" ; OK to be blank
+    :github-url "https://github.com/SnootyMonkey" ; OK to be blank
+    :github-title "Snooty Monkey's open source GitHub repositiories" ; OK to be blank
+    :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
+    :blog-title "Subscribe to Monkey Opus, the Snooty Monkey blog" ; OK to be blank
+    :blog-feed "http://feeds.feedburner.com/snootymonkey" ; OK to be blank
+
+    ;; Analytics
+    :analytics false ; include the analytics snippet in src/coming-soon/templates/analytics.html
+  }
+}
