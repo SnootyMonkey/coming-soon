@@ -25,6 +25,7 @@
     [lein-cljsbuild "0.3.2"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
     [lein-expectations "0.0.7"] ; Unit testing https://github.com/gar3thjon3s/lein-expectations
     [lein-cucumber "1.0.2"] ; cucumber-jvm (BDD testing) tasks https://github.com/nilswloka/lein-cucumber
+    [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
   ]
   :cljsbuild {
     :crossovers [coming-soon.models.email] ; compile for both Clojure and ClojureScript
