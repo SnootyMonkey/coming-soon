@@ -22,6 +22,9 @@
 (Then #"^the contact \"([^\"]*)\" exists$" [email]
   (assert (and (exists-by-email? email) (sane?))))
 
+(Then #"^the contact \"([^\"]*)\" does not exist$" [email]
+  (assert (and (not (exists-by-email? email)) (sane?))))
+
 (Then #"^the contact can be retrieved by \"([^\"]*)\"$" [email]
   (assert
     (when-let [contact (contact-by-email email)]

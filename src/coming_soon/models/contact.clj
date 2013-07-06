@@ -1,6 +1,7 @@
 (ns coming-soon.models.contact
   (:require [taoensso.carmine :as car]
             [coming-soon.lib.redis :refer (prefix with-car)]
+            [coming-soon.models.email :refer (valid?)]
             [clj-time.format :refer (formatters unparse)]
             [clj-time.core :refer (now)]))
 
@@ -84,15 +85,16 @@
     (car/exec)))
 
 (defn create
-  "Store the contact"
+  "Store the contact if the email is valid, otherwise return :invalid-email"
   [email referrer]
-  (if (exists-by-email? email)
-    ;; use the id we already have for this email to store the contact
-    (store (:id (contact-by-email email)) email referrer)
-    ;; increment the counter to provide a new id to store the contact
-    (let [id (with-car (car/incr coming-soon-id))]
-      (store id email referrer)))
-  true)
+  (if (valid? email)
+    ; existing id or new id
+    (let [id (if (exists-by-email? email)
+      (:id (contact-by-email email))
+      (with-car (car/incr coming-soon-id)))]
+      (store id email referrer)
+      true)
+    :invalid-email))
 
 ;; Remove the contact from the hash by id and the hash by email
 (defn- remove! [id email]
