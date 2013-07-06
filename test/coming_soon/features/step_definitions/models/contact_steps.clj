@@ -73,3 +73,25 @@
     (when-let [contact (contact-by-email email)]
       (when-let [time (parse (:updated-at contact))]
         (before? updated-at time)))))
+
+
+(Given #"^the system knows about the following contacts$" [table]
+  (println (table->rows table))
+  (comment  Express the Regexp above with the code you wish you had  )
+  (throw (cucumber.runtime.PendingException.)))
+
+(When #"^I delete the contact for \"([^\"]*)\"$" [arg1]
+  (comment  Express the Regexp above with the code you wish you had  )
+  (throw (cucumber.runtime.PendingException.)))
+
+(When #"^I delete the contact with id \"([^\"]*)\"$" [arg1]
+  (comment  Express the Regexp above with the code you wish you had  )
+  (throw (cucumber.runtime.PendingException.)))
+
+(When #"^I erase all contacts$" []
+  (comment  Express the Regexp above with the code you wish you had  )
+  (throw (cucumber.runtime.PendingException.)))
+
+(Then #"^the contact \"([^\"]*)\" does non exist$" [arg1]
+  (comment  Express the Regexp above with the code you wish you had  )
+  (throw (cucumber.runtime.PendingException.)))
