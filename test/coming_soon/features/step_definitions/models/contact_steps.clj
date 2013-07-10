@@ -91,54 +91,21 @@
 (When #"^I erase all contacts$" []
   (contact/erase!))
 
-(When #"^I list all contacts$" []
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
+(When #"^I retrieve the contact for \"([^\"]*)\" the \"([^\"]*)\" is \"([^\"]*)\"$" [email property value]
+  (let [compare (if (= property "id") (read-string value) value)]
+    (assert (= compare ((contact/contact-by-email email) (keyword property))))))
 
-(Then #"^the list contains (\d+) items$" [arg1]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
+(When #"^I retrieve the contact for \"([^\"]*)\" the \"([^\"]*)\" is blank$" [email property]
+  (assert (nil? ((contact/contact-by-email email) (keyword property)))))
 
-(Then #"^the next contact is \"([^\"]*)\" with the id \"([^\"]*)\" and the referrer \"([^\"]*)\"$" [arg1 arg2 arg3]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
+(When #"^I retrieve the contact for id \"([^\"]*)\" the \"([^\"]*)\" is \"([^\"]*)\"$" [id property value]
+  (assert (= value ((contact/contact-by-id id) (keyword property)))))
 
-(Then #"^the next contact is \"([^\"]*)\" with the id \"([^\"]*)\" and no referrer$" [arg1 arg2]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
+(When #"^I retrieve the contact for id \"([^\"]*)\" the \"([^\"]*)\" is blank$" [id property]
+  (assert (nil? ((contact/contact-by-id id) (keyword property)))))
 
-(When #"^I list all emails$" []
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
+(When #"^I retrieve the contact for \"([^\"]*)\" it doesn't exist$" [email]
+  (assert (nil? (contact/contact-by-email email))))
 
-(When #"^I list all referrals$" []
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
-
-(Then #"^the next referrer is \"([^\"]*)\" with a count of \"([^\"]*)\"$" [arg1 arg2]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
-
-(When #"^I retrieve the contact for \"([^\"]*)\" the id is \"([^\"]*)\"$" [arg1 arg2]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
-
-(When #"^I retrieve the contact for \"([^\"]*)\" the referrer is \"([^\"]*)\"$" [arg1 arg2]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
-
-(When #"^I retrieve the contact for \"([^\"]*)\" it doesn't exist$" [arg1]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
-
-(When #"^I retrieve the contact for id \"([^\"]*)\" the email is \"([^\"]*)\"$" [arg1 arg2]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
-
-(When #"^I retrieve the contact for id \"([^\"]*)\" the referrer is \"([^\"]*)\"$" [arg1 arg2]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
-
-(When #"^I retrieve the contact for id \"([^\"]*)\" it doesn't exist$" [arg1]
-  (comment  Express the Regexp above with the code you wish you had  )
-  (throw (cucumber.runtime.PendingException.)))
+(When #"^I retrieve the contact for id \"([^\"]*)\" it doesn't exist$" [id]
+  (assert (nil? (contact/contact-by-id id))))
