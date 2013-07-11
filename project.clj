@@ -17,8 +17,16 @@
     [jayq "2.4.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.5.1"] ; DateTime utilities https://github.com/clj-time/clj-time
-    [expectations "1.4.49"] ; Unit testing https://github.com/jaycfields/expectations
   ]
+  :profiles {
+    :dev {
+      :dependencies [
+        [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
+        [expectations "1.4.49"] ; Unit testing https://github.com/jaycfields/expectations
+        [print-foo "0.3.7"] ; Old school print debugging https://github.com/danielribeiro/print-foo
+      ]
+    }
+  }
   :plugins [
     [lein-ancient "0.4.0"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
     [lein-ring "0.8.3"] ; Common ring tasks https://github.com/weavejester/lein-ring
