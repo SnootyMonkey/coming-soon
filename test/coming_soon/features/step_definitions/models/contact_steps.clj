@@ -1,6 +1,7 @@
 ;; Behavioral driven unit tests for the contact model
 
-(require  '[coming-soon.models.contact :as contact]
+(require  '[coming-soon.lib.check :refer (check)]
+          '[coming-soon.models.contact :as contact]
           '[clj-time.core :refer (now before? after? ago secs)]
           '[clj-time.format :refer (parse)])
 
@@ -13,56 +14,56 @@
   (contact/erase!))
 
 (Then #"^the contact count is (\d+)$" [count-arg]
-  (assert (= (read-string count-arg) (contact/contact-count))))
+  (check (= (read-string count-arg) (contact/contact-count))))
 
 (Then #"^the content store is sane$" []
-  (assert (contact/sane?)))
+  (check (contact/sane?)))
 
 (When #"^I add a contact for \"([^\"]*)\"$" [email]
-  (assert (contact/create email nil))
+  (check (contact/create email nil))
   (def updated-at (parse (:updated-at (contact/contact-by-email email)))))
 
 (Then #"^the contact \"([^\"]*)\" exists$" [email]
-  (assert (contact/exists-by-email? email)))
+  (check (contact/exists-by-email? email)))
 
 (Then #"^the contact \"([^\"]*)\" does not exist$" [email]
-  (assert (not (contact/exists-by-email? email))))
+  (check (not (contact/exists-by-email? email))))
 
 (Then #"^the contact can be retrieved by \"([^\"]*)\"$" [email]
-  (assert
+  (check
     (when-let [contact (contact/contact-by-email email)]
       (= email (:email contact)))))
 
 (When #"^I add a contact for \"([^\"]*)\" with a referrer from \"([^\"]*)\"$" [email referrer]
-  (assert (contact/create email referrer)))
+  (check (contact/create email referrer)))
 
 (Then #"^the contact \"([^\"]*)\" has a referrer of \"([^\"]*)\"$" [email referrer]
-  (assert
+  (check
     (when-let [contact (contact/contact-by-email email)]
       (= email (:email contact)) (= referrer (:referrer contact)))))
 
 (Then #"^the contact \"([^\"]*)\" has no referrer$" [email]
-  (assert
+  (check
     (when-let [contact (contact/contact-by-email email)]
       (nil? (:referrer contact)))))
 
 (Then #"^the contact \"([^\"]*)\" and the contact \"([^\"]*)\" have unique ids$" [email1 email2]
-  (assert (not= (id-for-contact email1) (id-for-contact email2))))
+  (check (not= (id-for-contact email1) (id-for-contact email2))))
 
 (Then #"^the contact \"([^\"]*)\" has an id before the contact \"([^\"]*)\"$" [email1 email2]
-  (assert (< (id-for-contact email1) (id-for-contact email2))))
+  (check (< (id-for-contact email1) (id-for-contact email2))))
 
 (When #"^I delay a moment$" []
   (Thread/sleep 1000))
 
 (Then #"^the contact \"([^\"]*)\" has an updated-at of just before now$" [email]
-  (assert
+  (check
     (when-let [contact (contact/contact-by-email email)]
       (when-let [time (parse (:updated-at contact))]
         (and (after? time (-> 10 secs ago)) (before? time (now)))))))
 
 (Then #"^the contact \"([^\"]*)\" has an updated-at before the updated-at for contact \"([^\"]*)\"$" [email1 email2]
-  (assert
+  (check
     (let [contact1 (contact/contact-by-email email1)
           contact2 (contact/contact-by-email email2)]
       (when (and contact1 contact2)
@@ -72,7 +73,7 @@
             (before? time1 time2)))))))
 
 (Then #"^the contact \"([^\"]*)\" has a more recent updated-at than before$" [email]
-  (assert
+  (check
     (when-let [contact (contact/contact-by-email email)]
       (when-let [time (parse (:updated-at contact))]
         (before? updated-at time)))))
@@ -93,19 +94,19 @@
 
 (When #"^I retrieve the contact for \"([^\"]*)\" the \"([^\"]*)\" is \"([^\"]*)\"$" [email property value]
   (let [compare (if (= property "id") (read-string value) value)]
-    (assert (= compare ((contact/contact-by-email email) (keyword property))))))
+    (check (= compare ((contact/contact-by-email email) (keyword property))))))
 
 (When #"^I retrieve the contact for \"([^\"]*)\" the \"([^\"]*)\" is blank$" [email property]
-  (assert (nil? ((contact/contact-by-email email) (keyword property)))))
+  (check (nil? ((contact/contact-by-email email) (keyword property)))))
 
 (When #"^I retrieve the contact for id \"([^\"]*)\" the \"([^\"]*)\" is \"([^\"]*)\"$" [id property value]
-  (assert (= value ((contact/contact-by-id id) (keyword property)))))
+  (check (= value ((contact/contact-by-id id) (keyword property)))))
 
 (When #"^I retrieve the contact for id \"([^\"]*)\" the \"([^\"]*)\" is blank$" [id property]
-  (assert (nil? ((contact/contact-by-id id) (keyword property)))))
+  (check (nil? ((contact/contact-by-id id) (keyword property)))))
 
 (When #"^I retrieve the contact for \"([^\"]*)\" it doesn't exist$" [email]
-  (assert (nil? (contact/contact-by-email email))))
+  (check (nil? (contact/contact-by-email email))))
 
 (When #"^I retrieve the contact for id \"([^\"]*)\" it doesn't exist$" [id]
-  (assert (nil? (contact/contact-by-id id))))
+  (check (nil? (contact/contact-by-id id))))
