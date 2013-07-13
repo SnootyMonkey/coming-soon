@@ -1,4 +1,4 @@
-coming-soon
+coming-soon [![Build Status](https://travis-ci.org/SnootyMonkey/coming-soon.png?branch=master)](https://travis-ci.org/SnootyMonkey/coming-soon)
 ===========
 
 A simple landing page email collector, but with 90% more parentheses than the leading brand.
