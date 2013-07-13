@@ -10,3 +10,7 @@ jdk:
   - openjdk6
 services:
   - redis-server
+notifications:
+  hipchat:
+    rooms:
+      - ec1ead2b384476ea5bcb232b5bb9b6@Snooty Monkey
