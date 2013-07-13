@@ -7,6 +7,8 @@ v0.2
 
 * Added support for a title on all the user configured "social" links (Twitter, App.net, Facebook, GitHub, RSS).
 
+* Added unit tests and continious integration with Travis CI.
+
 v0.1
 ====
 Initial release.

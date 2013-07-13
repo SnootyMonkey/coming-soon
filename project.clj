@@ -5,13 +5,13 @@
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [
     [org.clojure/clojure "1.5.1"] ; Lisp on the JVM http://clojure.org/documentation
-    [ring/ring-jetty-adapter "1.1.8"] ; Web Server https://github.com/ring-clojure/ring
+    [ring/ring-jetty-adapter "1.2.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.2"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.1.5"] ; Web routing http://github.com/weavejester/compojure
     [com.taoensso/carmine "1.12.0"] ; Redis client https://github.com/ptaoussanis/carmine
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.7"] ; XML encoding https://github.com/clojure/data.xml
-    [clojure-csv/clojure-csv "2.0.0-alpha2"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
+    [clojure-csv/clojure-csv "2.0.1"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.1"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.3"] ; HTML generation https://github.com/weavejester/hiccup
     [jayq "2.4.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
