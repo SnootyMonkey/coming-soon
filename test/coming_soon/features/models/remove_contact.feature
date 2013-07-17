@@ -18,7 +18,7 @@ Feature: Removing Contacts
     And the content store is sane
 
 	Scenario: Removing a contact by id
-		When I remove the contact with id "2"
+		When I remove the contact with id 2
 		Then the contact count is 2
 		And the contact "zuck@facebook.com" exists
 		And the contact "obama@whitehouse.gov" does not exist
@@ -39,7 +39,7 @@ Feature: Removing Contacts
 		And the contact "zuck@facebook.com" exists
 		And the contact "obama@whitehouse.gov" exists
 		And the contact "jonny@apple.com" exists
-		When I remove the contact with id "4"
+		When I remove the contact with id 4
 		Then the contact count is 3
 		And the contact "zuck@facebook.com" exists
 		And the contact "obama@whitehouse.gov" exists

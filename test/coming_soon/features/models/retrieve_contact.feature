@@ -21,12 +21,12 @@ Feature: Retrieving Contacts
     When I retrieve the contact for "zuck@faceboo.com" it doesn't exist
 
   Scenario: Retrieving a contact by id
-    When I retrieve the contact for id "1" the "email" is "zuck@facebook.com"
-    When I retrieve the contact for id "1" the "referrer" is "http://facebook.com/cool-stuff"
-    When I retrieve the contact for id "2" the "email" is "obama@whitehouse.gov"
-    When I retrieve the contact for id "2" the "referrer" is "http://cia.gov/secret-stuff"
-    When I retrieve the contact for id "3" the "email" is "jonny@apple.com"
-    When I retrieve the contact for id "3" the "referrer" is blank
+    When I retrieve the contact for id 1 the "email" is "zuck@facebook.com"
+    When I retrieve the contact for id 1 the "referrer" is "http://facebook.com/cool-stuff"
+    When I retrieve the contact for id 2 the "email" is "obama@whitehouse.gov"
+    When I retrieve the contact for id 2 the "referrer" is "http://cia.gov/secret-stuff"
+    When I retrieve the contact for id 3 the "email" is "jonny@apple.com"
+    When I retrieve the contact for id 3 the "referrer" is blank
 
   Scenario: Retrieving a non-existing contact by id
-    When I retrieve the contact for id "4" it doesn't exist
+    When I retrieve the contact for id 4 it doesn't exist

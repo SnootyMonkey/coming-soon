@@ -7,6 +7,8 @@
 
 (def updated-at nil)
 
+(def result-list nil)
+
 (defn id-for-contact [email]
   (:id (contact/contact-by-email email)))
 
@@ -80,13 +82,14 @@
 
 
 (Given #"^the system knows about the following contacts$" [table]
+  (contact/erase!)
   (let [users (table->rows table)]
     (doseq [user users] (contact/create (:email user) (:referrer user)))))
 
 (When #"^I remove the contact for \"([^\"]*)\"$" [email]
   (contact/remove-by-email! email))
 
-(When #"^I remove the contact with id \"([^\"]*)\"$" [id]
+(When #"^I remove the contact with id (\d+)$" [id]
   (contact/remove-by-id! id))
 
 (When #"^I erase all contacts$" []
@@ -99,14 +102,26 @@
 (When #"^I retrieve the contact for \"([^\"]*)\" the \"([^\"]*)\" is blank$" [email property]
   (check (nil? ((contact/contact-by-email email) (keyword property)))))
 
-(When #"^I retrieve the contact for id \"([^\"]*)\" the \"([^\"]*)\" is \"([^\"]*)\"$" [id property value]
+(When #"^I retrieve the contact for id (\d+) the \"([^\"]*)\" is \"([^\"]*)\"$" [id property value]
   (check (= value ((contact/contact-by-id id) (keyword property)))))
 
-(When #"^I retrieve the contact for id \"([^\"]*)\" the \"([^\"]*)\" is blank$" [id property]
+(When #"^I retrieve the contact for id (\d+) the \"([^\"]*)\" is blank$" [id property]
   (check (nil? ((contact/contact-by-id id) (keyword property)))))
 
 (When #"^I retrieve the contact for \"([^\"]*)\" it doesn't exist$" [email]
   (check (nil? (contact/contact-by-email email))))
 
-(When #"^I retrieve the contact for id \"([^\"]*)\" it doesn't exist$" [id]
+(When #"^I retrieve the contact for id (\d+) it doesn't exist$" [id]
   (check (nil? (contact/contact-by-id id))))
+
+(When #"^I list all contacts$" []
+  (def result-list (contact/all-contacts)))
+
+(When #"^I list all emails$" []
+  (def result-list (contact/all-emails)))
+
+(When #"^I list all referrals$" []
+  (def result-list (contact/all-referrers)))
+
+(Then #"^the list contains (\d+) items$" [item-count]
+  (check (= (read-string item-count) (count result-list))))
