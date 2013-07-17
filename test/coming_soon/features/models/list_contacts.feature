@@ -24,6 +24,10 @@ Feature: Listing Contacts
   Scenario: Listing all emails in collected at order
     When I list all emails
     Then the list contains 4 items
+  #     And the next email is "zuck@facebook.com"
+  #     And the next email is "obama@whitehouse.gov"
+  #     And the next email is "biden@whitehouse.gov"
+  #     And the next email is "jonny@apple.com"
 
   Scenario: Listing all referrers in referral count order
     When I list all referrals
