@@ -60,9 +60,9 @@
   (map :email (all-contacts)))
 
 (defn all-referrers
-  "Return all the referral URLs and the # of referrals by that URL, in order of most referrals."
+  "Return all the referrer URLs and the # of referrals by that URL, in order of most referrals."
   []
-  (sort-by last > (map identity (frequencies (map :referrer (all-contacts))))))
+  (sort-by last > (map identity (frequencies (filter #(not (nil? %)) (map :referrer (all-contacts)))))))
 
 ;; ISO 8601 timestamp
 (defn- current-timestamp [] 
