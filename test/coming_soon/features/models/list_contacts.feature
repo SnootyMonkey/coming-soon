@@ -16,21 +16,21 @@ Feature: Listing Contacts
   Scenario: Listing all contacts in collected at order
     When I list all contacts
     Then the list contains 4 items
-#     And the next contact is "zuck@facebook.com" with the id 1 and the referrer "http://facebook.com/cool-stuff"
-#     And the next contact is "obama@whitehouse.gov" with the id 2 and the referrer "http://cia.gov/secret-stuff"
-#     And the next contact is "biden@whitehouse.gov" with the id 3 and the referrer "http://cia.gov/secret-stuff"
-#     And the next contact is "jonny@apple.com" with the id 4 and no referrer
+    And the next contact is "zuck@facebook.com" with the id 1 and the referrer "http://facebook.com/cool-stuff"
+    And the next contact is "obama@whitehouse.gov" with the id 2 and the referrer "http://cia.gov/secret-stuff"
+    And the next contact is "biden@whitehouse.gov" with the id 3 and the referrer "http://cia.gov/secret-stuff"
+    And the next contact is "jonny@apple.com" with the id 4 and no referrer
 
   Scenario: Listing all emails in collected at order
     When I list all emails
     Then the list contains 4 items
-  #     And the next email is "zuck@facebook.com"
-  #     And the next email is "obama@whitehouse.gov"
-  #     And the next email is "biden@whitehouse.gov"
-  #     And the next email is "jonny@apple.com"
+    And the next email is "zuck@facebook.com"
+    And the next email is "obama@whitehouse.gov"
+    And the next email is "biden@whitehouse.gov"
+    And the next email is "jonny@apple.com"
 
   Scenario: Listing all referrers in referral count order
     When I list all referrals
     Then the list contains 2 items
-#     And the next referrer is "http://cia.gov/secret-stuff" with a count of 2
-#     And the next referrer is "http://facebook.com/cool-stuff" with a count of 1
+    And the next referrer is "http://cia.gov/secret-stuff" with a count of 2
+    And the next referrer is "http://facebook.com/cool-stuff" with a count of 1
