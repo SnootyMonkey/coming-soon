@@ -27,6 +27,7 @@
       ]
     }
   }
+  :aliases {"test!" ["do" "clean," "deps," "expectations," "cucumber"]}
   :plugins [
     [lein-ancient "0.4.0"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
     [lein-ring "0.8.3"] ; Common ring tasks https://github.com/weavejester/lein-ring

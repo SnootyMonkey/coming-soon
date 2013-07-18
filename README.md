@@ -237,11 +237,10 @@ lein cljsbuild auto
 
 To run the tests:
 
-**WARNING** - Don't leave off the ENV=test from the command to run the cucumber tests. If you do, you'll run your tests against the Redis instance specified in your config.edn file. This is probably not what you want (the tests delete everything)!
+**WARNING** - Don't leave off the ENV=test from the command below. If you do, you'll run your tests against the Redis instance specified in your config.edn file. This is probably not what you want since the tests delete everything!
 
 ```console
-lein expectations
-ENV=test lein cucumber
+ENV=test lein test!
 ```
 
 Other Frequently Asked Questions
