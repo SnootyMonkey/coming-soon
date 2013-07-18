@@ -20,8 +20,8 @@
 (Given #"^I have no contacts$" []
   (contact/erase!))
 
-(Then #"^the contact count is (\d+)$" [count-arg]
-  (check (= (read-string count-arg) (contact/contact-count))))
+(Then #"^(now the|the) contact count is (\d+)$" [_ contact-count]
+  (check (= (read-string contact-count) (contact/contact-count))))
 
 (Then #"^the content store is sane$" []
   (check (contact/sane?)))
@@ -86,7 +86,7 @@
         (before? updated-at time)))))
 
 
-(Given #"^the system knows about the following contacts$" [table]
+(Given #"^the system knows about the following contacts:$" [table]
   (contact/erase!)
   (let [users (table->rows table)]
     (doseq [user users] (contact/create (:email user) (:referrer user)))))

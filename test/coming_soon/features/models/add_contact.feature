@@ -4,7 +4,7 @@ Feature: Adding Contacts
 
 	Background:
 		Given I have no contacts
-		Then the contact count is 0
+		And the contact count is 0
     And the content store is sane
 
 	Scenario: Adding a contact with an email

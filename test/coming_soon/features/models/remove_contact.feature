@@ -1,12 +1,12 @@
 Feature: Removing Contacts
 
 	Background:
-		Given the system knows about the following contacts
+		Given the system knows about the following contacts:
 			|email								|referrer												|
 			|zuck@facebook.com		|http://facebook.com/cool-stuff	|
 			|obama@whitehouse.gov	|http://cia.gov/secret-stuff		|
 			|jonny@apple.com 			|http://apple.com/pretty-stuff	|
-		Then the contact count is 3
+		And the contact count is 3
     And the content store is sane
 
 	Scenario: Removing a contact by email

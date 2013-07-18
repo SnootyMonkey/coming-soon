@@ -2,15 +2,15 @@ Feature: Listing Contacts
 
   Background:
     Given I have no contacts
-    Then the contact count is 0
-    When I add a contact for "zuck@facebook.com" with a referrer from "http://facebook.com/cool-stuff"
+    And the contact count is 0
+    And I add a contact for "zuck@facebook.com" with a referrer from "http://facebook.com/cool-stuff"
     And I delay a moment
     And I add a contact for "obama@whitehouse.gov" with a referrer from "http://cia.gov/secret-stuff"
     And I delay a moment
     And I add a contact for "biden@whitehouse.gov" with a referrer from "http://cia.gov/secret-stuff"
     And I delay a moment
     And I add a contact for "jonny@apple.com"
-    Then the contact count is 4
+    And now the contact count is 4
     And the content store is sane
 
   Scenario: Listing all contacts in collected at order

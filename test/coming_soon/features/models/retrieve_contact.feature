@@ -1,12 +1,12 @@
 Feature: Retrieving Contacts
 
   Background:
-    Given the system knows about the following contacts
+    Given the system knows about the following contacts:
       |email                |referrer                       |
       |zuck@facebook.com    |http://facebook.com/cool-stuff |
       |obama@whitehouse.gov |http://cia.gov/secret-stuff    |
       |jonny@apple.com      |                               |
-    Then the contact count is 3
+    And the contact count is 3
     And the content store is sane
 
   Scenario: Retrieving a contact by email
