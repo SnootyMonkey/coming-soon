@@ -12,6 +12,11 @@
 (defn id-for-contact [email]
   (:id (contact/contact-by-email email)))
 
+(defn next-result []
+  (let [next (first result-list)]
+    (def result-list (rest result-list))
+    next))
+
 (Given #"^I have no contacts$" []
   (contact/erase!))
 
@@ -125,3 +130,26 @@
 
 (Then #"^the list contains (\d+) items$" [item-count]
   (check (= (read-string item-count) (count result-list))))
+
+(Then #"^the next contact is \"([^\"]*)\" with the id (\d+) and the referrer \"([^\"]*)\"$" [email id referrer]
+  (let [contact (next-result)]
+    (check (= email (:email contact)))
+    (check (= (read-string id) (:id contact)))
+    (check (= referrer (:referrer contact)))))
+
+(Then #"^the next contact is \"([^\"]*)\" with the id (\d+) and no referrer$" [email id]
+  (let [contact (next-result)]
+    (check (= email (:email contact)))
+    (check (= (read-string id) (:id contact)))
+    (check (nil? (:referrer contact)))))
+
+(Then #"^the next email is \"([^\"]*)\"$" [expected-email]
+  (let [actual-email (next-result)]
+    (check (= expected-email actual-email))))
+
+(Then #"^the next referrer is \"([^\"]*)\" with a count of (\d+)$" [url referral-count]
+  (let [referrer (next-result)]
+    (check (= url (first referrer)))
+    (check (= (read-string referral-count) (last referrer)))))
+
+
