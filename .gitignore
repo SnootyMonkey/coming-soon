@@ -13,6 +13,7 @@ pom.xml
 .lein-failures
 .lein-plugins
 .lein-repl-history
+.lein-env
 
 resources/public/js/coming_soon.js
 

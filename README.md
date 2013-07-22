@@ -237,10 +237,8 @@ lein cljsbuild auto
 
 To run the tests:
 
-**WARNING** - Don't leave off the ENV=test from the command below. If you do, you'll run your tests against the Redis instance specified in your config.edn file. This is probably not what you want since the tests delete everything!
-
 ```console
-ENV=test lein test!
+lein test!
 ```
 
 Other Frequently Asked Questions
