@@ -1,7 +1,7 @@
 (ns coming-soon.controllers.redis
   (:require [compojure.core :refer (defroutes GET)]
             [hiccup.core :refer (html)]
-            [coming-soon.lib.redis :refer (redis-pool redis-server-spec)]
+            [coming-soon.lib.redis :refer (redis-conn)]
             [taoensso.carmine :as car]))
 
 (def head (html [:head [:title "Redis Test"]]))
@@ -19,7 +19,7 @@
 (defn- redis-test []
   (try
     (let [response
-      (car/with-conn redis-pool redis-server-spec (car/ping))]
+      (car/wcar redis-conn (car/ping))]
       (if (= response "PONG")
         redis-ok
         redis-borked))

@@ -3,22 +3,21 @@
             [coming-soon.config :as config]
             [clojure.string :refer (blank?)]))
 
-(defn conn-spec
+;; Redis config
+(defn- conn-spec
   "Determine if we should connect with a Redis URL, and if so, which one"
   []
   (let [
     url (config/redis :redis-connect-URL)
     env (config/redis :redis-env-variable)]
-    (if-not (blank? url)
-      (car/make-conn-spec :uri url)
-      (if-not (blank? env)
-        (car/make-conn-spec :uri (get (System/getenv) env))
-        (car/make-conn-spec)))))
+    (cond
+      (not (blank? url)) {:uri url}
+      (not (blank? env)) {:uri (get (System/getenv) env)}
+      :else {})))
 
 ;; A Redis connection with Carmine
-(defonce redis-pool (car/make-conn-pool))
-(def redis-server-spec (conn-spec))
-(defmacro with-car [& body] `(car/with-conn redis-pool redis-server-spec ~@body))
+(def redis-conn {:pool {} :spec (conn-spec)})
+(defmacro with-car [& body] `(car/wcar redis-conn ~@body))
 
 ;; Instance specific namespace
 (def prefix (config/coming-soon :instance-prefix))
