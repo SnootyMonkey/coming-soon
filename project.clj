@@ -63,5 +63,5 @@
       }}]
   }
   :ring {:handler coming-soon.app/app}
-  :min-lein-version "2.2"
+  :min-lein-version "2.1.2"
   :main coming-soon.app)
