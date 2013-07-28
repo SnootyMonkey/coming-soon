@@ -9,6 +9,8 @@ v0.2
 
 * Added unit tests and continious integration with Travis CI.
 
+* Configurable error response if Redis is not avalible. :error and :error-color in your config.edn file.
+
 v0.1
 ====
 Initial release.

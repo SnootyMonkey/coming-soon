@@ -51,6 +51,7 @@
     "#app-summary {color:" (landing-page :app-summary-color) ";}"
     "#instructions {color:" (landing-page :instructions-color) ";}"
     "#thank-you {color:" (landing-page :thank-you-color) ";}"
+    "#error-message {color:" (landing-page :error-color) ";}"
     "#spam-msg {color:" (landing-page :spam-msg-color) ";}"
     "a.social-link {color:" (landing-page :social-color) ";}"
     "a.social-link:hover {color:" (landing-page :social-hover-color) ";}"
@@ -70,6 +71,7 @@
   [:#app-summary] (html-content (landing-page :app-summary))
   [:#instructions] (html-content (landing-page :instructions))
   [:#thank-you] (html-content (landing-page :thank-you))
+  [:#error-message] (html-content (landing-page :error))
   [:#email] (set-attr :placeholder (landing-page :placeholder))
   [:#referrer] (set-attr :value referrer)
   [:#submit] (add-class (landing-page :signup-btn-class))  

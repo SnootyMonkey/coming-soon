@@ -12,6 +12,7 @@
 (def $backstretch ($ :.backstretch))
 (def $instructions ($ :#instructions))
 (def $thank-you ($ :#thank-you))
+(def $error-message ($ :#error-message))
 (def $email ($ :#email))
 (def $submit ($ :#submit))
 (def $submit-icon ($ :#submit-icon))
@@ -47,13 +48,17 @@
   (-> $spam-msg (css {:visibility "hidden"}))
   ;; Hide the instructions and show the thank you
   (.hide $instructions)
+  (.hide $error-message)
   (.show $thank-you))
 
 (defn update-for-failure
   "let the user know it's all gone pear-shaped"
   []
   (log "Oh no! We've shat the bed.")
-  (enable-submission))
+  (enable-submission)
+  ;; Hide the instructions and show the error
+  (.hide $instructions)
+  (.show $error-message))
 
 (defn success?
   "treat any 2xx status code as successful"

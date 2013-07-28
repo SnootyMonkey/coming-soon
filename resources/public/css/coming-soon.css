@@ -25,6 +25,10 @@ span#thank-you {
 	display: none;
 }
 
+span#error-message {
+	display: none;
+}
+
 #push {
 	height: 100px; /* adjust the size of push as need be to keep your footer below your content */
 }
