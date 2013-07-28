@@ -38,15 +38,15 @@
   }
   :aliases {
     "cucumber" ["with-profile" "test" "cucumber"]
-    "test" ["with-profile" "test" "do" "expectations," "cucumber"]
-    "test!" ["with-profile" "test" "do" "clean," "deps," "expectations," "cucumber"]
+    "expectations" ["with-profile" "test" "test"]
+    "test" ["with-profile" "test" "do" "test," "cucumber"]
+    "test!" ["with-profile" "test" "do" "clean," "deps," "test," "cucumber"]
   }
   :plugins [
     [lein-ancient "0.4.0"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
     [lein-ring "0.8.3"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-environ "0.4.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [lein-cljsbuild "0.3.2"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
-    [lein-expectations "0.0.7"] ; Unit testing https://github.com/gar3thjon3s/lein-expectations
     [lein-cucumber "1.0.2"] ; cucumber-jvm (BDD testing) tasks https://github.com/nilswloka/lein-cucumber
     [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
   ]
