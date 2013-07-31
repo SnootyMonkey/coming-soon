@@ -1,7 +1,9 @@
-coming-soon [![Build Status](https://travis-ci.org/SnootyMonkey/coming-soon.png?branch=master)](https://travis-ci.org/SnootyMonkey/coming-soon)
+-= coming-soon =-
 ===========
 
 A simple landing page email collector, but with 90% more parentheses than the leading brand.
+
+[![Development on Trello](http://snooty-monkey-open-images.s3.amazonaws.com/managed_on_trello.jpg)](https://trello.com/b/G8kY5MOf/coming-soon-https-github-com-snootymonkey-coming-soon) [![Build Status](https://travis-ci.org/SnootyMonkey/coming-soon.png?branch=master)](https://travis-ci.org/SnootyMonkey/coming-soon)
 
 What is coming-soon
 -------------------
