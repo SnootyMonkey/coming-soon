@@ -1,7 +1,7 @@
 Feature: Listing Contacts
 
   Background:
-    Given I have no contacts
+    Given there are no contacts
     And the contact count is 0
     And I add a contact for "zuck@facebook.com" with a referrer from "http://facebook.com/cool-stuff"
     And I delay a moment

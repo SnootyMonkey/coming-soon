@@ -6,6 +6,8 @@
 /lib
 /classes
 /checkouts
+/bin
+phantomjs
 pom.xml
 *.jar
 *.class

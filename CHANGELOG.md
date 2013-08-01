@@ -7,9 +7,9 @@ v0.2
 
 * Added support for a title on all the user configured "social" links (Twitter, App.net, Facebook, GitHub, RSS).
 
-* Added unit tests and continious integration with Travis CI.
+* Added unit tests and continuous integration with Travis CI.
 
-* Configurable error response if Redis is not avalible. :error and :error-color in your config.edn file.
+* Added a configurable error message if saving user's contact info is not successful. :error and :error-color in your config.edn file.
 
 v0.1
 ====

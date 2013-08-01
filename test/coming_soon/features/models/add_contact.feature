@@ -3,7 +3,7 @@ Feature: Adding Contacts
 	The system should collect valid contacts so they can be notified later about important developments.
 
 	Background:
-		Given I have no contacts
+		Given there are no contacts
 		And the contact count is 0
     And the content store is sane
 

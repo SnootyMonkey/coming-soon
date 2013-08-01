@@ -1,5 +1,4 @@
 ;; Behavioral driven unit tests for the contact model
-
 (require  '[coming-soon.lib.check :refer (check)]
           '[coming-soon.models.contact :as contact]
           '[clj-time.core :refer (now before? after? ago secs)]
@@ -17,7 +16,7 @@
     (def result-list (rest result-list))
     next))
 
-(Given #"^I have no contacts$" []
+(Given #"^there are no contacts$" []
   (contact/erase!))
 
 (Then #"^(now the|the) contact count is (\d+)$" [_ contact-count]
