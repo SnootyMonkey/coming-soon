@@ -1,8 +1,8 @@
 ;; Behavioral driven unit tests for the contact model
-(require  '[coming-soon.lib.check :refer (check)]
-          '[coming-soon.models.contact :as contact]
-          '[clj-time.core :refer (now before? after? ago secs)]
-          '[clj-time.format :refer (parse)])
+(require '[coming-soon.lib.check :refer (check)]
+         '[coming-soon.models.contact :as contact]
+         '[clj-time.core :refer (now before? after? ago secs)]
+         '[clj-time.format :refer (parse)])
 
 (def updated-at nil)
 

@@ -13,17 +13,17 @@
   :landing-page
   { 
     ;; Copy
-    :page-title "Silver Bullet | Launching soon!"
-    :app-title "Silver Bullet"
-    :app-tagline "Clojure powered bad-assery!"
-    :app-summary "With Silver Bullet, all your problems are gone.<br>Silver Bullet smacks your problems around a bit, then sends them packing.<br>You want it. You need it."  ; OK to be blank
-    :instructions "We'll notify you when it's ready."
-    :placeholder "Email Address*" ; OK to be blank
-    :sign-up-btn "Sign up"
-    :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
-    :thank-you "Thank you! We'll be in touch soon."
-    :error "Sorry! Our system is temporarily down, please try again later."
-    :copyright "&copy; 2013 Clojurific Studios" ; OK to be blank
+    :page-title "Test Title"
+    :app-title "Integration Test"
+    :app-tagline "Test Tagline"
+    :app-summary "Test Summary"  ; OK to be blank
+    :instructions "Test Instructions"
+    :placeholder "Test Email Placeholder" ; OK to be blank
+    :sign-up-btn "Test Button"
+    :spam-msg "Test Spam Message" ; OK to be blank
+    :thank-you "Test Thank You"
+    :error "Test Error"
+    :copyright "Test Copyright" ; OK to be blank
 
     ;; Fonts
 
@@ -33,48 +33,48 @@
     ;; http://www.insquaremedia.com/blog/15-web-design-stuff/50-our-favourite-google-font-combinations
     
     ;; see http://code.google.com/webfonts for available fonts
-    :app-title-font "Droid Sans" ; Google web font
-    :app-title-backup-fonts "Arial,Helvetica,sans-serif" ; Web-safe fonts
-    :body-font "Droid Serif" ; Google web font
-    :body-backup-fonts "Georgia,serif" ; Web-safe fonts
+    :app-title-font "Test Title Font" ; Google web font
+    :app-title-backup-fonts "Test Title Backup Font" ; Web-safe fonts
+    :body-font "Test Body Font" ; Google web font
+    :body-backup-fonts "Test Body Backup Font" ; Web-safe fonts
 
     ;; Images
-    :logo "/img/logo.png" ; OK to be blank
-    :background-image "" ; OK to be blank
+    :logo "/img/logo-test.png" ; OK to be blank
+    :background-image "/img/bg-test.png" ; OK to be blank
 
     ;; Colors
-    :background-color "#403727" ; brown
-    :container-bg-color "#EEE" ; light grey
-    :container-opacity "1" ; 1 for solid, 0 for no container, 0.x for some transparency
-    :app-title-color "#63A687" ; greenish
-    :app-tagline-color "#000" ; black
-    :app-summary-color "#000" ; black
-    :instructions-color "#000" ; black
-    :spam-msg-color "#646464" ; dark grey
-    :thank-you-color "#63A687" ; greenish
-    :error-color "#F00" ; red
-    :copyright-color "#646464" ; dark grey
-    :social-color "#646464" ; dark grey
-    :social-hover-color "#63A687" ; greenish
+    :background-color "#00000A"
+    :container-bg-color "#0000A0"
+    :container-opacity "0.5" ; 1 for solid, 0 for no container, 0.x for some transparency
+    :app-title-color "#000A00"
+    :app-tagline-color "#00A000"
+    :app-summary-color "#0A0000"
+    :instructions-color "#A00000"
+    :spam-msg-color "#0000AA"
+    :thank-you-color "#000AA0"
+    :error-color "#00AA00"
+    :copyright-color "#0AA000"
+    :social-color "#AA0000"
+    :social-hover-color "#000AAA"
 
     ;; Signup button
-    :signup-btn-icon "icon-envelope-alt" ; see http://fortawesome.github.com/Font-Awesome/ OK to be blank
-    :signup-btn-class "btn-success" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
+    :signup-btn-icon "icon-test" ; see http://fortawesome.github.com/Font-Awesome/ OK to be blank
+    :signup-btn-class "btn-test" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
 
     ;; Social stuff
-    :twitter-url "http://twitter.com/snootymonkey" ; OK to be blank
-    :twitter-title "Follow Snooty Monkey on Twitter" ; OK to be blank
-    :app-net-url "http://alpha.app.net/snootymonkey" ; OK to be blank
-    :app-net-title "Follow Snooty Monkey on App.net" ; OK to be blank
-    :facebook-url "https://www.facebook.com/bubbletimer" ; OK to be blank
-    :facebook-title "BubbleTimer is on Facebook" ; OK to be blank
-    :github-url "https://github.com/SnootyMonkey" ; OK to be blank
-    :github-title "Snooty Monkey's open source GitHub repositiories" ; OK to be blank
-    :blog-url "http://blog.snootymonkey.com/" ; OK to be blank
-    :blog-title "Subscribe to Monkey Opus, the Snooty Monkey blog" ; OK to be blank
-    :blog-feed "http://feeds.feedburner.com/snootymonkey" ; OK to be blank
+    :twitter-url "http://twitter.com/test" ; OK to be blank
+    :twitter-title "Test Twitter Title" ; OK to be blank
+    :app-net-url "http://alpha.app.net/test" ; OK to be blank
+    :app-net-title "Test App.net Title" ; OK to be blank
+    :facebook-url "https://www.facebook.com/test" ; OK to be blank
+    :facebook-title "Test Facebook Title" ; OK to be blank
+    :github-url "https://github.com/test" ; OK to be blank
+    :github-title "Test GitHub Title" ; OK to be blank
+    :blog-url "http://test.com/blog" ; OK to be blank
+    :blog-title "Test Blog Title" ; OK to be blank
+    :blog-feed "http://feeds.feedburner.com/test" ; OK to be blank
 
     ;; Analytics
-    :analytics false ; include the analytics snippet in src/coming-soon/templates/analytics.html
+    :analytics true ; include the analytics snippet in src/coming-soon/templates/analytics.html
   }
 }
