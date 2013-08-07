@@ -22,7 +22,6 @@
   (Thread/sleep 1000))
 
 (Then #"^I see the thank-you message$" []
-  (print-> (taxi/take-screenshot))
   (check (taxi/displayed? thank-you)))
 
 (Then #"^I don't see the thank-you message$" []

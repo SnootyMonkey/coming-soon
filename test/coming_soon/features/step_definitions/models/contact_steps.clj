@@ -4,16 +4,16 @@
          '[clj-time.core :refer (now before? after? ago secs)]
          '[clj-time.format :refer (parse)])
 
-(def updated-at nil)
+(def updated-at (atom nil))
 
-(def result-list nil)
+(def result-list (atom nil))
 
 (defn id-for-contact [email]
   (:id (contact/contact-by-email email)))
 
 (defn next-result []
-  (let [next (first result-list)]
-    (def result-list (rest result-list))
+  (let [next (first @result-list)]
+    (swap! result-list rest)
     next))
 
 (Given #"^there are no contacts$" []
@@ -27,7 +27,7 @@
 
 (When #"^I add a contact for \"([^\"]*)\"$" [email]
   (check (contact/create email nil))
-  (def updated-at (parse (:updated-at (contact/contact-by-email email)))))
+  (reset! updated-at (parse (:updated-at (contact/contact-by-email email)))))
 
 (Then #"^the contact \"([^\"]*)\" exists$" [email]
   (check (contact/exists-by-email? email)))
@@ -82,7 +82,7 @@
   (check
     (when-let [contact (contact/contact-by-email email)]
       (when-let [time (parse (:updated-at contact))]
-        (before? updated-at time)))))
+        (before? @updated-at time)))))
 
 
 (Given #"^the system knows about the following contacts:$" [table]
@@ -119,16 +119,16 @@
   (check (nil? (contact/contact-by-id id))))
 
 (When #"^I list all contacts$" []
-  (def result-list (contact/all-contacts)))
+  (reset! result-list (contact/all-contacts)))
 
 (When #"^I list all emails$" []
-  (def result-list (contact/all-emails)))
+  (reset! result-list (contact/all-emails)))
 
 (When #"^I list all referrals$" []
-  (def result-list (contact/all-referrers)))
+  (reset! result-list (contact/all-referrers)))
 
 (Then #"^the list contains (\d+) items$" [item-count]
-  (check (= (read-string item-count) (count result-list))))
+  (check (= (read-string item-count) (count @result-list))))
 
 (Then #"^the next contact is \"([^\"]*)\" with the id (\d+) and the referrer \"([^\"]*)\"$" [email id referrer]
   (let [contact (next-result)]

@@ -8,7 +8,7 @@
     [ring/ring-jetty-adapter "1.2.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.2"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.1.5"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.1.0"] ; Redis client https://github.com/ptaoussanis/carmine
+    [com.taoensso/carmine "2.1.2"] ; Redis client https://github.com/ptaoussanis/carmine
     [environ "0.4.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.7"] ; XML encoding https://github.com/clojure/data.xml
@@ -23,7 +23,7 @@
     :dev {
       :dependencies [
         [print-foo "0.3.7"] ; Old school print debugging https://github.com/danielribeiro/print-foo
-        [expectations "1.4.49"] ; Unit testing https://github.com/jaycfields/expectations
+        [expectations "1.4.53"] ; Unit testing https://github.com/jaycfields/expectations
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
         [clj-webdriver/clj-webdriver "0.6.0"] ; Clojure API for Selenium-WebDriver https://github.com/semperos/clj-webdriver
         [com.github.detro.ghostdriver/phantomjsdriver "1.0.4"] ; PhantomJS as Selenium back-end https://github.com/detro/ghostdriver
@@ -42,6 +42,7 @@
     "ancient" ["with-profile" "test" "ancient"]
     "cucumber" ["with-profile" "test" "cucumber"]
     "expectations" ["with-profile" "test" "test"]
+    "test-server" ["with-profile" "test" "ring" "server-headless"]
     "test" ["with-profile" "test" "do" "test," "cucumber"]
     "test!" ["with-profile" "test" "do" "clean," "deps," "test," "cucumber"]
   }
