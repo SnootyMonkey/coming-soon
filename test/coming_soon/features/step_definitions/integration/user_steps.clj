@@ -3,8 +3,6 @@
          '[clj-webdriver.taxi :as taxi]
          '[coming-soon.config :refer (landing-page)])
 
-(use 'print.foo)
-
 (def email-field "input#email")
 (def submit "#submit")
 (def thank-you "span#thank-you")

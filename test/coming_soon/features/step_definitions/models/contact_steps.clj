@@ -4,14 +4,19 @@
          '[clj-time.core :refer (now before? after? ago secs)]
          '[clj-time.format :refer (parse)])
 
+(def prior-updated-at (atom nil))
 (def updated-at (atom nil))
-
 (def result-list (atom nil))
 
-(defn id-for-contact [email]
+(defn- add-contact [email referrer]
+  (check (contact/create email referrer))
+  (reset! prior-updated-at @updated-at)
+  (reset! updated-at (parse (:updated-at (contact/contact-by-email email)))))
+
+(defn- id-for-contact [email]
   (:id (contact/contact-by-email email)))
 
-(defn next-result []
+(defn- next-result []
   (let [next (first @result-list)]
     (swap! result-list rest)
     next))
@@ -26,8 +31,10 @@
   (check (contact/sane?)))
 
 (When #"^I add a contact for \"([^\"]*)\"$" [email]
-  (check (contact/create email nil))
-  (reset! updated-at (parse (:updated-at (contact/contact-by-email email)))))
+  (add-contact email nil))
+
+(When #"^I add a contact for \"([^\"]*)\" with a referrer from \"([^\"]*)\"$" [email referrer]
+  (add-contact email referrer))
 
 (Then #"^the contact \"([^\"]*)\" exists$" [email]
   (check (contact/exists-by-email? email)))
@@ -39,9 +46,6 @@
   (check
     (when-let [contact (contact/contact-by-email email)]
       (= email (:email contact)))))
-
-(When #"^I add a contact for \"([^\"]*)\" with a referrer from \"([^\"]*)\"$" [email referrer]
-  (check (contact/create email referrer)))
 
 (Then #"^the contact \"([^\"]*)\" has a referrer of \"([^\"]*)\"$" [email referrer]
   (check
@@ -79,11 +83,7 @@
             (before? time1 time2)))))))
 
 (Then #"^the contact \"([^\"]*)\" has a more recent updated-at than before$" [email]
-  (check
-    (when-let [contact (contact/contact-by-email email)]
-      (when-let [time (parse (:updated-at contact))]
-        (before? @updated-at time)))))
-
+  (check (before? @prior-updated-at @updated-at)))
 
 (Given #"^the system knows about the following contacts:$" [table]
   (contact/erase!)

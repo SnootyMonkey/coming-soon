@@ -24,14 +24,12 @@ Feature: Adding my contact
   	And I don't see the error message
 		And now the contact count is 1
 		And the contact "zuck@facebook.com" exists
-		When I delay a moment
 		And I go to the site
 		And I provide my email "zuck@facebook.com"
 		Then I see the thank-you message
 		And I don't see the error message
 		And the contact count is 1
 		And the contact "zuck@facebook.com" exists
-		And the contact "zuck@facebook.com" has a more recent updated-at than before
 		And the content store is sane
 
 	Scenario: Provide no email address
