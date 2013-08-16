@@ -13,6 +13,8 @@
   []
   (when (= 1 (swap! browser-count inc))
     (set-driver! (init-driver {:webdriver (PhantomJSDriver. (DesiredCapabilities.))}))))
+    ;;(set-driver! {:browser :firefox})))
+    ;;(set-driver! {:browser :chrome})))
 
 (defn browser-down
   "If this is the last request, shut the browser down."
