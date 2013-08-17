@@ -14,7 +14,10 @@
 
 (defn browser-up
   "Start up a browser if it's not already started."
-  ([] (start-browser (init-driver {:webdriver (PhantomJSDriver. (DesiredCapabilities.))})))
+  ([] 
+    (let [capability (DesiredCapabilities.)]
+      (. capability setCapability "phantomjs.binary.path" "phantomjs")
+      (start-browser (init-driver {:webdriver (PhantomJSDriver. capability)}))))
   ([browser]
     (if (browser #{:firefox :chrome})
       (start-browser {:browser browser})
