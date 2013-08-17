@@ -237,7 +237,7 @@ To watch the ClojureScript code and build it each time it changes:
 lein cljsbuild auto
 ```
 
-To run the tests:
+To run the tests (requires you have the [PhantomJS](http://phantomjs.org/) binary or a link to it in /usr/local/phantomjs/bin/phantomjs):
 
 ```console
 lein test!
