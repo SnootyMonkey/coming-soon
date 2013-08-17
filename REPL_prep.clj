@@ -18,6 +18,10 @@
 
 (taxi/to "http://localhost:3000/")
 
+(taxi/title)
+(taxi/text "span#app-title")
+(taxi/text "span#app-tagline")
+
 (taxi/input-text "input#email" "")
 (taxi/input-text "input#email" "foo@bar.com")
 
