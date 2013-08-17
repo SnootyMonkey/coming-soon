@@ -39,13 +39,14 @@
     }]
   }
   :aliases {
-    "spell" ["spell" "-n"]
-    "ancient" ["with-profile" "test" "ancient"]
+    "build" ["do" "clean," "deps"]
     "cucumber" ["with-profile" "test" "cucumber"]
     "expectations" ["with-profile" "test" "test"]
     "test-server" ["with-profile" "test" "ring" "server-headless"]
     "test" ["with-profile" "test" "do" "test," "cucumber"]
-    "test!" ["with-profile" "test" "do" "clean," "deps," "test," "cucumber"]
+    "test!" ["do" "build,", "test"]
+    "spell" ["spell" "-n"]
+    "ancient" ["with-profile" "test" "ancient"]
   }
   :plugins [
     [lein-ancient "0.4.0"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient

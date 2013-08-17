@@ -8,13 +8,17 @@
 
 (def ^:private browser-count (atom 0))
 
+(defn- start-browser [browser]
+  (when (= 1 (swap! browser-count inc))
+    (set-driver! browser)))
+
 (defn browser-up
   "Start up a browser if it's not already started."
-  []
-  (when (= 1 (swap! browser-count inc))
-    (set-driver! (init-driver {:webdriver (PhantomJSDriver. (DesiredCapabilities.))}))))
-    ;;(set-driver! {:browser :firefox})))
-    ;;(set-driver! {:browser :chrome})))
+  ([] (start-browser (init-driver {:webdriver (PhantomJSDriver. (DesiredCapabilities.))})))
+  ([browser]
+    (if (browser #{:firefox :chrome})
+      (start-browser {:browser browser})
+      :what-browser-is-that?)))
 
 (defn browser-down
   "If this is the last request, shut the browser down."

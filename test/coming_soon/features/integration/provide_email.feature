@@ -35,9 +35,7 @@ Feature: Adding my contact
 	Scenario: Provide no email address
 		When I go to the site
 		And I provide my email ""
-		Then I see the invalid email message
 		And I don't see the thank-you message
-		And I don't see the error message
 		And the contact count is 0
   	When I provide my email "zuck@facebook.com"
   	Then I see the thank-you message
@@ -48,9 +46,7 @@ Feature: Adding my contact
   Scenario: Provide an invalid email address
 	  When I go to the site
 	  And I provide my email "zuck@facebook"
-	  Then I see the invalid email message
 	  And I don't see the thank-you message
-	  And I don't see the error message
 	  And the contact count is 0
 	  When I provide my email "zuck@facebook.com"
 	  Then I see the thank-you message

@@ -15,9 +15,10 @@
   (check (= (taxi/title) (landing-page :page-title))))
 
 (When #"^I provide my email \"([^\"]*)\"$" [email]
+  (taxi/clear email-field)
   (taxi/input-text email-field email)
   (taxi/click submit)
-  (Thread/sleep 1000))
+  (Thread/sleep 2000))
 
 (Then #"^I see the thank-you message$" []
   (check (taxi/displayed? thank-you)))
