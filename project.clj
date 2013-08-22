@@ -5,6 +5,7 @@
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [
     [org.clojure/clojure "1.5.1"] ; Lisp on the JVM http://clojure.org/documentation
+    [org.clojure/clojurescript "0.0-1859"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [ring/ring-jetty-adapter "1.2.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.2"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.1.5"] ; Web routing http://github.com/weavejester/compojure
@@ -13,11 +14,11 @@
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.7"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.1"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
-    [enlive "1.1.1"] ; HTML templates https://github.com/cgrand/enlive
+    [enlive "1.1.3"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.4"] ; HTML generation https://github.com/weavejester/hiccup
     [jayq "2.4.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
-    [clj-time "0.5.1"] ; DateTime utilities https://github.com/clj-time/clj-time
+    [clj-time "0.6.0"] ; DateTime utilities https://github.com/clj-time/clj-time
   ]
   :profiles {
     :dev {
@@ -43,8 +44,9 @@
     "cucumber" ["with-profile" "test" "cucumber"]
     "expectations" ["with-profile" "test" "test"]
     "test-server" ["with-profile" "test" "ring" "server-headless"]
-    "test" ["with-profile" "test" "do" "test," "cucumber"]
-    "test!" ["do" "build,", "test"]
+    "test" ["with-profile" "test" "test"]
+    "test-all" ["with-profile" "test" "do" "test," "cucumber"]
+    "test!" ["do" "build,", "test-all"]
     "spell" ["spell" "-n"]
     "ancient" ["with-profile" "test" "ancient"]
   }
