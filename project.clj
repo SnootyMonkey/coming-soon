@@ -14,7 +14,7 @@
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.7"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.1"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
-    [enlive "1.1.3"] ; HTML templates https://github.com/cgrand/enlive
+    [enlive "1.1.4"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.4"] ; HTML generation https://github.com/weavejester/hiccup
     [jayq "2.4.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
@@ -24,35 +24,37 @@
     :dev {
       :dependencies [
         [print-foo "0.3.7"] ; Old school print debugging https://github.com/danielribeiro/print-foo
+      ]
+      :jvm-opts ["-Dphantomjs.binary.path=phantomjs"]
+    }
+    :qa {
+      :dependencies [
         [expectations "1.4.53"] ; Unit testing https://github.com/jaycfields/expectations
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
         ;;[org.seleniumhq.selenium/selenium-server "2.34.0"]
         [clj-webdriver/clj-webdriver "0.6.0"] ; Clojure API for Selenium-WebDriver https://github.com/semperos/clj-webdriver
         [com.github.detro.ghostdriver/phantomjsdriver "1.0.4"] ; PhantomJS as Selenium back-end https://github.com/detro/ghostdriver
       ]
-      :jvm-opts ["-Dphantomjs.binary.path=phantomjs"]
-    }
-    :test [:dev {
       :env {
         :config-file "test/test-config.edn"
       }
       :cucumber-feature-paths ["test/coming_soon/features"]
-    }]
+    }
   }
   :aliases {
     "build" ["do" "clean," "deps"]
-    "cucumber" ["with-profile" "test" "cucumber"]
-    "expectations" ["with-profile" "test" "test"]
-    "test-server" ["with-profile" "test" "ring" "server-headless"]
-    "test" ["with-profile" "test" "test"]
-    "test-all" ["with-profile" "test" "do" "test," "cucumber"]
+    "cucumber" ["with-profile" "qa" "cucumber"]
+    "expectations" ["with-profile" "qa" "test"]
+    "test-server" ["with-profile" "qa" "ring" "server-headless"]
+    "test" ["with-profile" "qa" "test"]
+    "test-all" ["with-profile" "qa" "do" "test," "cucumber"]
     "test!" ["do" "build,", "test-all"]
     "spell" ["spell" "-n"]
-    "ancient" ["with-profile" "test" "ancient"]
+    "ancient" ["with-profile" "qa" "do" "ancient" ":allow-qualified," "ancient" ":plugins" ":allow-qualified"]
   }
   :plugins [
-    [lein-ancient "0.4.0"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
-    [lein-ring "0.8.3"] ; Common ring tasks https://github.com/weavejester/lein-ring
+    [lein-ancient "0.4.4"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
+    [lein-ring "0.8.7"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-environ "0.4.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [lein-cljsbuild "0.3.2"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
     [lein-cucumber "1.0.2"] ; cucumber-jvm (BDD testing) tasks https://github.com/nilswloka/lein-cucumber
