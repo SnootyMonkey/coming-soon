@@ -11,8 +11,9 @@
 
     ;; HEROKU REDIS - uncomment the selected provider (remove the ;;)
     ;; :redis-env-variable "REDISCLOUD_URL" ; Comment in for Redis Cloud on Heroku
-    ;; :redis-env-variable "MYREDIS_URL" ; Comment in for MyRedis on Heroku
     ;; :redis-env-variable "REDISTOGO_URL" ; Comment in for Redis To Go on Heroku
+    ;; :redis-env-variable "OPENREDIS_URL" ; Comment in for openredis on Heroku
+    ;; :redis-env-variable "REDISGREEN_URL" ; Comment in for RedisGreen on Heroku
 
     ;; SELF HOSTED REDIS
     ;; A different port on the local machine might be: redis://localhost:7000/

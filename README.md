@@ -138,9 +138,9 @@ heroku create
 heroku config:add BUILDPACK_URL=https://github.com/kolov/heroku-buildpack-clojure
 ```
 
-**6) Attach a free Redis instance to your app.**
+**6) Attach a Redis instance to your app.**
 
-As of this writing, there are 3 options for free Redis on Heroku.
+As of this writing, there are 2 options for free Redis on Heroku.
 
 To use [Redis Cloud](https://addons.heroku.com/rediscloud), run this command:
 
@@ -148,16 +148,23 @@ To use [Redis Cloud](https://addons.heroku.com/rediscloud), run this command:
 heroku addons:add rediscloud:20
 ```
 
-To use [MyRedis](https://addons.heroku.com/myredis), run this command:
-
-```console
-heroku addons:add myredis:gratis
-```
-
 To use [Redis To Go](https://addons.heroku.com/redistogo), run this command:
 
 ```console
 heroku addons:add redistogo:nano
+```
+As of this writing, there are 2 additional Redis options on Heroku that do not have a free tier.
+
+To use [openredis](https://addons.heroku.com/openredis), run this command:
+
+```console
+heroku addons:add openredis:micro
+```
+
+To use [RedisGreen](https://addons.heroku.com/redisgreen), run this command:
+
+```console
+heroku addons:add redisgreen:development
 ```
 
 In your text editor comment in the **:redis-env-variable** line in the **:redis** section of the **config.edn** file that matches the Redis provider you selected. Then commit your change to git.
