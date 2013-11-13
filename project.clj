@@ -3,33 +3,37 @@
   :url "https://github.com/SnootyMonkey/coming-soon/"
   :license {:name "MIT License"
             :url "http://opensource.org/licenses/MIT"}
+
+  :min-lein-version "2.2" ;; highest version supported by Travis-CI as of 9/20/13
+
   :dependencies [
     [org.clojure/clojure "1.5.1"] ; Lisp on the JVM http://clojure.org/documentation
-    [org.clojure/clojurescript "0.0-1859"] ; ClojureScript compiler https://github.com/clojure/clojurescript
-    [ring/ring-jetty-adapter "1.2.0"] ; Web Server https://github.com/ring-clojure/ring
-    [ring-basic-authentication "1.0.2"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
-    [compojure "1.1.5"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.2.0"] ; Redis client https://github.com/ptaoussanis/carmine
+    [org.clojure/clojurescript "0.0-2030"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [ring/ring-jetty-adapter "1.2.1"] ; Web Server https://github.com/ring-clojure/ring
+    [ring-basic-authentication "1.0.3"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
+    [compojure "1.1.6"] ; Web routing http://github.com/weavejester/compojure
+    [com.taoensso/carmine "2.4.0-RC2"] ; Redis client https://github.com/ptaoussanis/carmine
     [environ "0.4.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.7"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.1"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.4"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.4"] ; HTML generation https://github.com/weavejester/hiccup
-    [jayq "2.4.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
+    [jayq "2.5.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.6.0"] ; DateTime utilities https://github.com/clj-time/clj-time
   ]
+
   :profiles {
     :dev {
       :dependencies [
-        [print-foo "0.3.7"] ; Old school print debugging https://github.com/danielribeiro/print-foo
+        [print-foo "0.4.6"] ; Old school print debugging https://github.com/danielribeiro/print-foo
       ]
       :jvm-opts ["-Dphantomjs.binary.path=phantomjs"]
     }
     :qa {
       :dependencies [
-        [expectations "1.4.53"] ; Unit testing https://github.com/jaycfields/expectations
+        [expectations "1.4.56"] ; Unit testing https://github.com/jaycfields/expectations
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
         ;;[org.seleniumhq.selenium/selenium-server "2.34.0"]
         [clj-webdriver/clj-webdriver "0.6.0"] ; Clojure API for Selenium-WebDriver https://github.com/semperos/clj-webdriver
@@ -41,6 +45,7 @@
       :cucumber-feature-paths ["test/coming_soon/features"]
     }
   }
+
   :aliases {
     "build" ["do" "clean," "deps"]
     "cucumber" ["with-profile" "qa" "cucumber"]
@@ -52,14 +57,18 @@
     "spell" ["spell" "-n"]
     "ancient" ["with-profile" "qa" "do" "ancient" ":allow-qualified," "ancient" ":plugins" ":allow-qualified"]
   }
+  
   :plugins [
-    [lein-ancient "0.4.4"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
-    [lein-ring "0.8.7"] ; Common ring tasks https://github.com/weavejester/lein-ring
+    [lein-ancient "0.5.3"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
+    [lein-ring "0.8.8"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-environ "0.4.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
-    [lein-cljsbuild "0.3.2"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
+    [lein-cljsbuild "1.0.0-alpha2"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
     [lein-cucumber "1.0.2"] ; cucumber-jvm (BDD testing) tasks https://github.com/nilswloka/lein-cucumber
     [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
   ]
+
+  ;; ----- ClojureScript -----
+
   :cljsbuild {
     :crossovers [coming-soon.models.email] ; compile for both Clojure and ClojureScript
     :builds
@@ -72,6 +81,10 @@
         :pretty-print false ; generated JS code prettyfication
       }}]
   }
+
+  ;; ----- Web Application -----
+
   :ring {:handler coming-soon.app/app}
-  :min-lein-version "2.1.2"
-  :main coming-soon.app)
+  :main coming-soon.app
+
+)
