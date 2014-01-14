@@ -7,8 +7,7 @@
   }
   :redis
   {
-    ;; Redis Cloud powered test instance
-    :redis-connect-URL "redis://coming-soon-test:coming-soon-test@pub-redis-11719.us-east-1-1.1.ec2.garantiadata.com:11719"
+    ;; Local test instance
   }
   :landing-page
   { 

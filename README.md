@@ -288,3 +288,10 @@ Links
 * [Live Admin Demo](http://coming-soon-admin.herokuapp.com/contacts) - login as admin / admin
 * [IdeaFerret](http://ideaferret.com) - a coming-soon powered landing page
 * [Falklandsophile](http://falklandsophile.com) - another coming-soon powered landing page
+
+License
+-------
+
+coming-soon is distributed under the [Mozilla Public License v2.0](http://www.mozilla.org/MPL/2.0/).
+
+Copyright © 2013-2014 [Snooty Monkey, LLC](http://snootymonkey.com/)
