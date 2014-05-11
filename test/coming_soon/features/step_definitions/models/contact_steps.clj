@@ -1,7 +1,7 @@
 ;; Behavioral driven unit tests for the contact model
 (require '[coming-soon.lib.check :refer (check)]
          '[coming-soon.models.contact :as contact]
-         '[clj-time.core :refer (now before? after? ago secs)]
+         '[clj-time.core :refer (now before? after? ago seconds)]
          '[clj-time.format :refer (parse)])
 
 (def prior-updated-at (atom nil))
@@ -70,7 +70,7 @@
   (check
     (when-let [contact (contact/contact-by-email email)]
       (when-let [time (parse (:updated-at contact))]
-        (and (after? time (-> 10 secs ago)) (before? time (now)))))))
+        (and (after? time (-> 10 seconds ago)) (before? time (now)))))))
 
 (Then #"^the contact \"([^\"]*)\" has an updated-at before the updated-at for contact \"([^\"]*)\"$" [email1 email2]
   (check

@@ -1,11 +1,11 @@
 (ns coming-soon.expectations.models.email-expectations
-  (:require [expectations :refer (given expect)]
+  (:require [expectations :refer (expect from-each)]
             [coming-soon.models.email :refer (valid?)]))
 
 ; Source of email addresses: http://codefool.tumblr.com/post/15288874550/list-of-valid-and-invalid-email-addresses
 ; Note: not all the unusual ones were used
 
-(given [x] (expect valid? x)
+(expect valid? (from-each [email-address [
   "email@example.com"
   "firstname.lastname@example.com"
   "email@subdomain.example.com"
@@ -16,9 +16,9 @@
   "email@example.name"
   "email@example.museum"
   "email@example.co.jp"
-  "firstname-lastname@example.com")
+  "firstname-lastname@example.com"]] email-address))
 
-(given [x] (expect (not (valid? x)))
+(expect #(not (valid? %)) (from-each [email-address [
   "plainaddress"
   "#@%^%#$@#$@#.com"
   "@example.com"
@@ -33,4 +33,4 @@
   "email@example"
   "email@-example.com"
   "email@example..com"
-  "Abc..123@example.com")
+  "Abc..123@example.com"]] email-address))
