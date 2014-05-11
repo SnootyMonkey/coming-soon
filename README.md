@@ -151,7 +151,7 @@ heroku addons:add rediscloud:20
 To use [Redis To Go](https://addons.heroku.com/redistogo), run this command:
 
 ```console
-heroku addons:add redistogo:nano
+heroku addons:add redistogo
 ```
 As of this writing, there are 2 additional Redis options on Heroku that do not have a free tier.
 
