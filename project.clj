@@ -8,8 +8,8 @@
 
   :dependencies [
     [org.clojure/clojure "1.6.0"] ; Lisp on the JVM http://clojure.org/documentation
-    [org.clojure/clojurescript "0.0-2202"] ; ClojureScript compiler https://github.com/clojure/clojurescript
-    [ring/ring-jetty-adapter "1.3.0-beta2"] ; Web Server https://github.com/ring-clojure/ring
+    [org.clojure/clojurescript "0.0-2227"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [ring/ring-jetty-adapter "1.3.0-RC1"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.1.8"] ; Web routing http://github.com/weavejester/compojure
     [com.taoensso/carmine "2.6.2"] ; Redis client https://github.com/ptaoussanis/carmine
@@ -19,7 +19,7 @@
     [clojure-csv/clojure-csv "2.0.1"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.5"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
-    [jayq "2.5.0"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
+    [jayq "2.5.1"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.7.0"] ; DateTime utilities https://github.com/clj-time/clj-time
   ]
@@ -27,7 +27,7 @@
   :profiles {
     :dev {
       :dependencies [
-        [print-foo "0.5.1"] ; Old school print debugging https://github.com/danielribeiro/print-foo
+        [print-foo "0.5.3"] ; Old school print debugging https://github.com/danielribeiro/print-foo
       ]
       :jvm-opts ["-Dphantomjs.binary.path=phantomjs"]
     }
