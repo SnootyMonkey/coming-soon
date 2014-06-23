@@ -8,8 +8,8 @@
 
   :dependencies [
     [org.clojure/clojure "1.6.0"] ; Lisp on the JVM http://clojure.org/documentation
-    [org.clojure/clojurescript "0.0-2227"] ; ClojureScript compiler https://github.com/clojure/clojurescript
-    [ring/ring-jetty-adapter "1.3.0-RC1"] ; Web Server https://github.com/ring-clojure/ring
+    [org.clojure/clojurescript "0.0-2234"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [ring/ring-jetty-adapter "1.3.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.1.8"] ; Web routing http://github.com/weavejester/compojure
     [com.taoensso/carmine "2.6.2"] ; Redis client https://github.com/ptaoussanis/carmine
@@ -60,7 +60,7 @@
   
   :plugins [
     [lein-ancient "0.5.5"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
-    [lein-ring "0.8.10"] ; Common ring tasks https://github.com/weavejester/lein-ring
+    [lein-ring "0.8.11"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-environ "0.5.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [lein-cljsbuild "1.0.3"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
     [lein-cucumber "1.0.2"] ; cucumber-jvm (BDD testing) tasks https://github.com/nilswloka/lein-cucumber
