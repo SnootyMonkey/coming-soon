@@ -4,24 +4,24 @@
   :license {:name "Mozilla Public License v2.0"
             :url "http://www.mozilla.org/MPL/2.0/"}
 
-  :min-lein-version "2.3.4" ;; highest version supported by Travis-CI as of 1/14/2014
+  :min-lein-version "2.4.2" ;; highest version supported by Travis-CI as of 8/7/2014
 
   :dependencies [
     [org.clojure/clojure "1.6.0"] ; Lisp on the JVM http://clojure.org/documentation
-    [org.clojure/clojurescript "0.0-2234"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [org.clojure/clojurescript "0.0-2280"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [ring/ring-jetty-adapter "1.3.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.1.8"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.6.2"] ; Redis client https://github.com/ptaoussanis/carmine
+    [com.taoensso/carmine "2.7.0-RC1" :exclusions [org.clojure/clojure]] ; Redis client https://github.com/ptaoussanis/carmine
     [environ "0.5.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.7"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.1"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.5"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
-    [jayq "2.5.1"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
+    [jayq "2.5.2"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
-    [clj-time "0.7.0"] ; DateTime utilities https://github.com/clj-time/clj-time
+    [clj-time "0.8.0"] ; DateTime utilities https://github.com/clj-time/clj-time
   ]
 
   :profiles {
@@ -33,7 +33,7 @@
     }
     :qa {
       :dependencies [
-        [expectations "2.0.7"] ; Unit testing https://github.com/jaycfields/expectations
+        [expectations "2.0.9"] ; Unit testing https://github.com/jaycfields/expectations
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
         ;;[org.seleniumhq.selenium/selenium-server "2.34.0"]
         [clj-webdriver/clj-webdriver "0.6.1"] ; Clojure API for Selenium-WebDriver https://github.com/semperos/clj-webdriver
@@ -70,6 +70,7 @@
   ;; ----- ClojureScript -----
 
   :cljsbuild {
+    ; crossovers is deprecated, need to replace with cljx https://github.com/lynaghk/cljx
     :crossovers [coming-soon.models.email] ; compile for both Clojure and ClojureScript
     :builds
       [{
