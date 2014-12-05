@@ -4,18 +4,18 @@
   :license {:name "Mozilla Public License v2.0"
             :url "http://www.mozilla.org/MPL/2.0/"}
 
-  :min-lein-version "2.4.2" ;; highest version supported by Travis-CI as of 8/7/2014
+  :min-lein-version "2.5.0" ; highest version supported by Travis-CI as of 10/28/2014
 
   :dependencies [
     [org.clojure/clojure "1.6.0"] ; Lisp on the JVM http://clojure.org/documentation
-    [org.clojure/clojurescript "0.0-2280"] ; ClojureScript compiler https://github.com/clojure/clojurescript
-    [ring/ring-jetty-adapter "1.3.0"] ; Web Server https://github.com/ring-clojure/ring
+    [org.clojure/clojurescript "0.0-2371"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [ring/ring-jetty-adapter "1.3.2"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
-    [compojure "1.1.8"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.7.0-RC1" :exclusions [org.clojure/clojure]] ; Redis client https://github.com/ptaoussanis/carmine
-    [environ "0.5.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
+    [compojure "1.3.1"] ; Web routing http://github.com/weavejester/compojure
+    [com.taoensso/carmine "2.8.0" :exclusions [org.clojure/clojure]] ; Redis client https://github.com/ptaoussanis/carmine
+    [environ "1.0.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
-    [org.clojure/data.xml "0.0.7"] ; XML encoding https://github.com/clojure/data.xml
+    [org.clojure/data.xml "0.0.8"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.1"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.5"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
@@ -27,13 +27,13 @@
   :profiles {
     :dev {
       :dependencies [
-        [print-foo "0.5.3"] ; Old school print debugging https://github.com/danielribeiro/print-foo
+        [print-foo "1.0.1"] ; Old school print debugging https://github.com/danielribeiro/print-foo
       ]
       :jvm-opts ["-Dphantomjs.binary.path=phantomjs"]
     }
     :qa {
       :dependencies [
-        [expectations "2.0.9"] ; Unit testing https://github.com/jaycfields/expectations
+        [expectations "2.0.13"] ; Unit testing https://github.com/jaycfields/expectations
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
         ;;[org.seleniumhq.selenium/selenium-server "2.34.0"]
         [clj-webdriver/clj-webdriver "0.6.1"] ; Clojure API for Selenium-WebDriver https://github.com/semperos/clj-webdriver
@@ -60,8 +60,8 @@
   
   :plugins [
     [lein-ancient "0.5.5"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
-    [lein-ring "0.8.11"] ; Common ring tasks https://github.com/weavejester/lein-ring
-    [lein-environ "0.5.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
+    [lein-ring "0.8.13"] ; Common ring tasks https://github.com/weavejester/lein-ring
+    [lein-environ "1.0.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [lein-cljsbuild "1.0.3"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
     [lein-cucumber "1.0.2"] ; cucumber-jvm (BDD testing) tasks https://github.com/nilswloka/lein-cucumber
     [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell

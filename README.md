@@ -1,9 +1,11 @@
 -= coming-soon =-
 ===========
 
-A simple landing page email collector, but with 90% more parentheses than the leading brand.
+[![MPL License](http://img.shields.io/badge/license-MPL-green.svg?style=flat)](https://www.mozilla.org/MPL/2.0/)
+[![Build Status](http://img.shields.io/travis/SnootyMonkey/coming-soon.svg?style=flat)](https://travis-ci.org/SnootyMonkey/coming-soon)
+[![Roadmap on Trello](http://img.shields.io/badge/roadmap-trello-blue.svg?style=flat)](https://trello.com/b/G8kY5MOf/coming-soon-https-github-com-snootymonkey-coming-soon)
 
-[![Development on Trello](http://snooty-monkey-open-images.s3.amazonaws.com/managed_on_trello.jpg)](https://trello.com/b/G8kY5MOf/coming-soon-https-github-com-snootymonkey-coming-soon) [![Build Status](https://travis-ci.org/SnootyMonkey/coming-soon.png?branch=master)](https://travis-ci.org/SnootyMonkey/coming-soon)
+A simple landing page email collector, but with 90% more parentheses than the leading brand.
 
 What is coming-soon
 -------------------
@@ -244,7 +246,14 @@ To watch the ClojureScript code and build it each time it changes:
 lein cljsbuild auto
 ```
 
-To run the tests (requires you have the [PhantomJS](http://phantomjs.org/) binary or a link to it in /usr/local/phantomjs/bin/phantomjs):
+Testing
+_______
+
+Tests are run in continuous integration of the `master` and `dev` branches on [Travis CI](https://travis-ci.org/SnootyMonkey/coming-soon):
+
+[![Build Status](http://img.shields.io/travis/SnootyMonkey/coming-soon.svg?style=flat)](https://travis-ci.org/SnootyMonkey/coming-soon)
+
+To run the tests locally (requires you have the [PhantomJS](http://phantomjs.org/) binary or a link to it in /usr/local/phantomjs/bin/phantomjs):
 
 ```console
 lein test!
