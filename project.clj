@@ -8,7 +8,7 @@
 
   :dependencies [
     [org.clojure/clojure "1.6.0"] ; Lisp on the JVM http://clojure.org/documentation
-    [org.clojure/clojurescript "0.0-2411"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [org.clojure/clojurescript "0.0-2511"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [ring/ring-jetty-adapter "1.3.2"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.3.1"] ; Web routing http://github.com/weavejester/compojure
@@ -21,7 +21,7 @@
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
     [jayq "2.5.2"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
-    [clj-time "0.9.0-beta1"] ; DateTime utilities https://github.com/clj-time/clj-time
+    [clj-time "0.9.0"] ; DateTime utilities https://github.com/clj-time/clj-time
   ]
 
   :profiles {
