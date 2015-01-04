@@ -35,7 +35,7 @@
     :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
     :thank-you "Thank you! We'll be in touch soon."
     :error "Sorry! Our system is temporarily down, please try again later."
-    :copyright "&copy; 2013-2014 Clojurific Studios" ; OK to be blank
+    :copyright "&copy; 2015 Clojurific Studios" ; OK to be blank
 
     ;; Fonts
 
