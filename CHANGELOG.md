@@ -1,6 +1,11 @@
 v0.2
 ====
 
+* Upgraded Clojure to 1.7.0
+
+v0.2
+====
+
 * Upgraded the Font Awesome used in the default template to v3.2.1.
 
 * Added support for a title on all the user configured "social" links (Twitter, Facebook, GitHub, RSS).
