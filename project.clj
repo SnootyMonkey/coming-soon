@@ -29,14 +29,11 @@
       :dependencies [
         [print-foo "1.0.1"] ; Old school print debugging https://github.com/danielribeiro/print-foo
       ]
-      :jvm-opts ["-Dphantomjs.binary.path=phantomjs"]
     }
     :qa {
       :dependencies [
         [midje "1.7.0-beta1"] ; Example-based testing https://github.com/marick/Midje
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
-        [clj-webdriver/clj-webdriver "0.6.1"] ; Clojure API for Selenium-WebDriver https://github.com/semperos/clj-webdriver
-        [com.github.detro.ghostdriver/phantomjsdriver "1.1.0"] ; PhantomJS as Selenium back-end https://github.com/detro/ghostdriver
       ]
       :plugins [
         [lein-midje "3.1.3"] ; Example-based testing https://github.com/marick/lein-midje

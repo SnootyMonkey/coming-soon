@@ -3,6 +3,8 @@ v0.2
 
 * Upgraded Clojure to 1.7.0
 
+* Remove incomplete browser tests
+
 v0.2
 ====
 

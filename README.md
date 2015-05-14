@@ -253,7 +253,7 @@ Tests are run in continuous integration of the `master` and `dev` branches on [T
 
 [![Build Status](http://img.shields.io/travis/SnootyMonkey/coming-soon.svg?style=flat)](https://travis-ci.org/SnootyMonkey/coming-soon)
 
-To run the tests locally (requires you have the [PhantomJS](http://phantomjs.org/) binary or a link to it in /usr/local/phantomjs/bin/phantomjs):
+To run the tests locally:
 
 ```console
 lein test!
