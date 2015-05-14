@@ -76,8 +76,6 @@
     ;; Social stuff
     :twitter-url "" ; OK to be blank
     :twitter-title "" ; OK to be blank
-    :app-net-url "" ; OK to be blank
-    :app-net-title "" ; OK to be blank
     :facebook-url "" ; OK to be blank
     :facebook-title "" ; OK to be blank
     :github-url "" ; OK to be blank

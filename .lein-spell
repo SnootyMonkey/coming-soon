@@ -3,11 +3,15 @@ buildpack
 cljsbuild
 dynos
 integrations
+midje
 myredis
 nano
+openredis
 redis
 rediscloud
+redisgreen
 redistogo
+resellers
 screenshot
 signups
 toolbelt

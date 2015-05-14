@@ -63,8 +63,6 @@
     ;; Social stuff
     :twitter-url "http://twitter.com/test" ; OK to be blank
     :twitter-title "Test Twitter Title" ; OK to be blank
-    :app-net-url "http://alpha.app.net/test" ; OK to be blank
-    :app-net-title "Test App.net Title" ; OK to be blank
     :facebook-url "https://www.facebook.com/test" ; OK to be blank
     :facebook-title "Test Facebook Title" ; OK to be blank
     :github-url "https://github.com/test" ; OK to be blank

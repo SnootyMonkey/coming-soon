@@ -79,7 +79,6 @@
   [:#spam-msg] (html-content (landing-page :spam-msg))
   [:#social-links] (content (map linked-icon [
     {:link-name "twitter" :icon-name "twitter"}
-    {:link-name "app-net" :icon-name "adn"}
     {:link-name "facebook" :icon-name "facebook"}
     {:link-name "github" :icon-name "github"}
     {:link-name "blog" :icon-name "rss"}]))
