@@ -148,6 +148,6 @@
 
 (defn test-populate [n]
   "Create n many test registrations for whatever reason you may have for doing so"
-  (when (< 0 n)
+  (when (pos? n)
     (create (str "test.user" n "@testing.com") (str "http://testing" n ".com/article/test.html"))
     (recur (dec n))))
