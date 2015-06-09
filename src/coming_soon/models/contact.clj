@@ -35,7 +35,7 @@
   (if (exists-by-id? id)
     (read-string (with-car (car/hget coming-soon-contacts id)))
     nil))
-  
+
 (defn contact-by-email
   "Return the contact for an email, nil if the email has not been collected."
   [email]
@@ -90,8 +90,8 @@
   (if (valid? email)
     ; existing id or new id
     (let [id (if (exists-by-email? email)
-      (:id (contact-by-email email))
-      (with-car (car/incr coming-soon-id)))]
+              (:id (contact-by-email email))
+              (with-car (car/incr coming-soon-id)))]
       (store id email referrer)
       true)
     :invalid-email))

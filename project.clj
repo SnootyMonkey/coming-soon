@@ -55,6 +55,9 @@
         [lein-deps-tree "0.1.2"] ; Print a tree of project dependencies https://github.com/the-kenny/lein-deps-tree
         [venantius/ultra "0.3.3"] ; Enhancement's to Leiningen's REPL https://github.com/venantius/ultra
       ]
+      :cljfmt {
+        :file-pattern #"\/src\/.+\.clj[csx]?$"
+      }
     }]
   }
 

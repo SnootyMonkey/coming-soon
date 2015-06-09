@@ -6,10 +6,8 @@
   ;; strip off the prefixed # if there is one
   (let [color (last (clojure.string/split hex-color #"#"))]
     (let [full-color
-      ;; convert XYZ to XXYYZZ if necessary
-      (if (= (count color) 3)
-        (map-str #(str % %) color)
-        color)]
+          ;; convert XYZ to XXYYZZ if necessary
+          (if (= (count color) 3) (map-str #(str % %) color) color)]
       ;; convert the 6 hex digits to a sequence of the 3 RGB colors
       (hex-str-to-dec full-color))))
 

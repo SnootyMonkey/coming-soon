@@ -7,9 +7,8 @@
 (defn- conn-spec
   "Determine if we should connect with a Redis URL, and if so, which one"
   []
-  (let [
-    url (config/redis :redis-connect-URL)
-    env (config/redis :redis-env-variable)]
+  (let [url (config/redis :redis-connect-URL)
+        env (config/redis :redis-env-variable)]
     (cond
       (not (blank? url)) {:uri url}
       (not (blank? env)) {:uri (get (System/getenv) env)}

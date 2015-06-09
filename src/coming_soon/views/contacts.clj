@@ -18,7 +18,7 @@
 
 (defn- linked-icon [{:keys [link-name icon-name]}]
   (let [url (landing-page (keyword (str link-name "-url")))
-    title (landing-page (keyword (str link-name "-title")))]
+        title (landing-page (keyword (str link-name "-title")))]
     (if-not (blank? url)
       (html [:li [:a {:href url :title title :class "social-link" :target "_new"}
         [:i {:class (str "icon-" icon-name " icon-large")}]]]))))
@@ -87,7 +87,4 @@
   [:#copyright] (html-content (landing-page :copyright))
 
   ;; scripts
-  [:body] (append
-    (if (landing-page :analytics) 
-      (analytics-content)
-      "")))
+  [:body] (append (if (landing-page :analytics) (analytics-content) "")))
