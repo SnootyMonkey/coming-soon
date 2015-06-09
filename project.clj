@@ -8,11 +8,11 @@
 
   :dependencies [
     [org.clojure/clojure "1.7.0-RC1"] ; Lisp on the JVM http://clojure.org/documentation
-    [org.clojure/clojurescript "0.0-3297"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [org.clojure/clojurescript "0.0-3308"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [ring/ring-jetty-adapter "1.4.0-RC1"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.3.4"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.10.0"] ; Redis client https://github.com/ptaoussanis/carmine
+    [com.taoensso/carmine "2.11.1"] ; Redis client https://github.com/ptaoussanis/carmine
     [environ "1.0.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.8"] ; XML encoding https://github.com/clojure/data.xml
