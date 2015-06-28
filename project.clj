@@ -73,7 +73,7 @@
   }
   
   :plugins [
-    [lein-ring "0.9.4"] ; Common ring tasks https://github.com/weavejester/lein-ring
+    [lein-ring "0.9.6"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-environ "1.0.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
   ]
 
