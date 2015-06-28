@@ -228,12 +228,6 @@ It works well, but I want it to make my coffee too
 
 You can modify any of the Clojure and ClojureScript code to customize the behavior of your landing page. Just remember, you need to push any changes to Heroku so your live page will be updated.
 
-To run coming-soon locally:
-
-```console
-lein ring server
-```
-
 To build the ClojureScript code:
 
 ```console
@@ -244,6 +238,12 @@ To watch the ClojureScript code and build it each time it changes:
 
 ```console
 lein cljsbuild auto
+```
+
+To run coming-soon locally:
+
+```console
+lein run
 ```
 
 Testing

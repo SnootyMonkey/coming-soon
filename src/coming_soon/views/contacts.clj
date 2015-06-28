@@ -21,12 +21,12 @@
         title (landing-page (keyword (str link-name "-title")))]
     (if-not (blank? url)
       (html [:li [:a {:href url :title title :class "social-link" :target "_new"}
-        [:i {:class (str "icon-" icon-name " icon-large")}]]]))))
+        [:i {:class (str "fa fa-" icon-name " fa-lg")}]]]))))
 
 (defn- signup-button-icon []
   (let [signup-btn-icon-class (landing-page :signup-btn-icon)]
     (if-not (blank? signup-btn-icon-class)
-      (html [:i {:id "submit-icon" :class signup-btn-icon-class}] " "))))
+      (html [:i {:id "submit-icon" :class (str "fa " signup-btn-icon-class)}] " "))))
 
 (defn- background-image []
   (let [image-url (landing-page :background-image)]

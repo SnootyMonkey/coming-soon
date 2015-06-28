@@ -57,7 +57,7 @@
     :social-hover-color "#000AAA"
 
     ;; Signup button
-    :signup-btn-icon "icon-test" ; see http://fortawesome.github.com/Font-Awesome/ OK to be blank
+    :signup-btn-icon "fa-envelope-o" ; see http://fortawesome.github.io/Font-Awesome/cheatsheet/ OK to be blank
     :signup-btn-class "btn-test" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
 
     ;; Social stuff
