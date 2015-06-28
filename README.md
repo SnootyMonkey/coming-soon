@@ -34,7 +34,8 @@ Here are just some of the Fantastic Features<sup>TM</sup> you can enjoy:
 * Drop in your code snippet from your web analytics provider, such as Google Analytics, and you can track views and conversion rates for signing up
 * Twitter, Facebook, GitHub and blog links are supported as a setting in the config file
 * Go beyond the config file and change all the HTML and CSS to put whatever you'd like on the page
-* The CSS is Twitter Bootstrap
+* The CSS is [Twitter Bootstrap](http://getbootstrap.com/)
+* The icons are [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 * All the third-party resources are hosted on a [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
 * coming-soon makes no attempt to promote itself on your page... that's just tacky
 * There's an [admin page](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin.png) to view sign-ups and export them as [JSON](http://en.wikipedia.org/wiki/JSON), [XML](http://en.wikipedia.org/wiki/XML) or [CSV](http://en.wikipedia.org/wiki/Comma-separated_values)
