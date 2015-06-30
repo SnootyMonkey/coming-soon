@@ -7,7 +7,7 @@
   :min-lein-version "2.5.1" ; highest version supported by Travis-CI as of 5/4/2015
 
   :dependencies [
-    [org.clojure/clojure "1.7.0-RC1"] ; Lisp on the JVM http://clojure.org/documentation
+    [org.clojure/clojure "1.7.0"] ; Lisp on the JVM http://clojure.org/documentation
     [org.clojure/clojurescript "0.0-3308"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [ring/ring-jetty-adapter "1.4.0-RC1"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
