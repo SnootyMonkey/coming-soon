@@ -1,6 +1,7 @@
 MAINLINE
 ====
 
+* Upgraded the Bootstrap used in the default template to 3.3.5.
 * Upgraded the Font Awesome used in the default template to 4.3.0.
 * Upgraded Clojure to 1.7.0
 * Removed incomplete browser tests
