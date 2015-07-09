@@ -53,6 +53,8 @@
         [lein-checkall "0.1.1"] ; Runs bikeshed, kibit and eastwood https://github.com/itang/lein-checkall
         [lein-cljfmt "0.1.10"] ; Code formatting https://github.com/weavejester/cljfmt
         [lein-deps-tree "0.1.2"] ; Print a tree of project dependencies https://github.com/the-kenny/lein-deps-tree
+        [venantius/ultra "0.3.4"] ; Enhancement's to Leiningen's REPL https://github.com/venantius/ultra
+        [venantius/yagni "0.1.1"] ; Dead code finder https://github.com/venantius/yagni
       ]
       :env {
         :config-file "config.edn"
