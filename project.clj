@@ -21,13 +21,13 @@
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
     [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
-    [clj-time "0.9.0"] ; DateTime utilities https://github.com/clj-time/clj-time
+    [clj-time "0.10.0"] ; DateTime utilities https://github.com/clj-time/clj-time
   ]
 
   :profiles {
     :qa {
       :dependencies [
-        [midje "1.7.0-beta1"] ; Example-based testing https://github.com/marick/Midje
+        [midje "1.7.0"] ; Example-based testing https://github.com/marick/Midje
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
       ]
       :plugins [
