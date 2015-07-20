@@ -1,23 +1,30 @@
-MAINLINE
-====
+# Change Log
 
+All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/). This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com).
+
+## Unreleased - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.2...HEAD)
+
+### Changed
 * Upgraded the Bootstrap used in the default template to 3.3.5.
 * Upgraded the Font Awesome used in the default template to 4.3.0.
 * Upgraded Clojure to 1.7.0
-* Removed incomplete browser tests
 * Updated dependencies
 
-v0.2
-====
+### Removed
+* Removed incomplete browser tests
 
-* Upgraded the Font Awesome used in the default template to 3.2.1.
+## [v0.2.0](https://github.com/SnootyMonkey/coming-soon/releases/tag/v0.2.0) -  - 2015-05-14 - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.1...v0.2)
+
+### Added
 * Added support for a title on all the user configured "social" links (Twitter, Facebook, GitHub, RSS).
 * Added unit tests and continuous integration with Travis CI.
 * Added a configurable error message if saving user's contact info is not successful. :error and :error-color in your config.edn file.
+
+### Changed
+* Upgraded the Font Awesome used in the default template to 3.2.1.
 * Moved expectations tests to midje
 * Updated dependencies
 
-v0.1
-====
+## [v0.1.0](https://github.com/SnootyMonkey/coming-soon/releases/tag/v0.1.0) - 2015-05-13
 
 Initial release.
