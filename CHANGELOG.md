@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file. This projec
 ### Removed
 * Removed incomplete browser tests
 
-## [v0.2.0](https://github.com/SnootyMonkey/coming-soon/releases/tag/v0.2.0) -  - 2015-05-14 - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.1...v0.2)
+## [v0.2.0](https://github.com/SnootyMonkey/coming-soon/releases/tag/v0.2.0) -  2015-05-14 - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.1...v0.2)
 
 ### Added
 * Added support for a title on all the user configured "social" links (Twitter, Facebook, GitHub, RSS).
