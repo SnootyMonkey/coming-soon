@@ -44,7 +44,7 @@
     ;; http://designshack.net/articles/typography/10-more-great-google-font-combinations-you-can-copy/
     ;; http://www.insquaremedia.com/blog/15-web-design-stuff/50-our-favourite-google-font-combinations
     
-    ;; see http://code.google.com/webfonts for available fonts
+    ;; see https://www.google.com/fonts for available fonts
     :app-title-font "Droid Sans" ; Google web font
     :app-title-backup-fonts "Arial,Helvetica,sans-serif" ; Web-safe fonts
     :body-font "Droid Serif" ; Google web font

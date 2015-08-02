@@ -31,7 +31,7 @@
     ;; http://designshack.net/articles/typography/10-more-great-google-font-combinations-you-can-copy/
     ;; http://www.insquaremedia.com/blog/15-web-design-stuff/50-our-favourite-google-font-combinations
     
-    ;; see http://code.google.com/webfonts for available fonts
+    ;; see https://www.google.com/fonts for available fonts
     :app-title-font "Test Title Font" ; Google web font
     :app-title-backup-fonts "Test Title Backup Font" ; Web-safe fonts
     :body-font "Test Body Font" ; Google web font
