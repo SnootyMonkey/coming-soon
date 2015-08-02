@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file. This projec
 ## Unreleased - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.2...HEAD)
 
 ### Changed
+* Move from deprecated cross-overs to the new hotness, cljc.
+* sAdded .core to the ClojureScript coming-soon namespace to remove warning.
 * Upgraded the Bootstrap used in the default template to 3.3.5.
 * Upgraded the Font Awesome used in the default template to 4.3.0.
 * Upgraded Clojure to 1.7.0
