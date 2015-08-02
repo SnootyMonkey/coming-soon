@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. This projec
 
 ## Unreleased - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.2...HEAD)
 
+### Added
+* Added OpenCompany.io link and screenshot in README.
+
 ### Changed
 * Move from deprecated cross-overs to the new hotness, cljc.
 * sAdded .core to the ClojureScript coming-soon namespace to remove warning.

@@ -64,7 +64,7 @@ Why you SHOULD use coming-soon
 
 It's very simple and it's very free. Just edit the config file, deploy it to Heroku for free, then get on with building your app. It's even faster than using many of the software as a service options.
 
-As an example, the above landing page and the following landing pages were configured using just the configuration file with no custom HTML, CSS or coding.
+As an example, the following two landing pages were configured using just the configuration file with **no** custom HTML, CSS or coding.
 
 [![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
 
@@ -76,11 +76,11 @@ As an example, the above landing page and the following landing pages were confi
 
 If you want to go nuts on the templates and build some truly custom HTML and CSS for your landing page, then you have that option. You aren't locked into off-the-shelf templates or WYSIWYG editors or limited customization options like you are with many of the software as a service landing pages.
 
-Here is the same landing page with just [this simple custom CSS](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/css/custom.css).
+Here is the same IdeaFerret landing page with just [this simple custom CSS](https://github.com/SnootyMonkey/coming-soon/blob/master/examples/ideaferret/css/custom.css).
 
 [![IdeaFerret Custom Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example4-full.png)
 
-It's also open source (as in free to do whatever you like with it), so if it only does 80% of what you want, and you prefer to do the other 20% in Clojure/ClojureScript, it's probably for you.
+coming-soon is also open source (as in free to do whatever you like with it), so if it only does 80% of what you want, and you prefer to do the other 20% in Clojure/ClojureScript, it's probably for you.
 
 What it takes to use it
 -----------------------
@@ -298,6 +298,7 @@ Links
 * [Live Admin Demo](http://coming-soon-admin.herokuapp.com/contacts) - login as admin / admin
 * [IdeaFerret](http://ideaferret.com) - a coming-soon powered landing page
 * [Falklandsophile](http://falklandsophile.com) - another coming-soon powered landing page
+* [OpenCompany](http://opencompany.io) - yet another coming-soon powered landing page
 
 License
 -------
