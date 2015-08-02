@@ -7,8 +7,8 @@
   :min-lein-version "2.5.1" ; highest version supported by Travis-CI as of 5/4/2015
 
   :dependencies [
+    ;; Server-side
     [org.clojure/clojure "1.7.0"] ; Lisp on the JVM http://clojure.org/documentation
-    [org.clojure/clojurescript "0.0-3308"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [ring/ring-jetty-adapter "1.4.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.4.0"] ; Web routing http://github.com/weavejester/compojure
@@ -19,9 +19,11 @@
     [clojure-csv/clojure-csv "2.0.1"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.6"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
-    [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.10.0"] ; DateTime utilities https://github.com/clj-time/clj-time
+    ;; Client-side
+    [org.clojure/clojurescript "1.7.28"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
   ]
 
   :profiles {
@@ -86,8 +88,6 @@
   ;; ----- ClojureScript -----
 
   :cljsbuild {
-    ; crossovers is deprecated, need to replace with cljx https://github.com/lynaghk/cljx
-    :crossovers [coming-soon.models.email] ; compile for both Clojure and ClojureScript
     :builds
       [{
       :source-paths ["src/coming_soon/cljs" "src"] ; CLJS source code path

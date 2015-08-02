@@ -1,4 +1,4 @@
-(ns coming-soon
+(ns coming-soon.core
   (:require [goog.net.XhrIo :as xhr]
             [cljs.reader :as reader]
             [clojure.string :refer [join]]
