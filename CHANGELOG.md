@@ -2,14 +2,14 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/). This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com).
 
-## Unreleased - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.2...HEAD)
+## v0.3.0-SNAPSHOT - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.2...HEAD)
 
 ### Added
 * Added OpenCompany.io link and screenshot in README.
 
 ### Changed
 * Move from deprecated cross-overs to the new hotness, cljc.
-* sAdded .core to the ClojureScript coming-soon namespace to remove warning.
+* Updated the ClojureScript coming-soon namespace to remove warning.
 * Upgraded the Bootstrap used in the default template to 3.3.5.
 * Upgraded the Font Awesome used in the default template to 4.3.0.
 * Upgraded Clojure to 1.7.0
