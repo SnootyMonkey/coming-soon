@@ -1,5 +1,4 @@
--= coming-soon =-
-===========
+# -= coming-soon =-
 
 [![MPL License](http://img.shields.io/badge/license-MPL-blue.svg?style=flat)](https://www.mozilla.org/MPL/2.0/)
 [![Build Status](http://img.shields.io/travis/SnootyMonkey/coming-soon.svg?style=flat)](https://travis-ci.org/SnootyMonkey/coming-soon)
@@ -7,8 +6,8 @@
 
 A simple landing page email collector, but with 90% more parentheses than the leading brand.
 
-What is coming-soon
--------------------
+
+## What is coming-soon
 
 **coming-soon** is a simple "landing page" application that takes just a few minutes to setup on [Heroku](http://heroku.com/). With coming-soon you can quickly put up a page to publicize your new idea and collect email addresses of people who want to be notified when you are ready to launch.
 
@@ -22,8 +21,8 @@ You can see a [live demo](http://coming-soon-demo.heroku.com/) of coming-soon, o
 
 coming-soon is inspired by the Ruby app [LandingPad.rb](https://github.com/swanson/LandingPad.rb) by [Matt Swanson](https://github.com/swanson).
 
-What coming-soon can do
------------------------
+
+### What coming-soon can do
 
 Here are just some of the Fantastic Features<sup>TM</sup> you can enjoy:
 
@@ -41,8 +40,8 @@ Here are just some of the Fantastic Features<sup>TM</sup> you can enjoy:
 * There's an [admin page](http://coming-soon-resources.s3.amazonaws.com/coming-soon-admin.png) to view sign-ups and export them as [JSON](http://en.wikipedia.org/wiki/JSON), [XML](http://en.wikipedia.org/wiki/XML) or [CSV](http://en.wikipedia.org/wiki/Comma-separated_values)
 * There's no code that's not Clojure or ClojureScript, so... there's that
 
-Why you should NOT use coming-soon
-----------------------------------
+
+### Why you should NOT use coming-soon
 
 Can you answer the question, "Why do you want to host your own landing page (even if Heroku is doing the hosting for you) with open source software rather than using a landing page service?"
 
@@ -59,12 +58,12 @@ If you don't have a great answer to that question, then there are **lots** of fu
 * [LaunchGator](http://launch.deskgator.com/)
 * [Mailchimp](http://mailchimp.com) - you probably think of them as the email list back end only, but they can serve up the email capture page too
 
-Why you SHOULD use coming-soon
-------------------------------
+
+### Why you SHOULD use coming-soon
 
 It's very simple and it's very free. Just edit the config file, deploy it to Heroku for free, then get on with building your app. It's even faster than using many of the software as a service options.
 
-As an example, the following two landing pages were configured using just the configuration file with **no** custom HTML, CSS or coding.
+As an example, prior Silver Bullet landing page and the following [Falklandsophile](http://falklandsophile.com) and [IdeaFerret](http://ideaferret.com) landing pages were configured using just the configuration file with **no** custom HTML, CSS or coding.
 
 [![Falklandsophile Example](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-small.png)](http://coming-soon-resources.s3.amazonaws.com/coming-soon-example2-full.png)
 
@@ -82,13 +81,13 @@ Here is the same IdeaFerret landing page with just [this simple custom CSS](http
 
 coming-soon is also open source (as in free to do whatever you like with it), so if it only does 80% of what you want, and you prefer to do the other 20% in Clojure/ClojureScript, it's probably for you.
 
-What it takes to use it
------------------------
+
+## What it takes to use it
 
 coming-soon can be hosted on [Heroku](http://heroku.com) for free. Once you update the settings, just deploy it to Heroku and point a domain at it. That's all there is to it. You are then in business, and can get back to hacking on your app so that you have something to launch and send to all those email addresses you're collecting!
 
-Quick Start - 10 Steps to Heroku
-----------------------------------
+
+### Quick Start - 10 Steps to Heroku
 
 **1) Signup for Heroku and setup the Heroku tools on your machine.**
 
@@ -213,8 +212,8 @@ You will probably want a custom domain rather than Heroku's default. Follow [Her
 
 **10) Now get back to coding your app!**
 
-It looks good, but I want it to be more blue
---------------------------------------------
+
+### It looks good, but I want it to be more blue
 
 You can modify any of the HTML, CSS and images to customize your page. Just remember, you need to push any changes to Heroku so your live page will be updated.
 
@@ -224,8 +223,8 @@ git commit -m 'Made the HTML and CSS more pretty.'
 git push heroku
 ```
 
-It works well, but I want it to make my coffee too
---------------------------------------------------
+
+### It works well, but I want it to make my coffee too
 
 You can modify any of the Clojure and ClojureScript code to customize the behavior of your landing page. Just remember, you need to push any changes to Heroku so your live page will be updated.
 
@@ -247,8 +246,7 @@ To run coming-soon locally:
 lein run
 ```
 
-Testing
-_______
+## Tests
 
 Tests are run in continuous integration of the `master` and `dev` branches on [Travis CI](https://travis-ci.org/SnootyMonkey/coming-soon):
 
@@ -260,8 +258,7 @@ To run the tests locally:
 lein test!
 ```
 
-Other Frequently Asked Questions
---------------------------------
+## Frequently Asked Questions
 
 Here are some questions about coming-soon that I get asked all the time (or maybe I just made them all up).
 
@@ -289,8 +286,8 @@ Here are some questions about coming-soon that I get asked all the time (or mayb
 **Q:** Can I contribute my enhancements back to the project?  
 **A:** Sure, send me your pull requests if you'd like to contribute back your enhancements. I promise to look at every pull request and incorporate it, or at least provide feedback on why if I won't.
 
-Links
------
+## Links
+
 * [GitHub Project](http://github.com/SnootyMonkey/coming-soon)
 * [Change Log](http://github.com/SnootyMonkey/coming-soon/blob/master/CHANGELOG.md)
 * [Issue Tracker](http://github.com/SnootyMonkey/coming-soon/issues)
@@ -300,8 +297,7 @@ Links
 * [Falklandsophile](http://falklandsophile.com) - another coming-soon powered landing page
 * [OpenCompany](http://opencompany.io) - yet another coming-soon powered landing page
 
-License
--------
+## License
 
 coming-soon is distributed under the [Mozilla Public License v2.0](http://www.mozilla.org/MPL/2.0/).
 
