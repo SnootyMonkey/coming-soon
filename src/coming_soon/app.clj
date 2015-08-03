@@ -1,4 +1,5 @@
 (ns coming-soon.app
+  (:gen-class)
   (:require [compojure.core :refer (defroutes ANY)]
             [ring.middleware.params :refer (wrap-params)]
             [ring.adapter.jetty :as ring]

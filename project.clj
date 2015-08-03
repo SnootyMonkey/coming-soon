@@ -65,10 +65,15 @@
         :file-pattern #"\/src\/.+\.clj[csx]?$"
       }
     }]
+    :prod {
+      :env {
+        :config-file "config.edn"
+      }
+    }
   }
 
   :aliases {
-    "build" ["do" "clean," "deps"]
+    "build" ["with-profile" "prod" "do" "clean," "deps," ["cljsbuild" "once"] "uberjar"]
     "cucumber" ["with-profile" "qa" "cucumber"]
     "midje" ["with-profile" "qa" "midje"]
     "test-all" ["with-profile" "qa" "do" "cucumber," "midje"]
@@ -103,4 +108,5 @@
 
   :ring {:handler coming-soon.app/app}
   :main coming-soon.app
+  :aot [coming-soon.app]
 )
