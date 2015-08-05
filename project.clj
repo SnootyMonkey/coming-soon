@@ -29,11 +29,11 @@
   :profiles {
     :qa {
       :dependencies [
-        [midje "1.7.0"] ; Example-based testing https://github.com/marick/Midje
+        [midje "1.8-alpha1"] ; Example-based testing https://github.com/marick/Midje
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
       ]
       :plugins [
-        [lein-midje "3.1.3"] ; Example-based testing https://github.com/marick/lein-midje
+        [lein-midje "3.2-RC4"] ; Example-based testing https://github.com/marick/lein-midje
         [lein-cucumber "1.0.2"] ; cucumber-jvm (BDD testing) tasks https://github.com/nilswloka/lein-cucumber
         [jonase/eastwood "0.2.1"] ; Clojure linter https://github.com/jonase/eastwood        
       ]
