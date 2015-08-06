@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file. This projec
 ### Fixed
 * Added expilict AOT to remove leiningen uberjar warning
 * Updated the ClojureScript coming-soon namespace to remove warning
+* Google fonts are now pulled in with the current protocol (HTTP or HTTPS)
 
 ### Removed
 * Removed incomplete browser tests

@@ -26,20 +26,20 @@
   (if-not (= js/console js/undefined) 
     (util/log (join msg))))
 
-(defn disable-submission []
+(defn- disable-submission []
   ;; disable the submit button
   (-> $submit (attr "disabled" "true"))
   ;; spin the submit icon if there is one
   (if-not (nil? (val $submit-icon))
     (-> $submit-icon (add-class "icon-spin"))))
 
-(defn enable-submission []
+(defn- enable-submission []
   (-> $submit (remove-attr "disabled"))
   ;; stop spinning the submit icon if there is one
   (if-not (nil? (val $submit-icon))
     (-> $submit-icon (remove-class "icon-spin"))))
 
-(defn update-for-success
+(defn- update-for-success
   "remove the submission gadgetry and show the thank you message"
   []
   ;; hide the email submission elements
@@ -51,7 +51,7 @@
   (.hide $error-message)
   (.show $thank-you))
 
-(defn update-for-failure
+(defn- update-for-failure
   "let the user know it's all gone pear-shaped"
   []
   (log "Oh no! We've shat the bed.")
@@ -77,7 +77,7 @@
       (update-for-success)
       (update-for-failure))))
 
-(defn submit
+(defn- submit
   "submit the provided email to the coming-soon server with AJAX"
   [email]
   (log "submitting " email)

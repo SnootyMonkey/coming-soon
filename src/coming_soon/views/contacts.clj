@@ -4,7 +4,7 @@
             [coming-soon.config :refer (landing-page)]
             [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
 
-(def google-font-url "http://fonts.googleapis.com/css?family=")
+(def google-font-url "//fonts.googleapis.com/css?family=")
 
 (defn- analytics-content []
   (let [analytics (first (html-resource "coming_soon/templates/analytics.html"))]
