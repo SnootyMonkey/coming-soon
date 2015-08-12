@@ -12,7 +12,7 @@
     [ring/ring-jetty-adapter "1.4.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.4.0"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.11.1"] ; Redis client https://github.com/ptaoussanis/carmine
+    [com.taoensso/carmine "2.12.0-alpha2"] ; Redis client https://github.com/ptaoussanis/carmine
     [environ "1.0.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.8"] ; XML encoding https://github.com/clojure/data.xml
@@ -22,7 +22,7 @@
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.10.0"] ; DateTime utilities https://github.com/clj-time/clj-time
     ;; Client-side
-    [org.clojure/clojurescript "1.7.48"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [org.clojure/clojurescript "1.7.107"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
   ]
 
