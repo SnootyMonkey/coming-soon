@@ -7,7 +7,7 @@
             [coming-soon.config :refer (landing-page)]
             [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
 
-(def output-format (with-zone (formatter "M-d-yyyy h:m a") (default-time-zone)))
+(def output-format (with-zone (formatter "M-d-yyyy h:mm a") (default-time-zone)))
 
 (deftemplate admin-page "coming_soon/templates/admin.html" [contacts]
   [:#app-title] (html-content (landing-page :app-title))

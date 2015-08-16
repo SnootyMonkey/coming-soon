@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. This projec
 * Added OpenCompany.io link and screenshot in README
 
 ### Changed
+* Show contacts in newest first order on the admin page
 * Move from deprecated cross-overs to the new hotness, cljc
 * Upgraded the Bootstrap used in the default template to 3.3.5
 * Upgraded the Font Awesome used in the default template to 4.4.0
@@ -16,6 +17,7 @@ All notable changes to this project will be documented in this file. This projec
 * Updated dependencies
 
 ### Fixed
+* Minute in contact timestamp now has prefixed 0 on admin page
 * Added explicit AOT to remove leiningen uberjar warning
 * Updated the ClojureScript coming-soon namespace to remove warning
 * Google fonts are now pulled in with the current protocol (HTTP or HTTPS)

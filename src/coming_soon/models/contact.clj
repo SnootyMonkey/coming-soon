@@ -50,9 +50,9 @@
   (with-car (car/hlen coming-soon-contacts)))
 
 (defn all-contacts
-  "Return all the contacts that have been collected so far in date of collection order."
+  "Return all the contacts that have been collected so far in date of most recent collection order."
   []
-  (sort-by :updated-at (map read-string (with-car (car/hvals coming-soon-contacts)))))
+  (reverse (sort-by :id (map read-string (with-car (car/hvals coming-soon-contacts))))))
 
 (defn all-emails
   "Return all the emails that have been collected so far in date of collection order."
