@@ -34,7 +34,6 @@
       ]
       :plugins [
         [lein-midje "3.2-RC4"] ; Example-based testing https://github.com/marick/lein-midje
-        [lein-cucumber "1.0.2"] ; cucumber-jvm (BDD testing) tasks https://github.com/nilswloka/lein-cucumber
         [jonase/eastwood "0.2.1"] ; Clojure linter https://github.com/jonase/eastwood        
       ]
       :env {
@@ -92,12 +91,9 @@
   }
 
   :aliases {
-    "test-build" ["with-profile" "qa" "do" "clean," "deps," ["cljsbuild" "once"]]
     "build" ["with-profile" "prod" "do" "clean," "deps," ["cljsbuild" "once"] "uberjar"]
-    "cucumber" ["with-profile" "qa" "cucumber"]
     "midje" ["with-profile" "qa" "midje"]
-    "test-all" ["with-profile" "qa" "do" "cucumber," "midje"]
-    "test!" ["do" "test-build,", "test-all"]
+    "test!" ["with-profile" "qa" "midje"]
     "test-server" ["with-profile" "qa" "ring" "server-headless"]
     "start" ["with-profile" "dev" "ring" "server-headless"]
     "start!" ["ring" "server-headless"]
