@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file. This projec
 * Added OpenCompany.io link and screenshot in README
 
 ### Changed
-* Show contacts in newest first order on the admin page
+* Show signups in newest first order on the admin page
 * Move from deprecated cross-overs to the new hotness, cljc
 * Upgraded the Bootstrap used in the default template to 3.3.5
 * Upgraded the Font Awesome used in the default template to 4.4.0
