@@ -10,13 +10,6 @@
 (def output-format (with-zone (formatter "M-d-yyyy h:m a") (default-time-zone)))
 
 (deftemplate admin-page "coming_soon/templates/admin.html" [contacts]
-  [:#google-title-font] (set-attr :href (str google-font-url (landing-page :app-title-font)))
-  [:#configured-styles] (html-content (str 
-    "body {background-color:" (landing-page :background-color) "}"
-    "#main-container {background:" (rgb-color (landing-page :container-bg-color)) ";"
-    "background:" (rgba-color (landing-page :container-bg-color) (landing-page :container-opacity)) ";}"
-    "#app-title {color:" (landing-page :app-title-color) ";"
-      "font-family:" (landing-page :app-title-font) "," (landing-page :app-title-backup-fonts) ";}"))
   [:#app-title] (html-content (landing-page :app-title))
   [:table.contacts :tbody :tr] (clone-for [contact contacts]
     [:tr first-child] (content (str (:id contact)))

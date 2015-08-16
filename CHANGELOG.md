@@ -22,6 +22,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ### Removed
 * Removed incomplete browser tests
+* Custom styling of admin page, without dedicated styles this was too often ugly and hard to read
 
 ## [v0.2.0](https://github.com/SnootyMonkey/coming-soon/releases/tag/v0.2.0) -  2015-05-14 - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.1...v0.2)
 
