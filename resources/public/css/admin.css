@@ -6,3 +6,15 @@ div#main-container {
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 }
+
+table.contacts th {
+  text-align: center !important;
+}
+
+table.contacts th.number {
+  text-align: left !important;
+}
+
+table.contacts td.number {
+  text-align: left !important;
+}
