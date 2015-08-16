@@ -243,7 +243,7 @@ lein cljsbuild auto
 To run coming-soon locally:
 
 ```console
-lein run
+lein start
 ```
 
 ## Tests

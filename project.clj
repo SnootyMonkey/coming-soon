@@ -20,7 +20,7 @@
     [enlive "1.1.6"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
-    [clj-time "0.10.0"] ; DateTime utilities https://github.com/clj-time/clj-time
+    [clj-time "0.11.0"] ; DateTime utilities https://github.com/clj-time/clj-time
     ;; Client-side
     [org.clojure/clojurescript "1.7.107"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
@@ -79,8 +79,8 @@
     "test-all" ["with-profile" "qa" "do" "cucumber," "midje"]
     "test!" ["do" "build,", "test-all"]
     "test-server" ["with-profile" "qa" "ring" "server-headless"]
-    "run" ["with-profile" "dev" "ring" "server-headless"]
-    "run!" ["ring" "server-headless"]
+    "start" ["with-profile" "dev" "ring" "server-headless"]
+    "start!" ["ring" "server-headless"]
     "spell" ["spell" "-n"]
     "ancient" ["with-profile" "dev" "do" "ancient" ":allow-qualified," "ancient" ":plugins" ":allow-qualified"]
   }
