@@ -71,7 +71,7 @@
 
     ;; Signup button
     :signup-btn-icon "fa-lightbulb-o" ; see http://fortawesome.github.io/Font-Awesome/cheatsheet/ OK to be blank
-    :signup-btn-class "btn-inverse" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
+    :signup-btn-class "btn-default" ; see http://getbootstrap.com/css/#buttons
 
     ;; Social stuff
     :twitter-url "http://twitter.com/ideaferret" ; OK to be blank

@@ -71,7 +71,7 @@
 
     ;; Signup button
     :signup-btn-icon "fa-envelope" ; see http://fortawesome.github.io/Font-Awesome/cheatsheet/ OK to be blank
-    :signup-btn-class "btn-info" ; see http://twitter.github.com/bootstrap/base-css.html#buttons
+    :signup-btn-class "btn-info" ; see http://getbootstrap.com/css/#buttons
 
     ;; Social stuff
     :twitter-url "" ; OK to be blank
