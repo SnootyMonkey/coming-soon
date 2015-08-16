@@ -146,8 +146,9 @@
   []
   (= (with-car (car/hlen coming-soon-contacts)) (with-car (car/hlen coming-soon-emails))))
 
-(defn test-populate [n]
+(defn test-populate
   "Create n many test registrations for whatever reason you may have for doing so"
+  [n]
   (when (pos? n)
     (create (str "test.user" n "@testing.com") (str "http://testing" n ".com/article/test.html"))
     (recur (dec n))))

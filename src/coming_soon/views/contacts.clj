@@ -1,6 +1,6 @@
 (ns coming-soon.views.contacts
-  (:use [net.cgrand.enlive-html])
   (:require [clojure.string :refer (blank?)]
+            [net.cgrand.enlive-html :refer :all]
             [coming-soon.config :refer (landing-page)]
             [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
 

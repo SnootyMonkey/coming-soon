@@ -1,11 +1,11 @@
 (ns coming-soon.views.admin
-  (:use [net.cgrand.enlive-html])
-  (:require [coming-soon.models.contact :refer (timestamp-format)]
+  (:require [net.cgrand.enlive-html :refer :all]
+            [clj-time.format :refer (formatter with-zone parse unparse)]
+            [clj-time.core :refer (to-time-zone default-time-zone)]
+            [coming-soon.models.contact :refer (timestamp-format)]
             [coming-soon.views.contacts :refer (google-font-url)]
             [coming-soon.config :refer (landing-page)]
-            [coming-soon.helpers.colors :refer (rgb-color rgba-color)]
-            [clj-time.format :refer (formatter with-zone parse unparse)]
-            [clj-time.core :refer (to-time-zone default-time-zone)]))
+            [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
 
 (def output-format (with-zone (formatter "M-d-yyyy h:m a") (default-time-zone)))
 

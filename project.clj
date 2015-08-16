@@ -55,7 +55,6 @@
         [lein-checkall "0.1.1"] ; Runs bikeshed, kibit and eastwood https://github.com/itang/lein-checkall
         [lein-cljfmt "0.1.10"] ; Code formatting https://github.com/weavejester/cljfmt
         [lein-deps-tree "0.1.2"] ; Print a tree of project dependencies https://github.com/the-kenny/lein-deps-tree
-        [venantius/ultra "0.3.4"] ; Enhancement's to Leiningen's REPL https://github.com/venantius/ultra
         [venantius/yagni "0.1.1"] ; Dead code finder https://github.com/venantius/yagni
       ]
       :env {
@@ -65,6 +64,26 @@
         :file-pattern #"\/src\/.+\.clj[csx]?$"
       }
     }]
+    :repl [:dev {
+      :dependencies [
+        [org.clojure/tools.nrepl "0.2.10"] ; Network REPL https://github.com/clojure/tools.nrepl
+        [clojure-complete "0.2.3"] ; Code completion https://github.com/ninjudd/clojure-complete
+        [aprint "0.1.3"] ; Pretty printing in the REPL (aprint thing) https://github.com/razum2um/aprint
+      ]
+      :plugins [
+        [venantius/ultra "0.3.4"] ; Enhancement's to Leiningen's REPL https://github.com/venantius/ultra
+      ]
+      ;; REPL colors
+      :ultra {:color-scheme :solarized_dark}
+      ;; REPL injections
+      :injections [
+        (require '[aprint.core :refer (aprint ap)]
+                 '[clojure.stacktrace :refer (print-stack-trace)]
+                 '[clojure.test :refer :all]
+                 '[clj-time.format :as t]
+                 '[clojure.string :as s])
+      ]
+    }]
     :prod {
       :env {
         :config-file "config.edn"
@@ -73,14 +92,16 @@
   }
 
   :aliases {
+    "test-build" ["with-profile" "qa" "do" "clean," "deps," ["cljsbuild" "once"]]
     "build" ["with-profile" "prod" "do" "clean," "deps," ["cljsbuild" "once"] "uberjar"]
     "cucumber" ["with-profile" "qa" "cucumber"]
     "midje" ["with-profile" "qa" "midje"]
     "test-all" ["with-profile" "qa" "do" "cucumber," "midje"]
-    "test!" ["do" "build,", "test-all"]
+    "test!" ["do" "test-build,", "test-all"]
     "test-server" ["with-profile" "qa" "ring" "server-headless"]
     "start" ["with-profile" "dev" "ring" "server-headless"]
     "start!" ["ring" "server-headless"]
+    "repl" ["with-profile" "repl" "repl"]
     "spell" ["spell" "-n"]
     "ancient" ["with-profile" "dev" "do" "ancient" ":allow-qualified," "ancient" ":plugins" ":allow-qualified"]
   }
@@ -89,6 +110,19 @@
     [lein-ring "0.9.6"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-environ "1.0.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
   ]
+
+  ;; ----- Code check configuration -----
+
+  :eastwood {
+    ;; Dinable some linters that are enabled by default
+    :exclude-linters [:wrong-arity]
+    ;; Enable some linters that are disabled by default
+    :add-linters [:unused-namespaces :unused-private-vars :unused-locals]
+
+    ;; Exclude testing namespaces
+    :tests-paths ["test"]
+    :exclude-namespaces [:test-paths]
+  }
 
   ;; ----- ClojureScript -----
 

@@ -10,11 +10,8 @@
 pom.xml
 *.jar
 *.class
-.lein-deps-sum
-.lein-failures
-.lein-plugins
-.lein-repl-history
-.lein-env
+.lein-*
+.nrepl-*
 
 resources/public/js/coming_soon.js
 resources/public/img/falklands.jpg

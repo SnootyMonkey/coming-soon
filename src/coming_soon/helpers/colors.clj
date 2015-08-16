@@ -16,6 +16,7 @@
   [hex-color]
   (str "rgb(" (clojure.string/join "," (rgb-tuple hex-color)) ")"))
 
-(defn rgba-color [hex-color alpha]
+(defn rgba-color
   "Given a hex CSS color such as #EEE or #1A1A1A and an opacity, convert it to an RGB CSS color such as rgb(255, 16, 22, 0.5)"
+  [hex-color alpha]
   (str "rgba(" (clojure.string/join "," (rgb-tuple hex-color)) "," alpha ")"))
