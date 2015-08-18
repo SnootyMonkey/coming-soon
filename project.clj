@@ -66,7 +66,7 @@
     :repl [:dev {
       :dependencies [
         [org.clojure/tools.nrepl "0.2.10"] ; Network REPL https://github.com/clojure/tools.nrepl
-        [clojure-complete "0.2.3"] ; Code completion https://github.com/ninjudd/clojure-complete
+        [clojure-complete "0.2.4"] ; Code completion https://github.com/ninjudd/clojure-complete
         [aprint "0.1.3"] ; Pretty printing in the REPL (aprint thing) https://github.com/razum2um/aprint
       ]
       :plugins [
