@@ -1,12 +1,10 @@
 {
-  :coming-soon
-  { 
+  :coming-soon { 
     :admin-user "admin" ; CHANGE THIS!
     :admin-password "change_me!" ; CHANGE THIS!
     :instance-prefix "coming-soon" ; make this unique if you are sharing a single redis instance w/ another coming-soon instance
   }
-  :redis
-  {
+  :redis {
     ;; If you're running Redis locally on the same machine and the default 6379 port, leave everything in this section commented out
 
     ;; HEROKU REDIS - uncomment the selected provider (remove the ;;)
@@ -22,8 +20,22 @@
     ;; Uncomment (remove the ;;) the line below for self-hosted redis that's not on port 6379 of localhost
     ;; :redis-connect-URL "redis://user:pass@host:port/"
   }
-  :landing-page
-  { 
+  :webhooks {
+    ;; :posthere-io {
+    ;;   ;; POSThere.io is a webhook callback testing service you can use to test webhooks
+    ;;    :handler "coming-soon.webhooks.posthere-io"
+    ;; 
+    ;;    ;; change me to something unique for you
+    ;;    :posthere-io-uuid "coming-soon-test"
+    ;; }
+    ;; :mailchimp {
+    ;;     :handler "coming-soon.webhooks.mailchimp"
+    ;; }
+    ;; :slack {
+    ;;     :handler "coming-soon.webhooks.slack"
+    ;; }
+  }
+  :landing-page { 
     ;; Copy
     :page-title "Silver Bullet | Launching soon!"
     :app-title "Silver Bullet"

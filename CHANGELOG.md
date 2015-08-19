@@ -5,7 +5,9 @@ All notable changes to this project will be documented in this file. This projec
 ## v0.3.0-SNAPSHOT - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.2...HEAD)
 
 ### Added
-* Added OpenCompany.io link and screenshot in README
+* Ability to make async callbacks to invoke webhooks on successful contact addition (to services such as Slack and Mailchimp)
+* POSThere.io callback
+* Added OpenCompany.io usage link and screenshot in README
 
 ### Changed
 * Show signups in newest first order on the admin page

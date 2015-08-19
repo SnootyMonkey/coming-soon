@@ -10,3 +10,5 @@
 (def redis (config :redis))
 
 (def landing-page (config :landing-page))
+
+(def webhooks (config :webhooks))
