@@ -8,19 +8,17 @@
 (defn call
   "Send an async message for each configured webhook."
   [email referrer]
-  (let [webhooks config/webhooks]
-    (doseq [webhook (keys webhooks)]
-      (put! webhook-chan {:webhook webhook :email email :referrer referrer :config (webhooks webhook)}))))
+  (doseq [webhook (keys config/webhooks)]
+    (put! webhook-chan {:webhook webhook :email email :referrer referrer :config (get config/webhooks webhook)})))
 
-;; Dynamically require all configured webhook's namespaces
-(let [webhooks config/webhooks]
-  (doseq [webhook (keys webhooks)]
-    (if-let [handler (:handler (webhooks webhook))]
-      (try
-        (require (symbol handler))
-        (catch Exception e 
-          (println "Warning: could not load handler for" handler)
-          (println e))))))
+;; Dynamically require each configured webhook's handler's namespace
+(doseq [webhook (keys config/webhooks)]
+  (if-let [handler (:handler (get config/webhooks webhook))]
+    (try
+      (require (symbol handler))
+      (catch Exception e 
+        (println "Warning: could not load handler for" handler)
+        (println e)))))
 
 ;; Consume the webhook channel with 100 workers
 (doseq [n (range 100)]
