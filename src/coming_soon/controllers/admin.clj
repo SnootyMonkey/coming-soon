@@ -4,7 +4,7 @@
             [clojure.data.xml :as xml]
             [clojure-csv.core :as csv]
             [coming-soon.models.contact :refer (all-contacts)]
-            [coming-soon.config :refer (coming-soon)]
+            [coming-soon.config :refer (admin-user admin-password)]
             [coming-soon.views.admin :as view]))
             
 (defn- headers [mime-type extension]
@@ -17,8 +17,8 @@
 
 (defn authenticated? [username password]
   (and 
-    (= username (coming-soon :admin-user))
-    (= password (coming-soon :admin-password))))
+    (= username admin-user)
+    (= password admin-password)))
 
 (defn- json-contacts []
   {:status 200

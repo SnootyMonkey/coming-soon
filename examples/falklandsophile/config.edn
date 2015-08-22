@@ -1,8 +1,8 @@
 {
   :coming-soon
   { 
-    :admin-user "admin" ; CHANGE THIS!
-    :admin-password "change_me!" ; CHANGE THIS!
+    :admin-user "admin" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_USER
+    :admin-password "change_me!" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_PASSWORD
     :instance-prefix "falklands" ; make this unique if you are sharing a single redis instance w/ another coming-soon instance
   }
   :redis

@@ -8,7 +8,7 @@
 
   :dependencies [
     ;; Server-side
-    [org.clojure/clojure "1.7.0"] ; Lisp on the JVM http://clojure.org/documentation
+    [org.clojure/clojure "1.8.0-alpha4"] ; Lisp on the JVM http://clojure.org/documentation
     [ring/ring-jetty-adapter "1.4.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.4.0"] ; Web routing http://github.com/weavejester/compojure
@@ -68,14 +68,8 @@
     :repl [:dev {
       :dependencies [
         [org.clojure/tools.nrepl "0.2.10"] ; Network REPL https://github.com/clojure/tools.nrepl
-        [clojure-complete "0.2.4"] ; Code completion https://github.com/ninjudd/clojure-complete
         [aprint "0.1.3"] ; Pretty printing in the REPL (aprint thing) https://github.com/razum2um/aprint
       ]
-      :plugins [
-        [venantius/ultra "0.3.4"] ; Enhancement's to Leiningen's REPL https://github.com/venantius/ultra
-      ]
-      ;; REPL colors
-      :ultra {:color-scheme :solarized_dark}
       ;; REPL injections
       :injections [
         (require '[aprint.core :refer (aprint ap)]

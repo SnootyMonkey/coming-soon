@@ -5,9 +5,10 @@ All notable changes to this project will be documented in this file. This projec
 ## v0.3.0-SNAPSHOT - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.2...HEAD)
 
 ### Added
-* Ability to make async callbacks to invoke webhooks on successful signup (to services such as Slack and MailChimp)
+* Make async callbacks to invoke webhooks on successful signup (to services such as Slack and MailChimp)
 * MailChimp callback
 * POSThere.io callback
+* Provide admin's user name and password with ENV var
 * Added OpenCompany.io usage link and screenshot in README
 
 ### Changed
@@ -17,6 +18,7 @@ All notable changes to this project will be documented in this file. This projec
 * Upgraded the Font Awesome used in the default template to 4.4.0
 * Upgraded Clojure to 1.7.0
 * Updated `build` alias to perform a complete production build
+* Using Clojure 1.8
 * Updated dependencies
 
 ### Fixed

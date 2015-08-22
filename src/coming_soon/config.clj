@@ -1,14 +1,18 @@
 (ns coming-soon.config
   (:require [environ.core :refer (env)]))
 
-(def config-file (or (env :config-file) "config.edn"))
+(defonce config-file (or (env :config-file) "config.edn"))
 
-(def config (read-string (slurp config-file)))
+(defonce config (read-string (slurp config-file)))
 
-(def coming-soon (config :coming-soon))
+(defonce coming-soon (config :coming-soon))
 
-(def redis (config :redis))
+(defonce admin-user (or (env :admin-user) (coming-soon :admin-user)))
 
-(def landing-page (config :landing-page))
+(defonce admin-password (or (env :admin-password) (coming-soon :admin-password)))
 
-(def webhooks (config :webhooks))
+(defonce redis (config :redis))
+
+(defonce landing-page (config :landing-page))
+
+(defonce webhooks (config :webhooks))
