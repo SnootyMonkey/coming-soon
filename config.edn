@@ -23,19 +23,19 @@
   :webhooks {
     ;; :posthere-io {
     ;;   ;; POSThere.io is a webhook callback testing service you can use to test webhooks
-    ;;    :handler "coming-soon.webhooks.posthere-io"
+    ;;   :handler "coming-soon.webhooks.posthere-io"
     ;;
-    ;;    ;; change me to something unique for you
-    ;;    :posthere-io-uuid "coming-soon-test"
+    ;;   ;; change me to something unique for you
+    ;;   :posthere-io-uuid "coming-soon-test"
     ;; }
     ;; :mailchimp {
-    ;;     :handler "coming-soon.webhooks.mailchimp"
-    ;;     :api-key "" ; only set this if your config.edn is private! Otherwise use the ENV variable: MAILCHIMP_API_KEY
-    ;;     :list-id "" ; REQUIRED! ID of the MailChimp list to add new contacts to (displayed in the list's settings)
-    ;;     :status "pending" ; Mailchimp status of the new subscriber ('pending' or 'subscribed', 'pending' gets an email confirmation)
+    ;;   :handler "coming-soon.webhooks.mailchimp"
+    ;;   :api-key "" ; only set this if your config.edn is private! Otherwise use the ENV variable: MAILCHIMP_API_KEY
+    ;;   :list-id "" ; REQUIRED! ID of the MailChimp list to add new contacts to (displayed in the list's settings)
+    ;;   :status "pending" ; Mailchimp status of the new subscriber ('pending' or 'subscribed', 'pending' gets an email confirmation)
     ;; }
     ;; :slack {
-    ;;     :handler "coming-soon.webhooks.slack"
+    ;;   :handler "coming-soon.webhooks.slack"
     ;; }
   }
   :landing-page { 
