@@ -5,7 +5,8 @@ All notable changes to this project will be documented in this file. This projec
 ## v0.3.0-SNAPSHOT - [code](https://github.com/SnootyMonkey/posthere.io/compare/v0.2...HEAD)
 
 ### Added
-* Ability to make async callbacks to invoke webhooks on successful contact addition (to services such as Slack and Mailchimp)
+* Ability to make async callbacks to invoke webhooks on successful signup (to services such as Slack and MailChimp)
+* MailChimp callback
 * POSThere.io callback
 * Added OpenCompany.io usage link and screenshot in README
 
