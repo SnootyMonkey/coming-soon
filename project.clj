@@ -8,7 +8,7 @@
 
   :dependencies [
     ;; Server-side
-    [org.clojure/clojure "1.8.0-alpha4"] ; Lisp on the JVM http://clojure.org/documentation
+    [org.clojure/clojure "1.7.0"] ; Lisp on the JVM http://clojure.org/documentation
     [ring/ring-jetty-adapter "1.4.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.4.0"] ; Web routing http://github.com/weavejester/compojure
