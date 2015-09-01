@@ -35,7 +35,9 @@
     ;;   :status "pending" ; Mailchimp status of the new subscriber ('pending' or 'subscribed', 'pending' gets an email confirmation)
     ;; }
     ;; :slack {
-    ;;   :handler "coming-soon.webhooks.slack"
+    ;;     :handler "coming-soon.webhooks.slack"
+    ;;     :api-key "" ; only set this if your config.edn is private! Otherwise use the ENV variable: SLACK_API_KEY        
+    ;;     :channel-name ""
     ;; }
   }
   :landing-page { 
