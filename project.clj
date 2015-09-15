@@ -13,7 +13,7 @@
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.4.0"] ; Web routing http://github.com/weavejester/compojure
     [com.taoensso/carmine "2.12.0-beta1"] ; Redis client https://github.com/ptaoussanis/carmine
-    [org.clojure/core.async "0.1.361.0-d8047c-alpha"] ; Async programming library https://github.com/clojure/core.async/
+    [org.clojure/core.async "0.1.346.0-17112a-alpha"] ; Async programming library https://github.com/clojure/core.async/
     [environ "1.0.1"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-http "2.0.0"] ; HTTP client https://github.com/dakrone/clj-http
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
