@@ -12,9 +12,9 @@
     [ring/ring-jetty-adapter "1.4.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.4.0"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.12.0-alpha2"] ; Redis client https://github.com/ptaoussanis/carmine
-    [org.clojure/core.async "0.1.346.0-17112a-alpha"] ; Async programming library https://github.com/clojure/core.async/
-    [environ "1.0.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
+    [com.taoensso/carmine "2.12.0-beta1"] ; Redis client https://github.com/ptaoussanis/carmine
+    [org.clojure/core.async "0.1.361.0-d8047c-alpha"] ; Async programming library https://github.com/clojure/core.async/
+    [environ "1.0.1"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-http "2.0.0"] ; HTTP client https://github.com/dakrone/clj-http
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.0.8"] ; XML encoding https://github.com/clojure/data.xml
@@ -26,6 +26,11 @@
     ;; Client-side
     [org.clojure/clojurescript "1.7.122"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
+  ]
+
+  :plugins [
+    [lein-ring "0.9.6"] ; Common ring tasks https://github.com/weavejester/lein-ring
+    [lein-environ "1.0.1"] ; Get environment settings from different sources https://github.com/weavejester/environ
   ]
 
   :profiles {
@@ -98,11 +103,6 @@
     "ancient" ["with-profile" "dev" "do" "ancient" ":allow-qualified," "ancient" ":plugins" ":allow-qualified"]
   }
   
-  :plugins [
-    [lein-ring "0.9.6"] ; Common ring tasks https://github.com/weavejester/lein-ring
-    [lein-environ "1.0.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
-  ]
-
   ;; ----- Code check configuration -----
 
   :eastwood {
