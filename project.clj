@@ -54,14 +54,14 @@
       ]
       :plugins [
         [lein-ancient "0.6.8-SNAPSHOT"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
-        [lein-cljsbuild "1.0.6"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
+        [lein-cljsbuild "1.1.0"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
         [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
         [lein-bikeshed "0.2.0"] ; Check for code smells https://github.com/dakrone/lein-bikeshed
         [lein-kibit "0.1.2"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
         [lein-checkall "0.1.1"] ; Runs bikeshed, kibit and eastwood https://github.com/itang/lein-checkall
         [lein-cljfmt "0.3.0"] ; Code formatting https://github.com/weavejester/cljfmt
         [lein-deps-tree "0.1.2"] ; Print a tree of project dependencies https://github.com/the-kenny/lein-deps-tree
-        [venantius/yagni "0.1.1"] ; Dead code finder https://github.com/venantius/yagni
+        [venantius/yagni "0.1.4"] ; Dead code finder https://github.com/venantius/yagni
       ]
       :env {
         :config-file "config.edn"
@@ -100,7 +100,7 @@
     "start!" ["ring" "server-headless"]
     "repl" ["with-profile" "repl" "repl"]
     "spell" ["spell" "-n"]
-    "ancient!" ["do" "ancient" ":allow-qualified," "ancient" ":plugins" ":allow-qualified"] ; check for out of date dependencies
+    "ancient" ["ancient" ":all" ":allow-qualified"] ; check for out of date dependencies
   }
   
   ;; ----- Code check configuration -----
