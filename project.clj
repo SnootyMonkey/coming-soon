@@ -53,7 +53,7 @@
         [print-foo "1.0.2"] ; Old school print debugging https://github.com/danielribeiro/print-foo
       ]
       :plugins [
-        [lein-ancient "0.6.7"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
+        [lein-ancient "0.6.8-SNAPSHOT"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
         [lein-cljsbuild "1.0.6"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
         [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
         [lein-bikeshed "0.2.0"] ; Check for code smells https://github.com/dakrone/lein-bikeshed
@@ -72,7 +72,7 @@
     }]
     :repl [:dev {
       :dependencies [
-        [org.clojure/tools.nrepl "0.2.10"] ; Network REPL https://github.com/clojure/tools.nrepl
+        [org.clojure/tools.nrepl "0.2.11"] ; Network REPL https://github.com/clojure/tools.nrepl
         [aprint "0.1.3"] ; Pretty printing in the REPL (aprint thing) https://github.com/razum2um/aprint
       ]
       ;; REPL injections
@@ -100,7 +100,7 @@
     "start!" ["ring" "server-headless"]
     "repl" ["with-profile" "repl" "repl"]
     "spell" ["spell" "-n"]
-    "ancient" ["with-profile" "dev" "do" "ancient" ":allow-qualified," "ancient" ":plugins" ":allow-qualified"]
+    "ancient!" ["do" "ancient" ":allow-qualified," "ancient" ":plugins" ":allow-qualified"] ; check for out of date dependencies
   }
   
   ;; ----- Code check configuration -----
