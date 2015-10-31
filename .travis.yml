@@ -3,13 +3,12 @@ lein: lein2
 script: lein2 test!
 branches:
   only:
-    - master
-    - dev
+  - master
+  - dev
 jdk:
-  - oraclejdk7
+- oraclejdk7
 services:
-  - redis-server
+- redis-server
 notifications:
-  hipchat:
-    rooms:
-      - ec1ead2b384476ea5bcb232b5bb9b6@Snooty Monkey
+  slack:
+    secure: Xymsv6anNyxB6t79IchZQxjMk14huMEQ1FXCxNRwSmfHzqeRPEvLTEv9JWd6T4xoaoW7a1H5RV5lEyRb9iPV9qE1JVpE22AaZmuxvgLl1kAN1X6LN1vTqN5HCrPGQCuHY0HFbhV0/wewGB3fU02DaXO0qxp7qMxxoH5Z1AJJGfQ=
