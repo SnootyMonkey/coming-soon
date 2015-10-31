@@ -6,12 +6,12 @@
 
 (def head (html [:head [:title "Redis Test"]]))
 
-(defn- response-content [status] 
+(defn- response-content [status]
   (let [
     color (if status "green" "red")
     label (if status "OK" "BORKED")]
     (html [:html head [:body "Connection to Redis is: "
-          [:span {:style (str "font-weight: bold;color:" color ";")} label]]]))) 
+          [:span {:style (str "font-weight: bold;color:" color ";")} label]]])))
 
 (def redis-ok {:status 200 :body (response-content true)})
 (def redis-borked {:status 500 :body (response-content false)})

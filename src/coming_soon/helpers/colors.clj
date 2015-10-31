@@ -11,7 +11,7 @@
       ;; convert the 6 hex digits to a sequence of the 3 RGB colors
       (hex-str-to-dec full-color))))
 
-(defn rgb-color 
+(defn rgb-color
   "Given a hex CSS color such as #EEE or #1A1A1A, convert it to an RGB CSS color such as rgb(255, 16, 22)"
   [hex-color]
   (str "rgb(" (clojure.string/join "," (rgb-tuple hex-color)) ")"))
