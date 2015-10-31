@@ -93,8 +93,9 @@
 
   :aliases {
     "build" ["with-profile" "prod" "do" "clean," "deps," ["cljsbuild" "once"] "uberjar"]
-    "midje" ["with-profile" "qa" "midje"]
+    "midje!" ["with-profile" "qa" "midje"]
     "test!" ["with-profile" "qa" "midje"]
+    "autotest" ["with-profile" "qa" "midje" ":autotest"] ; watch for code changes and run affected tests
     "test-server" ["with-profile" "qa" "ring" "server-headless"]
     "start" ["with-profile" "dev" "ring" "server-headless"]
     "start!" ["ring" "server-headless"]
@@ -109,7 +110,7 @@
     ;; Dinable some linters that are enabled by default
     :exclude-linters [:wrong-arity]
     ;; Enable some linters that are disabled by default
-    :add-linters [:unused-namespaces :unused-private-vars :unused-locals]
+    :add-linters [:unused-private-vars :unused-locals] ; :unused-namespaces  (ideal, but doesn't see in macros)
 
     ;; Exclude testing namespaces
     :tests-paths ["test"]

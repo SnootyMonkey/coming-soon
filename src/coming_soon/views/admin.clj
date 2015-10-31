@@ -3,9 +3,7 @@
             [clj-time.format :refer (formatter with-zone parse unparse)]
             [clj-time.core :refer (to-time-zone default-time-zone)]
             [coming-soon.models.contact :refer (timestamp-format)]
-            [coming-soon.views.contacts :refer (google-font-url)]
-            [coming-soon.config :refer (landing-page)]
-            [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
+            [coming-soon.config :refer (landing-page)]))
 
 (def output-format (with-zone (formatter "M-d-yyyy h:mm a") (default-time-zone)))
 

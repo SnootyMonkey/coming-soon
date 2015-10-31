@@ -21,7 +21,7 @@
         (println e)))))
 
 ;; Consume the webhook channel with 100 workers
-(doseq [n (range 100)]
-  (go-loop []
+(dorun 100 (repeatedly
+  #(go-loop []
     (webhook/invoke (<! webhook-chan))
-    (recur)))
+    (recur))))
