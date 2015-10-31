@@ -13,7 +13,7 @@
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.4.0"] ; Web routing http://github.com/weavejester/compojure
     [com.taoensso/carmine "2.12.0"] ; Redis client https://github.com/ptaoussanis/carmine
-    [org.clojure/core.async "0.1.346.0-17112a-alpha"] ; Async programming library https://github.com/clojure/core.async/
+    [org.clojure/core.async "0.2.371"] ; Async programming library https://github.com/clojure/core.async/
     [environ "1.0.1"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-http "2.0.0"] ; HTTP client https://github.com/dakrone/clj-http
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
@@ -36,11 +36,11 @@
   :profiles {
     :qa {
       :dependencies [
-        [midje "1.8-alpha1"] ; Example-based testing https://github.com/marick/Midje
+        [midje "1.8.1"] ; Example-based testing https://github.com/marick/Midje
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
       ]
       :plugins [
-        [lein-midje "3.2-RC4"] ; Example-based testing https://github.com/marick/lein-midje
+        [lein-midje "3.2"] ; Example-based testing https://github.com/marick/lein-midje
         [jonase/eastwood "0.2.1"] ; Clojure linter https://github.com/jonase/eastwood        
       ]
       :env {
@@ -72,8 +72,8 @@
     }]
     :repl [:dev {
       :dependencies [
-        [org.clojure/tools.nrepl "0.2.11"] ; Network REPL https://github.com/clojure/tools.nrepl
-        [aprint "0.1.3"] ; Pretty printing in the REPL (aprint thing) https://github.com/razum2um/aprint
+        [org.clojure/tools.nrepl "0.2.12"] ; Network REPL https://github.com/clojure/tools.nrepl
+        [aprint "0.1.3"] ; Pretty printing in the REPL (aprint ...) https://github.com/razum2um/aprint
       ]
       ;; REPL injections
       :injections [
