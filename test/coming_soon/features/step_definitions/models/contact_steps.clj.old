@@ -150,5 +150,3 @@
 ;   (let [referrer (next-result)]
 ;     (check (= url (first referrer)))
 ;     (check (= (read-string referral-count) (last referrer)))))
-
-

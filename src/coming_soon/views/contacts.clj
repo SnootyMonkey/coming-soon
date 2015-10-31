@@ -39,7 +39,7 @@
   [:title] (content (landing-page :page-title))
   [:#google-title-font] (set-attr :href (str google-font-url (landing-page :app-title-font)))
   [:#google-body-font] (set-attr :href (str google-font-url (landing-page :body-font)))
-  [:#configured-styles] (html-content (str 
+  [:#configured-styles] (html-content (str
     "body {background-color:" (landing-page :background-color) ";"
       "font-family:" (landing-page :body-font) "," (landing-page :body-backup-fonts) ";}"
     "#main-container {background:" (rgb-color (landing-page :container-bg-color)) ";"
@@ -74,7 +74,7 @@
   [:#error-message] (html-content (landing-page :error))
   [:#email] (set-attr :placeholder (landing-page :placeholder))
   [:#referrer] (set-attr :value referrer)
-  [:#submit] (add-class (landing-page :signup-btn-class))  
+  [:#submit] (add-class (landing-page :signup-btn-class))
   [:#submit] (content (signup-button-icon) (landing-page :sign-up-btn))
   [:#spam-msg] (html-content (landing-page :spam-msg))
   [:#social-links] (content (map linked-icon [

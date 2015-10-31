@@ -6,7 +6,7 @@
 ; Note: not all the unusual ones were used
 
 (tabular (fact "valid email addresses are determined to be valid"
-  (valid? ?address) => true)
+  (valid? ?address) => truthy)
   ?address
   "email@example.com"
   "firstname.lastname@example.com"
@@ -21,7 +21,7 @@
   "firstname-lastname@example.com")
 
 (tabular (fact "invalid email addresses are determined to be invalid"
-  (valid? ?address) => false)
+  (valid? ?address) => falsey)
   ?address
   "plainaddress"
   "#@%^%#$@#$@#.com"

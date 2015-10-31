@@ -7,7 +7,7 @@
 
 ;; Redis "schema"
 ;; <prefix>:coming-soon-id - a simple incrementing counter
-(def coming-soon-id (str prefix ":coming-soon-id")) 
+(def coming-soon-id (str prefix ":coming-soon-id"))
 ;; <prefix>:coming-soon-contacts - hash of all contacts by id
 (def coming-soon-contacts (str prefix ":coming-soon-contacts"))
 ;; <prefix>:coming-soon-emails - hash of all ids, hashed by email (a secondary index)
@@ -59,7 +59,7 @@
   (sort-by last > (map identity (frequencies (remove nil? (map :referrer (all-contacts)))))))
 
 ;; ISO 8601 timestamp
-(defn- current-timestamp [] 
+(defn- current-timestamp []
   (unparse timestamp-format (now)))
 
 ;; Store the contact by email and by id
@@ -71,7 +71,7 @@
     (car/hset coming-soon-emails email id)
     ;; hash the contact by the id
     (car/hset coming-soon-contacts id (pr-str
-      {:id id 
+      {:id id
       :email email
       :referrer referrer
       :updated-at (current-timestamp)}))
@@ -105,7 +105,7 @@
   "Remove the contact."
   [email]
   (if (exists-by-email? email)
-    (do 
+    (do
       (let [id (with-car (car/hget coming-soon-emails email))]
         (remove! id email))
       true)
@@ -115,7 +115,7 @@
   "Remove the contact."
   [id]
   (if (exists-by-id? id)
-    (do 
+    (do
       (let [email (:email (contact-by-id id))]
         (remove! id email))
       true)

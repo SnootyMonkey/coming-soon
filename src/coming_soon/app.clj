@@ -16,13 +16,13 @@
     (wrap-basic-authentication admin/admin-routes admin/authenticated?))
   (route/resources "/")
   (route/not-found "Page Not Found"))
-  
+
 (def app (wrap-params app-routes))
 
 (defn start [port]
   (ring/run-jetty app {:port port :join? false}))
 
 (defn -main []
-  (let [port (Integer/parseInt 
+  (let [port (Integer/parseInt
        (or (System/getenv "PORT") "3000"))]
   (start port)))

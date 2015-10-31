@@ -9,7 +9,7 @@
   (if-not (email/valid? email)
     {:status 403 :body (pr-str {:contact "invalid"})}
     (if (contact/create email referrer)
-      (do 
+      (do
         (webhooks/call email referrer) ; invoke configured webhooks asynchronously
         {:status 200 :body (pr-str {:contact "created"})})
       {:status 500 :body (pr-str {:contact "error"})})))

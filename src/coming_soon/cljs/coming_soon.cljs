@@ -23,7 +23,7 @@
 (defn log
   "log to the console only if we have a console (so not in old versions of IE)"
   [& msg]
-  (if-not (= js/console js/undefined) 
+  (if-not (= js/console js/undefined)
     (util/log (join msg))))
 
 (defn- disable-submission []
@@ -91,7 +91,7 @@
     (log "in validate-email, email is: " email)
     ; IE doesn't support the HTML 5 email text input validation, so it could be blank
     (if (< (count email) 1)
-      (do 
+      (do
         (enable-submission)
         (js/alert "Please provide your email address."))
       ; IE doesn't support the HTML 5 email text input validation, so it could be invalid

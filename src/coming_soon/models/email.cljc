@@ -6,6 +6,4 @@
 (defn valid?
   "Determine if the specified email address is valid according to our email regex."
   [email]
-  (if (and (not (nil? email)) (re-matches email-regex email))
-    true 
-    false))
+  (and (not (nil? email)) (re-matches email-regex email)))

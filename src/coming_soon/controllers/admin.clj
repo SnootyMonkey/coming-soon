@@ -6,7 +6,7 @@
             [coming-soon.models.contact :refer (all-contacts)]
             [coming-soon.config :refer (admin-user admin-password)]
             [coming-soon.views.admin :as view]))
-            
+
 (defn- headers [mime-type extension]
   {
     "Cache-Control" "must-revalidate"
@@ -16,7 +16,7 @@
   })
 
 (defn authenticated? [username password]
-  (and 
+  (and
     (= username admin-user)
     (= password admin-password)))
 
@@ -25,7 +25,7 @@
    :headers (headers "application/json" "json")
    :body (json/generate-string (all-contacts))})
 
-(defn- xml-contact 
+(defn- xml-contact
   "Return the specified contact as an XML element"
   [contact]
   (xml/element :contact {:id (str (:id contact))} [
@@ -36,12 +36,12 @@
 (defn- xml-contacts []
   {:status 200
    :headers (headers "application/xml" "xml")
-   :body (xml/emit-str (xml/element :contacts {} 
+   :body (xml/emit-str (xml/element :contacts {}
       (map xml-contact (all-contacts))))})
 
 (def csv-header ["id" "email" "referrer" "updated-at"])
 
-(defn- csv-contact 
+(defn- csv-contact
   "Return the specified contact as a vector for CSV encoding"
   [contact]
   (list (str (:id contact)) (:email contact) (:referrer contact) (:updated-at contact)))

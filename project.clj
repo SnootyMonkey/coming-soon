@@ -101,6 +101,7 @@
     "start!" ["ring" "server-headless"]
     "repl" ["with-profile" "repl" "repl"]
     "spell" ["spell" "-n"]
+    "bikeshed!" ["bikeshed" "-v" "-m" "120"] ; code check with max line length warning of 120 characters
     "ancient" ["ancient" ":all" ":allow-qualified"] ; check for out of date dependencies
   }
   

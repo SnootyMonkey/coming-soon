@@ -3,7 +3,7 @@
             [coming-soon.config :as config]
             [coming-soon.webhooks.webhook :as webhook]))
 
-(def ^:private webhook-chan (chan (sliding-buffer 1000))) ; buffered channel with up to 1,000 entries without loosing any
+(def ^:private webhook-chan (chan (sliding-buffer 1000))) ; buffered channel w/ up to 1,000 entries without loosing any
 
 (defn call
   "Send an async message for each configured webhook."
@@ -16,7 +16,7 @@
   (if-let [handler (:handler (get config/webhooks webhook))]
     (try
       (require (symbol handler))
-      (catch Exception e 
+      (catch Exception e
         (println "Warning: could not load handler for" handler)
         (println e)))))
 
