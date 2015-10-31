@@ -18,31 +18,25 @@
 (defn exists-by-email?
   "Determine if a contact with the specified email address has been collected."
   [email]
-  (if (= 1 (with-car (car/hexists coming-soon-emails email)))
-    true
-    false))
+  (= 1 (with-car (car/hexists coming-soon-emails email))))
 
 (defn exists-by-id?
   "Determine if a contact with the specified id has been collected."
   [id]
-  (if (= 1 (with-car (car/hexists coming-soon-contacts id)))
-    true
-    false))
+  (= 1 (with-car (car/hexists coming-soon-contacts id))))
 
 (defn contact-by-id
   "Return the contact for an id, nil if no contact exists by that id."
   [id]
-  (if (exists-by-id? id)
-    (read-string (with-car (car/hget coming-soon-contacts id)))
-    nil))
+  (when (exists-by-id? id)
+    (read-string (with-car (car/hget coming-soon-contacts id)))))
 
 (defn contact-by-email
   "Return the contact for an email, nil if the email has not been collected."
   [email]
-  (if (exists-by-email? email)
+  (when (exists-by-email? email)
     (let [id (with-car (car/hget coming-soon-emails email))]
-      (contact-by-id id))
-    nil))
+      (contact-by-id id))))
 
 (defn contact-count
   "Return the number of contacts collected."
@@ -62,7 +56,7 @@
 (defn all-referrers
   "Return all the referrer URLs and the # of referrals by that URL, in order of most referrals."
   []
-  (sort-by last > (map identity (frequencies (filter #(not (nil? %)) (map :referrer (all-contacts)))))))
+  (sort-by last > (map identity (frequencies (remove nil? (map :referrer (all-contacts)))))))
 
 ;; ISO 8601 timestamp
 (defn- current-timestamp [] 
