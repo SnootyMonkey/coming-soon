@@ -12,8 +12,8 @@
     [ring/ring-jetty-adapter "1.4.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.4.0"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.12.0"] ; Redis client https://github.com/ptaoussanis/carmine
-    [org.clojure/core.async "0.2.371"] ; Async programming library https://github.com/clojure/core.async/
+    [com.taoensso/carmine "2.12.1"] ; Redis client https://github.com/ptaoussanis/carmine
+    [org.clojure/core.async "0.2.374"] ; Async programming library https://github.com/clojure/core.async/
     [environ "1.0.1"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-http "2.0.0"] ; HTTP client https://github.com/dakrone/clj-http
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
@@ -24,7 +24,7 @@
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.11.0"] ; DateTime utilities https://github.com/clj-time/clj-time
     ;; Client-side
-    [org.clojure/clojurescript "1.7.145"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [org.clojure/clojurescript "1.7.189"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
   ]
 
@@ -36,12 +36,12 @@
   :profiles {
     :qa {
       :dependencies [
-        [midje "1.8.1"] ; Example-based testing https://github.com/marick/Midje
+        [midje "1.8.2"] ; Example-based testing https://github.com/marick/Midje
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
       ]
       :plugins [
         [lein-midje "3.2"] ; Example-based testing https://github.com/marick/lein-midje
-        [jonase/eastwood "0.2.1"] ; Clojure linter https://github.com/jonase/eastwood        
+        [jonase/eastwood "0.2.2"] ; Clojure linter https://github.com/jonase/eastwood        
       ]
       :env {
         :config-file "test/test-config.edn"
@@ -53,8 +53,8 @@
         [print-foo "1.0.2"] ; Old school print debugging https://github.com/danielribeiro/print-foo
       ]
       :plugins [
-        [lein-ancient "0.6.8-SNAPSHOT"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
-        [lein-cljsbuild "1.1.0"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
+        [lein-ancient "0.6.8"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
+        [lein-cljsbuild "1.1.1"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
         [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
         [lein-bikeshed "0.2.0"] ; Check for code smells https://github.com/dakrone/lein-bikeshed
         [lein-kibit "0.1.2"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
