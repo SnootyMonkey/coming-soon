@@ -1,7 +1,7 @@
 (ns coming-soon.views.contacts
   (:require [clojure.string :refer (blank?)]
             [net.cgrand.enlive-html :refer :all]
-            [coming-soon.config :refer (landing-page)]
+            [coming-soon.config :refer (landing-page landing-page-uri)]
             [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
 
 (def google-font-url "//fonts.googleapis.com/css?family=")
@@ -34,7 +34,7 @@
       (str "$.backstretch('" image-url "');")
       "")))
 
-(deftemplate home-page "coming_soon/templates/home.html" [referrer]
+(deftemplate home-page "coming_soon/templates/home.html" [referrer uri]
   ;; head
   [:title] (content (landing-page :page-title))
   [:#google-title-font] (set-attr :href (str google-font-url (landing-page :app-title-font)))
@@ -47,7 +47,7 @@
     "img.logo {display:" (if (blank? (landing-page :logo)) "none" "inline") ";}"
     "#app-title {color:" (landing-page :app-title-color) ";"
       "font-family:" (landing-page :app-title-font) "," (landing-page :app-title-backup-fonts) ";}"
-    "#app-tagline {color:" (landing-page :app-tagline-color) ";}"
+    "#app-tagline {color:" ((landing-page-uri uri) :app-tagline-color) ";}"
     "#app-summary {color:" (landing-page :app-summary-color) ";}"
     "#instructions {color:" (landing-page :instructions-color) ";}"
     "#thank-you {color:" (landing-page :thank-you-color) ";}"

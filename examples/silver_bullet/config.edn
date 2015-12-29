@@ -87,4 +87,11 @@
     ;; Analytics
     :analytics false ; include the analytics snippet in src/coming-soon/templates/analytics.html
   }
+  :variations [
+    {
+        :route "/child-safe"
+        :app-tagline "Clojure powered!"
+        :app-summary "With Silver Bullet, all your problems are gone.<br>Silver Bullet solves your problems.<br>You want it. You need it."
+    }
+  ] ; OK to be empty
 }

@@ -15,4 +15,8 @@
 
 (defonce landing-page (config :landing-page))
 
-(defonce webhooks (config :webhooks))
+(defn landing-page-uri [uri] (println uri) (config :landing-page))
+
+(defonce webhooks (or (config :webhooks) {}))
+
+(defonce variations (or (config :variations) []))

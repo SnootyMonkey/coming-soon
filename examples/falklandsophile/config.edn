@@ -87,4 +87,5 @@
     ;; Analytics
     :analytics false ; include the analytics snippet in src/coming-soon/templates/analytics.html
   }
+  :variations [] ; OK to be empty
 }
