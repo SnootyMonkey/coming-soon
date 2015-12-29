@@ -17,7 +17,7 @@
     [environ "1.0.1"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-http "2.0.0"] ; HTTP client https://github.com/dakrone/clj-http
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
-    [org.clojure/data.xml "0.0.8"] ; XML encoding https://github.com/clojure/data.xml
+    [org.clojure/data.xml "0.1.0-beta1"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.1"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.6"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
@@ -41,7 +41,7 @@
       ]
       :plugins [
         [lein-midje "3.2"] ; Example-based testing https://github.com/marick/lein-midje
-        [jonase/eastwood "0.2.2"] ; Clojure linter https://github.com/jonase/eastwood        
+        [jonase/eastwood "0.2.3"] ; Clojure linter https://github.com/jonase/eastwood        
       ]
       :env {
         :config-file "test/test-config.edn"
@@ -54,7 +54,7 @@
       ]
       :plugins [
         [lein-ancient "0.6.8"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
-        [lein-cljsbuild "1.1.1"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
+        [lein-cljsbuild "1.1.2"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
         [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
         [lein-bikeshed "0.2.0"] ; Check for code smells https://github.com/dakrone/lein-bikeshed
         [lein-kibit "0.1.2"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
