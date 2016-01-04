@@ -295,7 +295,7 @@ Here are some questions about coming-soon that I get asked all the time (or mayb
 * [Live Admin Demo](http://coming-soon-admin.herokuapp.com/contacts) - login as admin / admin
 * [IdeaFerret](http://ideaferret.com) - a coming-soon powered landing page
 * [Falklandsophile](http://falklandsophile.com) - another coming-soon powered landing page
-* [OpenCompany](http://opencompany.io) - yet another coming-soon powered landing page
+* [OPENcompany](http://opencompany.io) - yet another coming-soon powered landing page
 
 ## License
 
