@@ -2,7 +2,7 @@
   (:require [clojure.string :refer (blank?)]
             [net.cgrand.enlive-html :refer :all]
             [coming-soon.config :refer (landing-page)]
-            [coming-soon.helpers.colors :refer (rgb-color rgba-color)]))
+            [coming-soon.lib.colors :refer (rgb-color rgba-color)]))
 
 (def google-font-url "//fonts.googleapis.com/css?family=")
 

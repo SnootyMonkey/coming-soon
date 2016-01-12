@@ -1,4 +1,4 @@
-(ns coming-soon.helpers.colors
+(ns coming-soon.lib.colors
   (:require [clojure.contrib.string :refer (map-str)]
             [tinter.core :refer (hex-str-to-dec)]))
 
