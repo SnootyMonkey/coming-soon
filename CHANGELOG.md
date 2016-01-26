@@ -16,7 +16,7 @@ All notable changes to this project will be documented in this file. This projec
 * Move from deprecated cross-overs to the new hotness, cljc
 * Upgraded the Bootstrap used in the default template to 3.3.5
 * Upgraded the Font Awesome used in the default template to 4.4.0
-* Upgraded Clojure to 1.7.0
+* Upgraded Clojure to 1.8.0
 * Updated `build` alias to perform a complete production build
 * Updated dependencies
 

@@ -8,14 +8,14 @@
 
   :dependencies [
     ;; Server-side
-    [org.clojure/clojure "1.7.0"] ; Lisp on the JVM http://clojure.org/documentation
+    [org.clojure/clojure "1.8.0"] ; Lisp on the JVM http://clojure.org/documentation
     [ring/ring-jetty-adapter "1.4.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.4.0"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.12.1"] ; Redis client https://github.com/ptaoussanis/carmine
+    [com.taoensso/carmine "2.12.2"] ; Redis client https://github.com/ptaoussanis/carmine
     [org.clojure/core.async "0.2.374"] ; Async programming library https://github.com/clojure/core.async/
     [environ "1.0.1"] ; Get environment settings from different sources https://github.com/weavejester/environ
-    [clj-http "2.0.0"] ; HTTP client https://github.com/dakrone/clj-http
+    [clj-http "2.0.1"] ; HTTP client https://github.com/dakrone/clj-http
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.1.0-beta1"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.2"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
