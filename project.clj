@@ -15,7 +15,7 @@
     [com.taoensso/carmine "2.13.0-RC1"] ; Redis client https://github.com/ptaoussanis/carmine
     [org.clojure/core.async "0.2.374"] ; Async programming library https://github.com/clojure/core.async/
     [environ "1.0.3"] ; Get environment settings from different sources https://github.com/weavejester/environ
-    [clj-http "3.0.1"] ; HTTP client https://github.com/dakrone/clj-http
+    [clj-http "3.1.0"] ; HTTP client https://github.com/dakrone/clj-http
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
     [org.clojure/data.xml "0.1.0-beta1"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.2"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
