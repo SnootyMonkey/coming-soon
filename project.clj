@@ -8,11 +8,11 @@
 
   :dependencies [
     ;; Server-side
-    [org.clojure/clojure "1.8.0"] ; Lisp on the JVM http://clojure.org/documentation
-    [ring/ring-jetty-adapter "1.4.0"] ; Web Server https://github.com/ring-clojure/ring
+    [org.clojure/clojure "1.9.0-alpha5"] ; Lisp on the JVM http://clojure.org/documentation
+    [ring/ring-jetty-adapter "1.5.0"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.5.0"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.13.0-RC1"] ; Redis client https://github.com/ptaoussanis/carmine
+    [com.taoensso/carmine "2.13.0"] ; Redis client https://github.com/ptaoussanis/carmine
     [org.clojure/core.async "0.2.374"] ; Async programming library https://github.com/clojure/core.async/
     [environ "1.0.3"] ; Get environment settings from different sources https://github.com/weavejester/environ
     [clj-http "3.1.0"] ; HTTP client https://github.com/dakrone/clj-http
@@ -22,9 +22,9 @@
     [enlive "1.1.6"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
-    [clj-time "0.11.0"] ; DateTime utilities https://github.com/clj-time/clj-time
+    [clj-time "0.12.0"] ; DateTime utilities https://github.com/clj-time/clj-time
     ;; Client-side
-    [org.clojure/clojurescript "1.8.51"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [org.clojure/clojurescript "1.9.36"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
   ]
 
