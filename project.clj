@@ -8,39 +8,39 @@
 
   :dependencies [
     ;; Server-side
-    [org.clojure/clojure "1.9.0-alpha7"] ; Lisp on the JVM http://clojure.org/documentation
-    [ring/ring-jetty-adapter "1.6.0-beta1"] ; Web Server https://github.com/ring-clojure/ring
+    [org.clojure/clojure "1.9.0-alpha13"] ; Lisp on the JVM http://clojure.org/documentation
+    [ring/ring-jetty-adapter "1.6.0-beta6"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
-    [compojure "1.5.1"] ; Web routing http://github.com/weavejester/compojure
-    [com.taoensso/carmine "2.14.0-alpha1"] ; Redis client https://github.com/ptaoussanis/carmine
-    [org.clojure/core.async "0.2.385"] ; Async programming library https://github.com/clojure/core.async/
-    [environ "1.0.3"] ; Get environment settings from different sources https://github.com/weavejester/environ
-    [clj-http "3.1.0"] ; HTTP client https://github.com/dakrone/clj-http
+    [compojure "1.6.0-beta1"] ; Web routing http://github.com/weavejester/compojure
+    [com.taoensso/carmine "2.15.0"] ; Redis client https://github.com/ptaoussanis/carmine
+    [org.clojure/core.async "0.2.395"] ; Async programming library https://github.com/clojure/core.async/
+    [environ "1.1.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
+    [clj-http "3.3.0"] ; HTTP client https://github.com/dakrone/clj-http
     [clj-json "0.5.3"] ; JSON encoding https://github.com/mmcgrana/clj-json/
-    [org.clojure/data.xml "0.1.0-beta1"] ; XML encoding https://github.com/clojure/data.xml
+    [org.clojure/data.xml "0.1.0-beta2"] ; XML encoding https://github.com/clojure/data.xml
     [clojure-csv/clojure-csv "2.0.2"] ; CSV encoding https://github.com/davidsantiago/clojure-csv
     [enlive "1.1.6"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "1.0.5"] ; HTML generation https://github.com/weavejester/hiccup
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.12.0"] ; DateTime utilities https://github.com/clj-time/clj-time
     ;; Client-side
-    [org.clojure/clojurescript "1.9.93"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [org.clojure/clojurescript "1.9.293"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
   ]
 
   :plugins [
     [lein-ring "0.9.7"] ; Common ring tasks https://github.com/weavejester/lein-ring
-    [lein-environ "1.0.3"] ; Get environment settings from different sources https://github.com/weavejester/environ
+    [lein-environ "1.1.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
   ]
 
   :profiles {
     :qa {
       :dependencies [
-        [midje "1.8.3"] ; Example-based testing https://github.com/marick/Midje
+        [midje "1.9.0-alpha5"] ; Example-based testing https://github.com/marick/Midje
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
       ]
       :plugins [
-        [lein-midje "3.2"] ; Example-based testing https://github.com/marick/lein-midje
+        [lein-midje "3.2.1"] ; Example-based testing https://github.com/marick/lein-midje
         [jonase/eastwood "0.2.3"] ; Clojure linter https://github.com/jonase/eastwood        
       ]
       :env {
@@ -54,12 +54,12 @@
       ]
       :plugins [
         [lein-ancient "0.6.10"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
-        [lein-cljsbuild "1.1.3"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
+        [lein-cljsbuild "1.1.4"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
         [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
         [lein-bikeshed "0.3.0"] ; Check for code smells https://github.com/dakrone/lein-bikeshed
         [lein-kibit "0.1.2"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
         [lein-checkall "0.1.1"] ; Runs bikeshed, kibit and eastwood https://github.com/itang/lein-checkall
-        [lein-cljfmt "0.5.3"] ; Code formatting https://github.com/weavejester/cljfmt
+        [lein-cljfmt "0.5.6"] ; Code formatting https://github.com/weavejester/cljfmt
         [lein-deps-tree "0.1.2"] ; Print a tree of project dependencies https://github.com/the-kenny/lein-deps-tree
         [venantius/yagni "0.1.4"] ; Dead code finder https://github.com/venantius/yagni
       ]
