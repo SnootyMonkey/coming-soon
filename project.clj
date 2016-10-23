@@ -49,9 +49,6 @@
       :cucumber-feature-paths ["test/coming_soon/features"]
     }
     :dev [:qa {
-      :dependencies [
-        [print-foo "1.0.2"] ; Old school print debugging https://github.com/danielribeiro/print-foo
-      ]
       :plugins [
         [lein-ancient "0.6.10"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
         [lein-cljsbuild "1.1.4"] ; ClojureScript compiler https://github.com/emezeske/lein-cljsbuild
