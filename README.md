@@ -2,6 +2,7 @@
 
 [![MPL License](http://img.shields.io/badge/license-MPL-blue.svg?style=flat)](https://www.mozilla.org/MPL/2.0/)
 [![Build Status](http://img.shields.io/travis/SnootyMonkey/coming-soon.svg?style=flat)](https://travis-ci.org/SnootyMonkey/coming-soon)
+[![Dependency Status](https://www.versioneye.com/user/projects/5482dabc3f594e3aca000147/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5482dabc3f594e3aca000147)
 [![Roadmap on Trello](http://img.shields.io/badge/roadmap-trello-blue.svg?style=flat)](https://trello.com/b/G8kY5MOf/coming-soon-https-github-com-snootymonkey-coming-soon)
 
 A simple landing page email collector, but with 90% more parentheses than the leading brand.

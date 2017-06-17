@@ -1,16 +1,20 @@
 language: clojure
-lein: lein2
+jdk:
+- oraclejdk8
+lein: 2.7.1
+services:
+- redis-server
+cache:
+  directories:
+  - "$HOME/.m2"
 script:
 - lein2 test!
 - lein2 eastwood
+- lein2 kibit
 branches:
   only:
   - master
   - dev
-jdk:
-- oraclejdk8
-services:
-- redis-server
 notifications:
   slack:
     secure: Xymsv6anNyxB6t79IchZQxjMk14huMEQ1FXCxNRwSmfHzqeRPEvLTEv9JWd6T4xoaoW7a1H5RV5lEyRb9iPV9qE1JVpE22AaZmuxvgLl1kAN1X6LN1vTqN5HCrPGQCuHY0HFbhV0/wewGB3fU02DaXO0qxp7qMxxoH5Z1AJJGfQ=
