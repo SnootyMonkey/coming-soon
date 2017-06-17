@@ -1,5 +1,6 @@
 (ns coming-soon.controllers.admin
-  (:require [compojure.core :refer (defroutes GET POST)]
+  (:require [clojure.string :as s]
+            [compojure.core :refer (defroutes GET POST)]
             [clj-json.core :as json]
             [clojure.data.xml :as xml]
             [clojure-csv.core :as csv]
@@ -52,7 +53,7 @@
    :body (csv/write-csv (cons csv-header (map csv-contact (all-contacts))))})
 
 (defn- html-contacts []
-  (apply str (view/admin-page (all-contacts))))
+  (s/join (view/admin-page (all-contacts))))
 
 (defroutes admin-routes
   (GET "/contacts" [] (html-contacts))

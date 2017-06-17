@@ -302,4 +302,4 @@ Here are some questions about coming-soon that I get asked all the time (or mayb
 
 coming-soon is distributed under the [Mozilla Public License v2.0](http://www.mozilla.org/MPL/2.0/).
 
-Copyright © 2013-2016 [Snooty Monkey, LLC](http://snootymonkey.com/)
+Copyright © 2013-2017 [Snooty Monkey, LLC](http://snootymonkey.com/)

@@ -1,10 +1,10 @@
 (ns coming-soon.core
-  (:require [goog.net.XhrIo :as xhr]
-            [cljs.reader :as reader]
-            [clojure.string :refer [join]]
+  (:require [cljs.reader :as reader]
+            [clojure.string :as s]
+            [goog.net.XhrIo :as xhr]
             [jayq.core :refer [$ document-ready bind val css attr remove-attr add-class remove-class]]
             [jayq.util :as util]
-            [coming-soon.models.email :refer [valid?]]))
+            [coming-soon.models.email :as email]))
 
 (def subscribe-url "/subscribe")
 
@@ -24,28 +24,28 @@
   "log to the console only if we have a console (so not in old versions of IE)"
   [& msg]
   (if-not (= js/console js/undefined)
-    (util/log (join msg))))
+    (util/log (s/join msg))))
 
 (defn- disable-submission []
   ;; disable the submit button
-  (-> $submit (attr "disabled" "true"))
+  (attr $submit "disabled" "true")
   ;; spin the submit icon if there is one
   (if-not (nil? (val $submit-icon))
-    (-> $submit-icon (add-class "icon-spin"))))
+    (add-class $submit-icon "icon-spin")))
 
 (defn- enable-submission []
-  (-> $submit (remove-attr "disabled"))
+  (remove-attr $submit "disabled")
   ;; stop spinning the submit icon if there is one
   (if-not (nil? (val $submit-icon))
-    (-> $submit-icon (remove-class "icon-spin"))))
+    (remove-class $submit-icon "icon-spin")))
 
 (defn- update-for-success
   "remove the submission gadgetry and show the thank you message"
   []
   ;; hide the email submission elements
-  (-> $email (css {:visibility "hidden"}))
-  (-> $submit (css {:visibility "hidden"}))
-  (-> $spam-msg (css {:visibility "hidden"}))
+  (css $email {:visibility "hidden"})
+  (css $submit {:visibility "hidden"})
+  (css $spam-msg {:visibility "hidden"})
   ;; Hide the instructions and show the thank you
   (.hide $instructions)
   (.hide $error-message)
@@ -95,7 +95,7 @@
         (enable-submission)
         (js/alert "Please provide your email address."))
       ; IE doesn't support the HTML 5 email text input validation, so it could be invalid
-      (if (valid? email)
+      (if (email/valid? email)
         (submit email)
         (do
           (enable-submission)
