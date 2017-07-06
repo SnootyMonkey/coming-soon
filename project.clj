@@ -24,7 +24,7 @@
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
     [clj-time "0.13.0"] ; DateTime utilities https://github.com/clj-time/clj-time
     ;; Client-side
-    [org.clojure/clojurescript "1.9.562"] ; ClojureScript compiler https://github.com/clojure/clojurescript
+    [org.clojure/clojurescript "1.9.671"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
   ]
 
