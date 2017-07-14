@@ -22,7 +22,7 @@
     [enlive "1.1.6"] ; HTML templates https://github.com/cgrand/enlive
     [hiccup "2.0.0-alpha1"] ; HTML generation https://github.com/weavejester/hiccup
     [tinter "0.1.1-SNAPSHOT"] ; color manipulation https://github.com/andypayne/tinter
-    [clj-time "0.13.0"] ; DateTime utilities https://github.com/clj-time/clj-time
+    [clj-time "0.14.0"] ; DateTime utilities https://github.com/clj-time/clj-time
     ;; Client-side
     [org.clojure/clojurescript "1.9.671"] ; ClojureScript compiler https://github.com/clojure/clojurescript
     [jayq "2.5.4"] ; ClojureScript wrapper for jQuery https://github.com/ibdknox/jayq
