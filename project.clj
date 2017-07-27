@@ -9,7 +9,7 @@
   :dependencies [
     ;; Server-side
     [org.clojure/clojure "1.9.0-alpha17"] ; Lisp on the JVM http://clojure.org/documentation
-    [ring/ring-jetty-adapter "1.6.1"] ; Web Server https://github.com/ring-clojure/ring
+    [ring/ring-jetty-adapter "1.6.2"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
     [compojure "1.6.0"] ; Web routing http://github.com/weavejester/compojure
     [com.taoensso/carmine "2.16.0"] ; Redis client https://github.com/ptaoussanis/carmine
@@ -36,13 +36,13 @@
   :profiles {
     :qa {
       :dependencies [
-        [midje "1.9.0-alpha6"] ; Example-based testing https://github.com/marick/Midje
+        [midje "1.9.0-alpha8"] ; Example-based testing https://github.com/marick/Midje
         [ring-mock "0.1.5"] ; Test Ring requests https://github.com/weavejester/ring-mock
       ]
       :plugins [
         [lein-midje "3.2.1"] ; Example-based testing https://github.com/marick/lein-midje
         [jonase/eastwood "0.2.4"] ; Clojure linter https://github.com/jonase/eastwood        
-        [lein-kibit "0.1.5"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
+        [lein-kibit "0.1.6-beta1"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
       ]
       :env {
         :config-file "test/test-config.edn"
