@@ -13,6 +13,5 @@ pom.xml
 .lein-*
 .nrepl-*
 
-resources/public/js/coming_soon.js
 resources/public/img/falklands.jpg
 resources/public/img/ferret.jpg

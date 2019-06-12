@@ -185,6 +185,10 @@ git push heroku master
 
 **8) Congratulations! Now test out your landing page.**
 
+*** Troubleshooting ***
+In case you see in browser's console error that coming-soon.js is not found, you need to build your project locally. Add `resources/public/js/` directory and push it to heroku as well.
+
+
 Launch your app in your browser.
 
 ```console
@@ -201,7 +205,7 @@ You should see: "Connection to Redis is: OK"
 
 Go back to your landing page by removing the /redis-test from the URL and enter in your email address to test signing up for your own app.
 
-To view the contact information that's been entered into your landing page, navigate to **http://your-heroku-machine-name.heroku.com/contacts**.  You will need to enter the admin username and password that you setup in **config.edn**.  
+To view the contact information that's been entered into your landing page, navigate to **http://your-heroku-machine-name.heroku.com/contacts**.  You will need to enter the admin username and password that you setup in **config.edn**.
 
 You should see a table listing the email and referral URL for everyone that has signed up for your app.
 
@@ -231,6 +235,10 @@ You can modify any of the Clojure and ClojureScript code to customize the behavi
 
 To build the ClojureScript code:
 
+NOTE: do not forget to upgrade lein
+```console
+lein upgrade
+```
 ```console
 lein cljsbuild once
 ```
@@ -263,28 +271,28 @@ lein test!
 
 Here are some questions about coming-soon that I get asked all the time (or maybe I just made them all up).
 
-**Q:** Can I host it somewhere other than Heroku?  
+**Q:** Can I host it somewhere other than Heroku?
 **A:** Sure, nothing about coming-soon is Heroku specific.
 
-**Q:** Why is it so slow to load the landing page sometimes?  
+**Q:** Why is it so slow to load the landing page sometimes?
 **A:** Unless you are paying Heroku to host at least 2 dynos, you are subject to [idling](https://devcenter.heroku.com/articles/dynos#dyno-idling). This means that after an hour, your app will be spun down to save resources. The next unlucky soul to access your landing page will have to wait for 10 seconds or so for your app to spin back up. You can solve this by paying Heroku for 2 web dynos or by using a server monitoring service that pings your landing page more frequently than once an hour.
 
-**Q:** How many signups can I store before my Redis instance runs out of space?  
+**Q:** How many signups can I store before my Redis instance runs out of space?
 **A:** That's a very optimistic question. I like you; you've got gumption. A good rule of thumb is that an empty Redis instance is ~1MB and coming-soon uses (very conservatively) ~.5MB per 1,000 registrations. The .5MB per 1,000 registrations estimate is providing for a fairly long and unique referrer URL for every user, a fairly long email addresses for every user, and 25% overhead for memory fragmentation, so your actual results will likely be better. Assuming the conservative rule of thumb, and a free 20MB Redis service, you'll get over 38,000 registrations before it fills up and you have to start paying for Redis.
 
-**Q:** Who made this treasure?  
+**Q:** Who made this treasure?
 **A:** coming-soon is written by Sean Johnson, the founder of [Snooty Monkey](http://snootymonkey.com/).
 
-**Q:** How can I ever repay you for creating such a treasure?  
+**Q:** How can I ever repay you for creating such a treasure?
 **A:** It's not required by the license terms, but please [drop me a note](http://snootymonkey.com/contact/) and let me know the URL of your landing page so I can take a look.
 
-**Q:** Can I use it for X?  
+**Q:** Can I use it for X?
 **A:** coming-soon is licensed with the [MIT license](https://github.com/SnootyMonkey/coming-soon/blob/master/MIT-LICENSE.txt), so you are free to use it pretty much however you'd like, in accordance with the license terms.
- 
-**Q:** Can I add X to it?  
+
+**Q:** Can I add X to it?
 **A:** Sure, please fork coming-soon on GitHub if you'd like to enhance it.
 
-**Q:** Can I contribute my enhancements back to the project?  
+**Q:** Can I contribute my enhancements back to the project?
 **A:** Sure, send me your pull requests if you'd like to contribute back your enhancements. I promise to look at every pull request and incorporate it, or at least provide feedback on why if I won't.
 
 ## Links
