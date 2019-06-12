@@ -185,10 +185,6 @@ git push heroku master
 
 **8) Congratulations! Now test out your landing page.**
 
-*** Troubleshooting ***
-In case you see in browser's console error that coming-soon.js is not found, you need to build your project locally. Add `resources/public/js/` directory and push it to heroku as well.
-
-
 Launch your app in your browser.
 
 ```console
@@ -202,6 +198,9 @@ Test Redis connectivity by adding /redis-test to your browser's URL after the UR
 For instance, if you app is **http://your-heroku-machine-name.heroku.com/** then you should load **http://your-heroku-machine-name.heroku.com/redis-test**
 
 You should see: "Connection to Redis is: OK"
+
+Note:
+In case you see in browser's console error that coming-soon.js is not found, you need to build your project locally. Add `resources/public/js/` directory and push it to heroku as well.
 
 Go back to your landing page by removing the /redis-test from the URL and enter in your email address to test signing up for your own app.
 
@@ -235,10 +234,12 @@ You can modify any of the Clojure and ClojureScript code to customize the behavi
 
 To build the ClojureScript code:
 
-NOTE: do not forget to upgrade lein
+Note: do not forget to upgrade lein
 ```console
 lein upgrade
 ```
+And build it.
+
 ```console
 lein cljsbuild once
 ```
