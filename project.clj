@@ -4,10 +4,12 @@
   :license {:name "Mozilla Public License v2.0"
             :url "http://www.mozilla.org/MPL/2.0/"}
 
+
   :min-lein-version "2.7.1"
 
   :dependencies [
     ;; Server-side
+    [javax.xml.bind/jaxb-api "2.4.0-b180830.0359"]
     [org.clojure/clojure "1.9.0-alpha17"] ; Lisp on the JVM http://clojure.org/documentation
     [ring/ring-jetty-adapter "1.6.2"] ; Web Server https://github.com/ring-clojure/ring
     [ring-basic-authentication "1.0.5"] ; Basic HTTP/S Auth https://github.com/remvee/ring-basic-authentication
@@ -29,6 +31,7 @@
   ]
 
   :plugins [
+    [org.clojure/core.unify "0.5.7"] ; Unification bindings library https://github.com/clojure/core.unify
     [lein-ring "0.12.0"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-environ "1.1.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
   ]
@@ -41,7 +44,7 @@
       ]
       :plugins [
         [lein-midje "3.2.1"] ; Example-based testing https://github.com/marick/lein-midje
-        [jonase/eastwood "0.2.4"] ; Clojure linter https://github.com/jonase/eastwood        
+        [jonase/eastwood "0.2.4"] ; Clojure linter https://github.com/jonase/eastwood
         [lein-kibit "0.1.6-beta1"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
       ]
       :env {
@@ -101,7 +104,7 @@
     "bikeshed!" ["bikeshed" "-v" "-m" "120"] ; code check with max line length warning of 120 characters
     "ancient" ["ancient" ":all" ":allow-qualified"] ; check for out of date dependencies
   }
-  
+
   ;; ----- Code check configuration -----
 
   :eastwood {
