@@ -1,5 +1,5 @@
 {
-  :coming-soon { 
+  :coming-soon {
     :admin-user "admin" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_USER
     :admin-password "change_me!" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_PASSWORD
     :instance-prefix "coming-soon" ; make this unique if you are sharing a single redis instance w/ another coming-soon instance
@@ -12,10 +12,11 @@
     ;; :redis-env-variable "REDISTOGO_URL" ; Comment in for Redis To Go on Heroku
     ;; :redis-env-variable "OPENREDIS_URL" ; Comment in for openredis on Heroku
     ;; :redis-env-variable "REDISGREEN_URL" ; Comment in for RedisGreen on Heroku
+    ;; :redis-env-variable "REDIS_URL" ; Comment in for Heroku Redis
 
     ;; SELF HOSTED REDIS
     ;; A different port on the local machine might be: redis://localhost:7000/
-    ;; The default port, but on a different server might be: redis://10.1.0.70/ 
+    ;; The default port, but on a different server might be: redis://10.1.0.70/
     ;; Local on the default port, but with authentication might be: redis://admin:supersecret@localhost/
     ;; Uncomment (remove the ;;) the line below for self-hosted redis that's not on port 6379 of localhost
     ;; :redis-connect-URL "redis://user:pass@host:port/"
@@ -36,11 +37,11 @@
     ;; }
     ;; :slack {
     ;;     :handler "coming-soon.webhooks.slack"
-    ;;     :api-key "" ; only set this if your config.edn is private! Otherwise use the ENV variable: SLACK_API_KEY        
+    ;;     :api-key "" ; only set this if your config.edn is private! Otherwise use the ENV variable: SLACK_API_KEY
     ;;     :channel-name ""
     ;; }
   }
-  :landing-page { 
+  :landing-page {
     ;; Copy
     :page-title "Silver Bullet | Launching soon!"
     :app-title "Silver Bullet"
@@ -60,7 +61,7 @@
     ;; http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
     ;; http://designshack.net/articles/typography/10-more-great-google-font-combinations-you-can-copy/
     ;; http://www.insquaremedia.com/blog/15-web-design-stuff/50-our-favourite-google-font-combinations
-    
+
     ;; see https://www.google.com/fonts for available fonts
     :app-title-font "Droid Sans" ; Google web font
     :app-title-backup-fonts "Arial,Helvetica,sans-serif" ; Web-safe fonts
