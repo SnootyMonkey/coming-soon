@@ -1,7 +1,7 @@
 {
   :coming-soon { 
     :admin-user "admin" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_USER
-    :admin-password "change_me!" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_PASSWORD
+    :admin-password "password" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_PASSWORD
     :instance-prefix "coming-soon" ; make this unique if you are sharing a single redis instance w/ another coming-soon instance
   }
   :redis {
@@ -42,9 +42,9 @@
   }
   :landing-page { 
     ;; Copy
-    :page-title "Silver Bullet | Launching soon!"
-    :app-title "Silver Bullet"
-    :app-tagline "Clojure powered bad-assery!"
+    :page-title "Ifraat | Launching soon!"
+    :app-title "Ifraat"
+    :app-tagline "Tagline for Ifraat"
     :app-summary "With Silver Bullet, all your problems are gone.<br>Silver Bullet smacks your problems around a bit, then sends them packing.<br>You want it. You need it."  ; OK to be blank
     :instructions "We'll notify you when it's ready."
     :placeholder "Email Address*" ; OK to be blank
@@ -52,7 +52,7 @@
     :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
     :thank-you "Thank you! We'll be in touch soon."
     :error "Sorry! Our system is temporarily down, please try again later."
-    :copyright "&copy; 2017 Clojurific Studios" ; OK to be blank
+    :copyright "&copy; 2017 Ifraat LLP" ; OK to be blank
 
     ;; Fonts
 
