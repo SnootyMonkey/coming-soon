@@ -1,14 +1,14 @@
 {
   :coming-soon { 
     :admin-user "admin" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_USER
-    :admin-password "change_me!" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_PASSWORD
+    :admin-password "password" ; CHANGE THIS! Only use if config.edn is private! Otherwise use ENV var: ADMIN_PASSWORD
     :instance-prefix "coming-soon" ; make this unique if you are sharing a single redis instance w/ another coming-soon instance
   }
   :redis {
     ;; If you're running Redis locally on the same machine and the default 6379 port, leave everything in this section commented out
 
     ;; HEROKU REDIS - uncomment the selected provider (remove the ;;)
-    ;; :redis-env-variable "REDISCLOUD_URL" ; Comment in for Redis Cloud on Heroku
+     :redis-env-variable "REDISCLOUD_URL" ; Comment in for Redis Cloud on Heroku
     ;; :redis-env-variable "REDISTOGO_URL" ; Comment in for Redis To Go on Heroku
     ;; :redis-env-variable "OPENREDIS_URL" ; Comment in for openredis on Heroku
     ;; :redis-env-variable "REDISGREEN_URL" ; Comment in for RedisGreen on Heroku
@@ -42,17 +42,17 @@
   }
   :landing-page { 
     ;; Copy
-    :page-title "Silver Bullet | Launching soon!"
-    :app-title "Silver Bullet"
-    :app-tagline "Clojure powered bad-assery!"
-    :app-summary "With Silver Bullet, all your problems are gone.<br>Silver Bullet smacks your problems around a bit, then sends them packing.<br>You want it. You need it."  ; OK to be blank
-    :instructions "We'll notify you when it's ready."
+    :page-title "Ifraat | Securing Pakistani's Futures"
+    :app-title "Ifraat"
+    :app-tagline "A new way for Pakistani's to grow their wealth"
+    :app-summary "Ifraat is a mobile app that helps people in developing countries to safely invest and grow their money, starting with Pakistan.<br>We do this by investing our customer's money, no matter how small the amount, in curated, high quality investments in the US stock market."  ; OK to be blank
+    :instructions "Sign up for a free consultation"
     :placeholder "Email Address*" ; OK to be blank
-    :sign-up-btn "Sign up"
+    :sign-up-btn "Get Free Advice!"
     :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
     :thank-you "Thank you! We'll be in touch soon."
     :error "Sorry! Our system is temporarily down, please try again later."
-    :copyright "&copy; 2017 Clojurific Studios" ; OK to be blank
+    :copyright "&copy; 2017 Ifraat LLP" ; OK to be blank
 
     ;; Fonts
 
@@ -69,7 +69,7 @@
 
     ;; Images
     :logo "/img/logo.png" ; OK to be blank
-    :background-image "" ; OK to be blank
+    :background-image "/img/growth.jpg" ; OK to be blank
 
     ;; Colors
     :background-color "#403727" ; brown
