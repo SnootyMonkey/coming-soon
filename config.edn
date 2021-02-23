@@ -69,7 +69,7 @@
 
     ;; Images
     :logo "/img/logo.png" ; OK to be blank
-    :background-image "" ; OK to be blank
+    :background-image "/img/growth.jpg" ; OK to be blank
 
     ;; Colors
     :background-color "#403727" ; brown
