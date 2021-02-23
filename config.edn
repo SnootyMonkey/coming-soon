@@ -48,7 +48,7 @@
     :app-summary "Ifraat is a mobile app that helps people in developing countries to safely invest and grow their money, starting with Pakistan.<br>We do this by investing our customer's money, no matter how small the amount, in curated, high quality investments in the US stock market."  ; OK to be blank
     :instructions "Sign up for a free consultation"
     :placeholder "Email Address*" ; OK to be blank
-    :sign-up-btn "Sign up"
+    :sign-up-btn "Get Free Advice!"
     :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
     :thank-you "Thank you! We'll be in touch soon."
     :error "Sorry! Our system is temporarily down, please try again later."
