@@ -42,11 +42,11 @@
   }
   :landing-page { 
     ;; Copy
-    :page-title "Ifraat | Launching soon!"
+    :page-title "Ifraat | Securing Pakistani's Futures"
     :app-title "Ifraat"
-    :app-tagline "Tagline for Ifraat"
-    :app-summary "With Silver Bullet, all your problems are gone.<br>Silver Bullet smacks your problems around a bit, then sends them packing.<br>You want it. You need it."  ; OK to be blank
-    :instructions "We'll notify you when it's ready."
+    :app-tagline "A new way for Pakistani's to grow their wealth"
+    :app-summary "Ifraat is a mobile app that helps people in developing countries to safely invest and grow their money, starting with Pakistan.<br>We do this by investing our customer's money, no matter how small the amount, in curated, high quality investments in the US stock market."  ; OK to be blank
+    :instructions "Sign up for a free consultation"
     :placeholder "Email Address*" ; OK to be blank
     :sign-up-btn "Sign up"
     :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
