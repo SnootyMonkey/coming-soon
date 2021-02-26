@@ -12,6 +12,8 @@ pom.xml
 *.class
 .lein-*
 .nrepl-*
+.idea
+.idea/*
 
 resources/public/js/coming_soon.js
 resources/public/img/falklands.jpg

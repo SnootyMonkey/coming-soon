@@ -42,17 +42,17 @@
   }
   :landing-page { 
     ;; Copy
-    :page-title "Ifraat | Securing Pakistani's Futures"
+    :page-title "Ifraat | Invest in the US stock market from Pakistan"
     :app-title "Ifraat"
-    :app-tagline "A new way for Pakistani's to grow their wealth"
-    :app-summary "Ifraat is a mobile app that helps people in developing countries to safely invest and grow their money, starting with Pakistan.<br>We do this by investing our customer's money, no matter how small the amount, in curated, high quality investments in the US stock market."  ; OK to be blank
-    :instructions "Sign up for a free consultation"
-    :placeholder "Email Address*" ; OK to be blank
-    :sign-up-btn "Get Free Advice!"
-    :spam-msg "* We won't spam you. We hate spam as much as you do." ; OK to be blank
+    :app-tagline "A new way for Pakistanis to safely grow their money"
+    :app-summary "Ifraat is a mobile app that helps Pakistanis to protect, invest and grow their money.<br>We do this by investing Rs 10,000 or more of your money in carefully chosen high quality investments in the US stock market."  ; OK to be blank
+    :instructions "Get started"
+    :placeholder "Mobile phone number" ; OK to be blank
+    :sign-up-btn "Sign up now"
+    :spam-msg "" ; OK to be blank
     :thank-you "Thank you! We'll be in touch soon."
     :error "Sorry! Our system is temporarily down, please try again later."
-    :copyright "&copy; 2017 Ifraat LLP" ; OK to be blank
+    :copyright "&copy; 2021 Ifraat.com" ; OK to be blank
 
     ;; Fonts
 
@@ -74,7 +74,7 @@
     ;; Colors
     :background-color "#403727" ; brown
     :container-bg-color "#EEE" ; light grey
-    :container-opacity "1" ; 1 for solid, 0 for no container, 0.x for some transparency
+    :container-opacity "0" ; 1 for solid, 0 for no container, 0.x for some transparency
     :app-title-color "#63A687" ; greenish
     :app-tagline-color "#000" ; black
     :app-summary-color "#000" ; black
